@@ -1,0 +1,701 @@
+/* Custom properties for theme */
+:root {
+    --primary-color: #3b82f6; /* Modern blue */
+    --primary-light: #eff6ff;
+    --primary-dark: #1d4ed8;
+    --accent-color: #06b6d4; /* Cyan accent */
+    --bg-color: #f8fafc; /* Slate 50 */
+    --card-bg: #ffffff;
+    --text-color: #1e293b; /* Slate 800 */
+    --text-muted: #64748b; /* Slate 500 */
+    --border-color: #e2e8f0; /* Slate 200 */
+    --sidebar-width: 320px;
+    --border-radius: 12px;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+}
+
+[data-theme="dark"] {
+    --primary-color: #60a5fa;
+    --primary-light: #1e293b;
+    --primary-dark: #3b82f6;
+    --accent-color: #22d3ee;
+    --bg-color: #0f172a; /* Slate 900 */
+    --card-bg: #1e293b; /* Slate 800 */
+    --text-color: #f1f5f9; /* Slate 100 */
+    --text-muted: #94a3b8; /* Slate 400 */
+    --border-color: #334155; /* Slate 700 */
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+}
+
+/* Reset and general styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header UI */
+header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    color: var(--text-color);
+}
+
+.logo-dot {
+    color: var(--primary-color);
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-light);
+    border-color: var(--primary-color);
+}
+
+.btn .icon {
+    font-size: 1rem;
+}
+
+[data-theme="light"] .sun-icon { display: none; }
+[data-theme="dark"] .moon-icon { display: none; }
+
+/* Resume layout */
+.resume-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    overflow: hidden;
+    min-height: 1000px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--primary-light);
+    padding: 2.5rem 2rem;
+    border-right: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.avatar-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--card-bg);
+    box-shadow: var(--shadow);
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.name .surname {
+    color: var(--primary-color);
+}
+
+.title-tag {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.profile-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.cert-card {
+    display: flex;
+    justify-content: center;
+}
+
+.cert-badge-img {
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+    transition: transform 0.2s ease;
+}
+
+.cert-badge-img:hover {
+    transform: scale(1.05);
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.contact-icon {
+    font-size: 1.1rem;
+}
+
+.contact-detail {
+    word-break: break-all;
+}
+
+.hover-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.hover-link:hover {
+    color: var(--primary-color);
+}
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.main-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.main-section-title .subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* Abilities / Radar section */
+.abilities-section {
+    background-color: var(--primary-light);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    align-items: center;
+}
+
+.radar-container {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Timeline/Work Experience */
+.timeline {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.25rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -1.5rem;
+    top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: 2px solid var(--card-bg);
+    box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.timeline-content {
+    background-color: var(--card-bg);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.25rem;
+}
+
+.role {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--text-color);
+}
+
+.role-dept {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.duration {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--primary-light);
+    padding: 0.15rem 0.6rem;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.company {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.job-description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: justify;
+}
+
+/* Education */
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.edu-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.edu-year {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    white-space: nowrap;
+    min-width: 100px;
+}
+
+.edu-degree {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.15rem;
+}
+
+.edu-school {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.edu-gpa {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    display: block;
+}
+
+/* Skills blocks */
+.skills-block {
+    margin-bottom: 1.25rem;
+}
+
+.skills-block:last-child {
+    margin-bottom: 0;
+}
+
+.skills-block-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+.tag-primary {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    border-color: rgba(59, 130, 246, 0.15);
+}
+
+.tag-secondary {
+    background-color: var(--bg-color);
+    color: var(--text-muted);
+    border-color: var(--border-color);
+}
+
+/* Page break and printer optimization */
+.page-break {
+    display: none;
+}
+
+/* Responsive rules */
+@media screen and (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .main-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Print Styling */
+@media print {
+    :root {
+        --primary-color: #1e3a8a; /* High contrast dark blue */
+        --accent-color: #0d9488;
+        --bg-color: #ffffff;
+        --card-bg: #ffffff;
+        --text-color: #0f172a;
+        --text-muted: #334155;
+        --border-color: #cbd5e1;
+        --sidebar-width: 260px;
+    }
+
+    html {
+        font-size: 10pt !important;
+    }
+
+    body {
+        background-color: #ffffff;
+        color: #0f172a;
+    }
+
+    .profile-text, .job-description, .edu-school, .edu-gpa, .contact-list li {
+        font-size: 0.9rem !important; /* 0.9 * 10pt = 9pt */
+    }
+
+    header, .no-print {
+        display: none !important;
+    }
+
+    .resume-container {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        width: 100% !important;
+        max-width: 100%;
+        border-radius: 0;
+        background-color: #ffffff;
+    }
+
+    .sidebar {
+        width: 28% !important;
+        flex-shrink: 0 !important;
+        padding: 0 1.5rem 0 0;
+        background-color: #ffffff;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .section-title {
+        letter-spacing: 0.01em !important;
+    }
+
+    .main-content {
+        width: 72% !important;
+        flex-grow: 1 !important;
+        padding: 0 0 0 1.5rem;
+    }
+
+    .avatar-container {
+        width: 140px;
+        height: 140px;
+        border: 2px solid var(--border-color);
+    }
+
+    .company {
+        margin-bottom: 0.35rem;
+    }
+
+    .duration {
+        background: transparent;
+        color: var(--text-color);
+        padding: 0;
+        font-weight: bold;
+    }
+
+    .page-break {
+        display: none !important;
+    }
+
+    .timeline-item {
+        page-break-inside: avoid;
+        margin-bottom: 1.5rem;
+    }
+
+    .edu-card {
+        page-break-inside: avoid;
+        background-color: #ffffff;
+        padding: 0.5rem 0;
+        border: none;
+        border-bottom: 1px dashed var(--border-color);
+        border-radius: 0;
+    }
+    
+    .edu-year {
+        min-width: 120px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .skills-block {
+        page-break-inside: avoid;
+    }
+
+    .tag {
+        background: transparent !important;
+        border: 1px solid var(--border-color) !important;
+        color: var(--text-color) !important;
+        font-size: 7.5pt;
+    }
+
+    @page {
+        margin: 1.2cm 1cm;
+    }
+    
+    .print-page-break {
+        page-break-before: always !important;
+        break-before: page !important;
+    }
+
+    .print-br {
+        display: block !important;
+    }
+
+    .section {
+        margin-bottom: 1.25rem !important;
+    }
+    
+    .profile-section {
+        margin-bottom: 1.25rem !important;
+    }
+    
+    .avatar-container {
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .main-content {
+        gap: 1.5rem !important;
+    }
+    
+    .timeline-item {
+        margin-bottom: 1.25rem !important;
+    }
+
+    .timeline {
+        padding-left: 0 !important;
+    }
+
+    .timeline::before {
+        display: none !important;
+    }
+
+    .timeline-marker {
+        display: none !important;
+    }
+
+}
+
+/* Sidebar adjustments for Education and Skills */
+.sidebar .edu-card {
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.75rem;
+    background-color: var(--card-bg);
+}
+
+.sidebar .edu-year {
+    min-width: auto;
+    font-size: 0.85rem;
+}
+
+.sidebar .edu-degree {
+    font-size: 0.9rem;
+}
+
+.sidebar .edu-school {
+    font-size: 0.8rem;
+}
+
+.sidebar .tags-container {
+    gap: 0.35rem;
+}
+
+.sidebar .tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+}

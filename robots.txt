@@ -1,0 +1,21 @@
+# robots.txt for Thanyavuth Akarasomcheep Resume
+# Allow all search engines, web crawlers, and AI user agents to crawl and index the profile
+
+User-agent: *
+Allow: /
+
+# Specifically allow AI search and LLM training crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
