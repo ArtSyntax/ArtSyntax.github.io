@@ -432,6 +432,14 @@ header {
     margin-bottom: 0.25rem;
 }
 
+.edu-research {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+}
+
 .edu-gpa {
     font-size: 0.85rem;
     font-weight: 600;
@@ -533,7 +541,7 @@ header {
         color: #0f172a;
     }
 
-    .profile-text, .job-description, .edu-school, .edu-gpa, .contact-list li {
+    .profile-text, .job-description, .edu-school, .edu-gpa, .edu-research, .contact-list li {
         font-size: 0.9rem !important; /* 0.9 * 10pt = 9pt */
     }
 
