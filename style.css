@@ -641,7 +641,7 @@ header {
     .edu-card {
         page-break-inside: avoid;
         background-color: #ffffff;
-        padding: 0.3rem 0;
+        padding: 0.5rem 0;
         border: none;
         border-bottom: 1px dashed var(--border-color);
         border-radius: 0;
@@ -664,7 +664,7 @@ header {
     }
 
     @page {
-        margin: 0.8cm 1cm;
+        margin: 1.2cm 1cm;
     }
     
     .print-page-break {
@@ -677,23 +677,23 @@ header {
     }
 
     .section {
-        margin-bottom: 0.8rem !important;
+        margin-bottom: 1.25rem !important;
     }
     
     .profile-section {
-        margin-bottom: 0.8rem !important;
+        margin-bottom: 1.25rem !important;
     }
     
     .avatar-container {
-        margin-bottom: 0.4rem !important;
+        margin-bottom: 0.75rem !important;
     }
     
     .main-content {
-        gap: 0.85rem !important;
+        gap: 1.5rem !important;
     }
     
     .timeline-item {
-        margin-bottom: 0.8rem !important;
+        margin-bottom: 1.25rem !important;
     }
 
     .timeline {
