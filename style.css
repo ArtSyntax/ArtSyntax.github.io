@@ -231,7 +231,7 @@ header {
 
 .contact-list li {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
     font-size: 0.9rem;
@@ -239,16 +239,17 @@ header {
 }
 
 .contact-icon {
-    font-size: 1.1rem;
-}
-
-.contact-icon-svg {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1.1rem;
-    height: 1.1rem;
-    margin-top: 0.15rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.contact-icon-svg {
+    /* Inherits width, height, and display from .contact-icon */
 }
 
 .social-svg-icon {
