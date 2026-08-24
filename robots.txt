@@ -1,24 +1,25 @@
-# robots.txt for Thanyavuth Akarasomcheep Resume
-# Allow all search engines, web crawlers, and AI user agents to crawl and index the profile
-
+# robots.txt for ArtSyntax - The AI-Native Solution Studio
 User-agent: *
 Allow: /
 
-# Specifically allow AI search and LLM training crawlers
+# Directives for AI Search & Crawlers (AEO / GEO Optimization)
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: ClaudeBot
-Allow: /
-
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Applebot-Extended
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 # Sitemap
-Sitemap: https://thanyavuth.com/sitemap.xml
+Sitemap: https://artsyntax.github.io/sitemap.xml
