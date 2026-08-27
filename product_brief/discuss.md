@@ -271,6 +271,17 @@
 
 ---
 
+## 💻 [CTO] [2026-08-27] Documentation Synchronization and Mobile UX Optimization
+
+### 📌 Summary of Updates
+11. **Comprehensive `llms.txt` Update from `index.html` (`llms.txt`):**
+   - ปรับปรุงและอัปเดตไฟล์ [`llms.txt`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/llms.txt) ใหม่ทั้งหมดโดยยึดโครงสร้างและข้อความจริงจาก [`index.html`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/index.html) แบบ 100% Verbatim
+12. **Mobile Form Focus Auto-Zoom Prevention (`css/styles.css`):**
+   - แก้ไขปัญหาหน้าเว็บเด้งซูม (Auto-Zoom) บนมือถือ (Mobile Safari / Chrome) เวลาแตะกดช่องกรอกแบบฟอร์ม
+   - กำหนดขนาดฟอนต์ของช่องอินพุตทุกชนิด (`.form-control`, `input`, `textarea`) เป็น **`16px` (`1rem`)** ทั้งใน Base CSS และ `@media (max-width: 768px)` ซึ่งเป็นมาตรฐานของ iOS/Android ที่ป้องกันไม่ให้เว็บบราวเซอร์ทำการเด้งซูมภาพเข้าอัตโนมัติ 100%
+
+---
+
 ## 🎨 [CPO] [2026-08-27] Competitor & Market Analysis Log (SME Segment)
 
 ### 📌 Summary of Analysis
@@ -302,3 +313,10 @@
    - **JSON-LD Schema:** มีการเพิ่ม `FAQPage` พร้อม `@type: ProfessionalService` และกำหนด `priceRange: "฿20,000+"` ──► อัปเดต Technical PRD
 3. **Status:**
    - เอกสารทั้งหมดในโฟลเดอร์ `product_brief/` ถูกแก้ไขและซิงก์กลับให้เหมือน `index.html` ตรงกันแบบบรรทัดต่อบรรทัดเรียบร้อยแล้ว ไม่มีข้อมูลใดที่ขัดแย้งกันอีกต่อไป
+
+---
+
+## 💻 [CTO] [2026-08-27] Mobile Form Focus Auto-Zoom Prevention
+1. **Mobile Form Focus Auto-Zoom Prevention (`css/styles.css`):**
+   - แก้ไขปัญหาหน้าเว็บเด้งซูม (Auto-Zoom) บนมือถือ (Mobile Safari / Chrome) เวลาแตะกดช่องกรอกแบบฟอร์ม
+   - กำหนดขนาดฟอนต์ของช่องอินพุตทุกชนิด (`.form-control`, `input`, `textarea`) เป็น **`16px` (`1rem`)** ทั้งใน Base CSS และ `@media (max-width: 768px)` ซึ่งเป็นมาตรฐานระบบปฏิบัติการ iOS/Android ที่ป้องกันไม่ให้เว็บบราวเซอร์ทำการเด้งซูมหน้าเว็บเข้าอัตโนมัติ 100%
