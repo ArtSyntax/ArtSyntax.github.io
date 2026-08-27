@@ -297,6 +297,22 @@ button {
   gap: 0.75rem;
 }
 
+/* Navbar CTA Button Scroll Visibility Toggle */
+.nav-cta-btn {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px) scale(0.95);
+  transition: opacity var(--transition-normal), transform var(--transition-normal), visibility var(--transition-normal);
+  pointer-events: none;
+}
+
+.nav-cta-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
 .mobile-toggle {
   display: none;
   align-items: center;

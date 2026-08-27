@@ -9,7 +9,35 @@ document.addEventListener('DOMContentLoaded', () => {
   initCustomFormValidation();
   initCookieConsent();
   initChatWidget();
+  initNavbarCtaToggle();
 });
+
+/* ==========================================================================
+   6. NAVBAR CTA BUTTON SCROLL OBSERVER
+   ========================================================================== */
+/**
+ * Shows Navbar CTA button only when Hero CTA button scrolls off-screen
+ */
+function initNavbarCtaToggle() {
+  const heroCtaBtn = document.getElementById('heroCtaBtn');
+  const navCtaBtn = document.getElementById('navCtaBtn');
+
+  if (!heroCtaBtn || !navCtaBtn) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navCtaBtn.classList.remove('visible');
+      } else {
+        navCtaBtn.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0
+  });
+
+  observer.observe(heroCtaBtn);
+}
 
 /* ==========================================================================
    5. INTERACTIVE FLOATING CHAT WIDGET CONTROLLER

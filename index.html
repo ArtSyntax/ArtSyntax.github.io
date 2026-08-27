@@ -195,7 +195,7 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="#contact" class="btn btn-primary">
+                <a href="#contact" class="btn btn-primary nav-cta-btn" id="navCtaBtn">
                     <span>พูดคุยกับผู้เชี่ยวชาญ</span>
                 </a>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="เปิดเมนู" aria-expanded="false">
@@ -234,7 +234,7 @@
                     <h1 class="hero-title">From Idea to Business Growth.<br><span class="gradient-text">Innovation Beyond Software.</span></h1>
                     <p class="hero-desc">เปลี่ยนไอเดียให้เป็น Innovation พัฒนา AI & Software Solutions และยกระดับทีมให้พร้อมขับเคลื่อนธุรกิจ สร้าง Business Impact ลดต้นทุน เพิ่มประสิทธิภาพการทำงาน โอกาสใหม่เพื่อการเติบโต <strong>เริ่มต้นเพียง 20,000 บาท</strong></p>
                     <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">
+                        <a href="#contact" class="btn btn-primary" id="heroCtaBtn">
                             <span>พูดคุยกับผู้เชี่ยวชาญ</span>
                         </a>
                         <a href="#services" class="btn" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: white;">
@@ -452,95 +452,7 @@
                 </div>
 
                 <div class="tech-stack-grid reveal">
-                    <!-- 1. React -->
-                    <div class="glass-card tech-card" style="background: rgba(97, 218, 251, 0.07); border-color: rgba(97, 218, 251, 0.2);">
-                        <div class="tech-icon-box">
-                            <img src="image/React.svg" alt="React" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">React</span>
-                    </div>
-
-                    <!-- 2. Node.js -->
-                    <div class="glass-card tech-card" style="background: rgba(104, 160, 99, 0.07); border-color: rgba(104, 160, 99, 0.2);">
-                        <div class="tech-icon-box">
-                            <img src="image/Node.js.svg" alt="Node.js" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">Node.js</span>
-                    </div>
-
-                    <!-- 3. TailwindCSS -->
-                    <div class="glass-card tech-card" style="background: rgba(56, 189, 248, 0.07); border-color: rgba(56, 189, 248, 0.2);">
-                        <div class="tech-icon-box">
-                            <img src="image/TailwindCSS.svg" alt="TailwindCSS" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">TailwindCSS</span>
-                    </div>
-
-                    <!-- 4. PostgreSQL -->
-                    <div class="glass-card tech-card" style="background: rgba(51, 103, 145, 0.09); border-color: rgba(51, 103, 145, 0.22);">
-                        <div class="tech-icon-box">
-                            <img src="image/PostgresSQL.svg" alt="PostgreSQL" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">PostgreSQL</span>
-                    </div>
-
-                    <!-- 5. MongoDB -->
-                    <div class="glass-card tech-card" style="background: rgba(71, 162, 72, 0.07); border-color: rgba(71, 162, 72, 0.2);">
-                        <div class="tech-icon-box">
-                            <img src="image/MongoDB.svg" alt="MongoDB" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">MongoDB</span>
-                    </div>
-
-                    <!-- 6. Redis -->
-                    <div class="glass-card tech-card" style="background: rgba(220, 56, 45, 0.07); border-color: rgba(220, 56, 45, 0.2);">
-                        <div class="tech-icon-box">
-                            <img src="image/Redis.svg" alt="Redis" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">Redis</span>
-                    </div>
-
-                    <!-- 7. Apache Kafka -->
-                    <div class="glass-card tech-card" style="background: rgba(139, 92, 246, 0.07); border-color: rgba(139, 92, 246, 0.2);">
-                        <div class="tech-icon-box">
-                            <img src="image/Apache Kafka.png" alt="Apache Kafka" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">Apache Kafka</span>
-                    </div>
-
-                    <!-- 8. RabbitMQ -->
-                    <div class="glass-card tech-card" style="background: rgba(255, 102, 0, 0.07); border-color: rgba(255, 102, 0, 0.2);">
-                        <div class="tech-icon-box">
-                            <img src="image/RabbitMQ.svg" alt="RabbitMQ" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">RabbitMQ</span>
-                    </div>
-
-                    <!-- 9. ELK Stack -->
-                    <div class="glass-card tech-card" style="background: rgba(0, 85, 113, 0.1); border-color: rgba(0, 85, 113, 0.25);">
-                        <div class="tech-icon-box">
-                            <img src="image/Elastic Search.svg" alt="ELK Stack" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">ELK Stack</span>
-                    </div>
-
-                    <!-- 10. Python -->
-                    <div class="glass-card tech-card" style="background: rgba(55, 118, 171, 0.08); border-color: rgba(255, 212, 59, 0.22);">
-                        <div class="tech-icon-box">
-                            <img src="image/Python.svg" alt="Python" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">Python</span>
-                    </div>
-
-                    <!-- 11. OpenAI -->
-                    <div class="glass-card tech-card" style="background: rgba(16, 163, 127, 0.07); border-color: rgba(16, 163, 127, 0.2);">
-                        <div class="tech-icon-box">
-                            <img src="image/OpenAI.svg.webp" alt="OpenAI" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">OpenAI</span>
-                    </div>
-
-                    <!-- 12. Google Gemini -->
+                    <!-- 1. Google Gemini -->
                     <div class="glass-card tech-card" style="background: rgba(142, 36, 170, 0.08); border-color: rgba(66, 133, 244, 0.2);">
                         <div class="tech-icon-box">
                             <img src="image/Gemini.svg.webp" alt="Google Gemini" class="tech-icon-img">
@@ -548,7 +460,15 @@
                         <span class="tech-name">Google Gemini</span>
                     </div>
 
-                    <!-- 13. Claude -->
+                    <!-- 2. OpenAI -->
+                    <div class="glass-card tech-card" style="background: rgba(16, 163, 127, 0.07); border-color: rgba(16, 163, 127, 0.2);">
+                        <div class="tech-icon-box">
+                            <img src="image/OpenAI.svg.webp" alt="OpenAI" class="tech-icon-img">
+                        </div>
+                        <span class="tech-name">OpenAI</span>
+                    </div>
+
+                    <!-- 3. Claude -->
                     <div class="glass-card tech-card" style="background: rgba(217, 119, 87, 0.08); border-color: rgba(217, 119, 87, 0.2);">
                         <div class="tech-icon-box">
                             <img src="image/Claude.svg.webp" alt="Claude" class="tech-icon-img">
@@ -556,7 +476,31 @@
                         <span class="tech-name">Claude</span>
                     </div>
 
-                    <!-- 14. AWS -->
+                    <!-- 4. Redis -->
+                    <div class="glass-card tech-card" style="background: rgba(220, 56, 45, 0.07); border-color: rgba(220, 56, 45, 0.2);">
+                        <div class="tech-icon-box">
+                            <img src="image/Redis.svg" alt="Redis" class="tech-icon-img">
+                        </div>
+                        <span class="tech-name">Redis</span>
+                    </div>
+
+                    <!-- 5. Google Cloud -->
+                    <div class="glass-card tech-card" style="background: rgba(66, 133, 244, 0.08); border-color: rgba(66, 133, 244, 0.2);">
+                        <div class="tech-icon-box">
+                            <img src="image/Google Cloud.svg" alt="Google Cloud" class="tech-icon-img">
+                        </div>
+                        <span class="tech-name">Google Cloud</span>
+                    </div>
+
+                    <!-- 6. Azure -->
+                    <div class="glass-card tech-card" style="background: rgba(0, 120, 212, 0.08); border-color: rgba(0, 120, 212, 0.2);">
+                        <div class="tech-icon-box">
+                            <img src="image/Azure.svg" alt="Azure" class="tech-icon-img">
+                        </div>
+                        <span class="tech-name">Azure</span>
+                    </div>
+
+                    <!-- 7. AWS -->
                     <div class="glass-card tech-card" style="background: rgba(255, 153, 0, 0.08); border-color: rgba(255, 153, 0, 0.2);">
                         <div class="tech-icon-box">
                             <img src="image/AWS.svg" alt="AWS" class="tech-icon-img">
@@ -564,20 +508,12 @@
                         <span class="tech-name">AWS</span>
                     </div>
 
-                    <!-- 15. Microsoft Azure -->
-                    <div class="glass-card tech-card" style="background: rgba(0, 120, 212, 0.08); border-color: rgba(0, 120, 212, 0.2);">
+                    <!-- 8. Firebase -->
+                    <div class="glass-card tech-card" style="background: rgba(245, 130, 32, 0.08); border-color: rgba(245, 130, 32, 0.22);">
                         <div class="tech-icon-box">
-                            <img src="image/Azure.svg" alt="Microsoft Azure" class="tech-icon-img">
+                            <img src="image/Firebase.svg" alt="Firebase" class="tech-icon-img">
                         </div>
-                        <span class="tech-name">Microsoft Azure</span>
-                    </div>
-
-                    <!-- 16. Google Cloud -->
-                    <div class="glass-card tech-card" style="background: rgba(66, 133, 244, 0.08); border-color: rgba(66, 133, 244, 0.2);">
-                        <div class="tech-icon-box">
-                            <img src="image/Google Cloud.svg" alt="Google Cloud" class="tech-icon-img">
-                        </div>
-                        <span class="tech-name">Google Cloud</span>
+                        <span class="tech-name">Firebase</span>
                     </div>
                 </div>
             </div>
