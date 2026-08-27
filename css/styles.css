@@ -724,11 +724,11 @@ button {
 
 /* Contact / Form */
 .contact-card {
-  padding: 3rem 2.5rem;
+  padding: 3.5rem 2.5rem;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 3rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .form-group {
@@ -852,10 +852,11 @@ button {
 }
 
 .btn-submit {
-  width: 100%;
-  padding: 1rem;
+  width: auto;
+  display: inline-flex;
+  padding: 0.85rem 2rem;
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 /* Footer */

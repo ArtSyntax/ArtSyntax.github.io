@@ -22,4 +22,4 @@ User-agent: ClaudeBot
 Allow: /
 
 # Sitemap
-Sitemap: https://artsyntax.github.io/sitemap.xml
+Sitemap: https://artsyntax.app/sitemap.xml
