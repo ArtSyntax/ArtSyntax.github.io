@@ -88,6 +88,7 @@ function initCustomFormValidation() {
   forms.forEach(form => {
     // Intercept form submit event for custom validation check
     form.addEventListener('submit', (e) => {
+      e.preventDefault();
       let isValid = true;
       const inputs = form.querySelectorAll('.form-control[required]');
       let firstInvalidInput = null;
@@ -101,25 +102,96 @@ function initCustomFormValidation() {
       });
 
       if (!isValid) {
-        e.preventDefault();
         if (firstInvalidInput) {
           firstInvalidInput.focus();
         }
+        return;
       }
+
+      // Valid form -> submit via AJAX to FormSubmit
+      handleFormSubmit(form);
     });
 
     // Automatically remove error bubble when user types in the field
     const allInputs = form.querySelectorAll('.form-control');
     allInputs.forEach(input => {
-      input.addEventListener('input', () => {
+      input.addEventListener('input', (e) => {
+        if (input.id === 'phone') {
+          e.target.value = e.target.value.replace(/\D/g, '');
+        }
         removeErrorBubble(input);
       });
     });
   });
+
+  // Setup reset button to allow sending another message
+  const btnReset = document.getElementById('btnResetForm');
+  if (btnReset) {
+    btnReset.addEventListener('click', () => {
+      const form = document.getElementById('contactForm');
+      const successCard = document.getElementById('formSuccessCard');
+      if (form && successCard) {
+        form.reset();
+        form.style.display = 'block';
+        successCard.style.display = 'none';
+      }
+    });
+  }
 }
 
 /**
- * Validates a single input field against required, email, and minlength rules.
+ * Handles AJAX form submission to FormSubmit API endpoint and displays success card
+ * @param {HTMLFormElement} form 
+ */
+function handleFormSubmit(form) {
+  const btnSubmit = form.querySelector('button[type="submit"]');
+  const originalBtnText = btnSubmit ? btnSubmit.innerHTML : '';
+  const successCard = document.getElementById('formSuccessCard');
+
+  if (btnSubmit) {
+    btnSubmit.disabled = true;
+    btnSubmit.style.opacity = '0.7';
+    btnSubmit.style.cursor = 'wait';
+    btnSubmit.querySelector('span').textContent = 'กำลังส่งข้อมูล...';
+  }
+
+  const formData = new FormData(form);
+
+  fetch('https://formsubmit.co/ajax/thanyavuth@outlook.com', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      // Hide form and show success card
+      form.style.display = 'none';
+      if (successCard) {
+        successCard.style.display = 'block';
+      }
+    } else {
+      // Fallback submit if AJAX endpoint returned error
+      form.submit();
+    }
+  })
+  .catch(() => {
+    // Network fallback submit
+    form.submit();
+  })
+  .finally(() => {
+    if (btnSubmit) {
+      btnSubmit.disabled = false;
+      btnSubmit.style.opacity = '1';
+      btnSubmit.style.cursor = 'pointer';
+      btnSubmit.innerHTML = originalBtnText;
+    }
+  });
+}
+
+/**
+ * Validates a single input field against required, email, phone, and minlength rules.
  * @param {HTMLInputElement|HTMLTextAreaElement} input
  * @returns {boolean} True if valid, false if invalid
  */
@@ -132,6 +204,8 @@ function validateInput(input) {
     message = `กรุณากรอก${getLabelText(input)}`;
   } else if (input.type === 'email' && !isValidEmail(val)) {
     message = 'กรุณากรอกอีเมลให้ถูกต้อง (เช่น example@company.com)';
+  } else if ((input.type === 'tel' || input.id === 'phone') && !isValidPhone(val)) {
+    message = 'กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง (เช่น 0812345678 หรือ 021234567)';
   } else if (minLength && val.length < minLength) {
     message = `กรุณากรอกรายละเอียดอย่างน้อย ${minLength} ตัวอักษร (ปัจจุบัน ${val.length} ตัวอักษร)`;
   }
@@ -150,6 +224,18 @@ function validateInput(input) {
  */
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+/**
+ * Regex check for valid Thai Mobile or Landline/Office Phone Number
+ * Supports mobile (06, 08, 09 + 8 digits) and landline (02, 03, 04, 05, 07 + 7-8 digits)
+ * Handles hyphens, spaces, and +66 country code prefix.
+ * @param {string} phone
+ * @returns {boolean}
+ */
+function isValidPhone(phone) {
+  let clean = phone.replace(/^\+66/, '0').replace(/[-()\s]/g, '');
+  return /^(0[689]\d{8}|0[23457]\d{7,8})$/.test(clean);
 }
 
 /**
