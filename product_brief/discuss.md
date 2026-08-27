@@ -313,8 +313,9 @@
    - อัปเดต Hero Section (`#home`): `"ยืดหยุ่นด้วยการเริ่มต้นทีละบริการในงบเพียง 20,000 บาท หรือยกระดับแบบครบวงจร (End-to-End)"`
    - อัปเดต FAQ Section (`#faq`): `"คุณสามารถเลือกเริ่มต้นทีละ 1 บริการ (เช่น งาน Prototype หรือระบบขนาดเล็ก) ในงบเริ่มต้น 20,000 บาท..."` รวมถึงอัปเดต Schema JSON-LD
    - อัปเดตรายละเอียดงบประมาณใน `core_product_offerings.md`, `end_to_end_brief.md`, `product_strategy.md`, และ `sme_website_brief.md`
-3. **Tech Stack & Powered By Section Integration (`index.html`, `css/styles.css`):**
-   - เพิ่มเซกชันใหม่ **`Powered By`** ในตำแหน่ง Section 6 บน [`index.html`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/index.html) พร้อมลิงก์เมนู `Tech Stack` บน Navbar และ Mobile Drawer
+3. **Trusted Technology Partners Section Integration (`index.html`, `css/styles.css`):**
+   - อัปเดตเปลี่ยนชื่อเมนูบน Navbar / Mobile Drawer จาก `Tech Stack` เป็น **`Partners`** (Anchor: `#partners`)
+   - เปลี่ยนชื่อหัวข้อเซกชัน 6 จาก `Powered By` เป็น **`Trusted Technology Partners`**
    - แสดงผลขุมพลังเทคโนโลยี 16 แบรนด์ชั้นนำ: **React, Node.js, TailwindCSS, PostgreSQL, MongoDB, Redis, Apache Kafka, RabbitMQ, ELK Stack, Python, OpenAI, Google Gemini, Claude, AWS, Microsoft Azure, Google Cloud** ด้วย SVG Vector Icons สีแบรนด์แท้ ในดีไซน์ Glassmorphism
    - จัดวางรูปแบบการแสดงผลทั้งบน Desktop และ Mobile สมดุลที่ **4 คอลัมน์สมบูรณ์แบบ (4 × 4 Grid)** ปรับความกว้างรวมของตารางการ์ดบน Desktop ให้กระชับลงที่ **`max-width: 820px;`** วางกึ่งกลางหน้าจอ สวยงาม พอดี และโปรเฟสชันนัล 100%
 4. **Brand Logo & Tech Stack Asset Alignment (`index.html`, `image/`):**
