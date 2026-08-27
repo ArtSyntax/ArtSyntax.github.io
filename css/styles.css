@@ -7,8 +7,8 @@
   --surface-glass: rgba(21, 28, 44, 0.75);
   --surface-glass-hover: rgba(30, 41, 64, 0.88);
   --surface-glass-active: rgba(40, 53, 82, 0.95);
-  --border-glass: rgba(255, 255, 255, 0.09);
-  --border-glass-bright: rgba(255, 255, 255, 0.22);
+  --border-glass: rgba(255, 255, 255, 0.18);
+  --border-glass-bright: rgba(255, 255, 255, 0.35);
   
   /* Brand Accents */
   --accent-indigo: #6366f1;
@@ -278,12 +278,31 @@ button {
   color: white;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .mobile-toggle {
   display: none;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   color: var(--text-primary);
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: 1;
+}
+
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--accent-indigo);
 }
 
 .mobile-drawer {
@@ -575,12 +594,13 @@ button {
   justify-content: flex-start;
   border-radius: var(--radius-md);
   height: 100%;
+  filter: drop-shadow(0 0 0.8px rgba(255, 255, 255, 0.25));
 }
 
 .pentagon-card:hover {
   border-color: var(--accent-indigo);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.25);
+  filter: drop-shadow(0 0 1.5px rgba(99, 102, 241, 0.5));
   background: rgba(28, 37, 58, 0.95);
 }
 
@@ -631,7 +651,27 @@ button {
 @media (max-width: 992px) {
   .pentagon-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
+  }
+
+  .pentagon-card {
+    clip-path: polygon(0% 0%, 50% 16px, 100% 0%, 100% calc(100% - 16px), 50% 100%, 0% calc(100% - 16px));
+    padding: 2.25rem 1.5rem 2.5rem;
+    border-radius: 0;
+  }
+
+  .pentagon-card:first-of-type {
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 16px), 50% 100%, 0% calc(100% - 16px));
+    padding-top: 1.75rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .pentagon-card:last-of-type {
+    clip-path: polygon(0% 0%, 50% 16px, 100% 0%, 100% 100%, 0% 100%);
+    padding-bottom: 1.75rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
   }
 }
 
@@ -781,13 +821,39 @@ footer {
 /* Responsive Media Queries */
 @media (max-width: 992px) {
   .nav-links { display: none; }
-  .mobile-toggle { display: block; }
+  .mobile-toggle { display: flex; }
   .bento-card { grid-column: span 12; }
   .contact-card { grid-template-columns: 1fr; gap: 2rem; }
   .approach-grid { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.925rem;
+  }
+  .pentagon-card p,
+  .flow-io-node p,
+  .bento-card p,
+  .faq-answer p,
+  .key-outcomes-list li {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+  .badge {
+    font-size: 0.8rem;
+  }
+  .stat-label {
+    font-size: 0.875rem;
+  }
+}
+
 @media (max-width: 640px) {
   .stats-grid { grid-template-columns: 1fr; }
-  .nav-btn-desktop { display: none; }
+  .nav-actions .btn {
+    padding: 0.5rem 0.95rem;
+    font-size: 0.8rem;
+  }
 }
