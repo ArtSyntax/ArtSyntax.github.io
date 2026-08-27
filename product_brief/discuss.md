@@ -331,9 +331,10 @@
 1. **Mobile Form Focus Auto-Zoom Prevention (`css/styles.css`):**
    - แก้ไขปัญหาหน้าเว็บเด้งซูม (Auto-Zoom) บนมือถือ (Mobile Safari / Chrome) เวลาแตะกดช่องกรอกแบบฟอร์ม
    - กำหนดขนาดฟอนต์ของช่องอินพุตทุกชนิด (`.form-control`, `input`, `textarea`) เป็น **`16px` (`1rem`)** ทั้งใน Base CSS และ `@media (max-width: 768px)` ซึ่งเป็นมาตรฐานระบบปฏิบัติการ iOS/Android ที่ป้องกันไม่ให้เว็บบราวเซอร์ทำการเด้งซูมหน้าเว็บเข้าอัตโนมัติ 100%
-2. **Brand Logo Asset Integration & Mobile Nav-Wrapper Padding Optimization (`index.html`, `css/styles.css`):**
+2. **Brand Logo Asset Integration & Font Typography (`index.html`, `css/styles.css`):**
    - นำไฟล์ไอคอนโลโก้แบรนด์ [`logo.jpeg`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/logo.jpeg) มาประมวลผลลบพื้นหลังสีขาวทั้งส่วนภายนอกและส่วนช่องว่างตรงกลางออกอย่างละเอียด ได้เป็นไฟล์โลโก้โปร่งใส **[`logo.png`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/logo.png)** (Transparent PNG)
-   - ปรับขนาดความสูงของรูปโลโก้กลับมาเป็นขนาดมาตรฐาน 1x ที่ **`34px × 34px`** ในส่วน Header Navigation Bar (`.logo-img`)
+   - ปรับแบบฟอนต์ของชื่อเว็บ/แบรนด์ **`ARTSYNTAX`** บน Header Navbar (`.logo`) ให้ใช้ฟอนต์ **`Plus Jakarta Sans`** (`font-weight: 800; letter-spacing: -0.02em;`) ปรับลุคให้ทันสมัย สไตล์เทคโนโลยีระดับสากล 100%
+   - ปรับขนาดความสูงของรูปโลโก้เป็นขนาดมาตรฐาน 1x ที่ **`34px × 34px`** ในส่วน Header Navigation Bar (`.logo-img`)
    - ปรับลดระยะ Padding ซ้าย-ขวาของ `.nav-wrapper` บนมือถือ (`@media (max-width: 768px)`) ลงเหลือ **`0.25rem`** ให้ใช้พื้นที่ส่วนกว้างของหน้าจอสมาร์ตโฟนได้อย่างสมบูรณ์แบบ
    - เปลี่ยนไอคอนปุ่มเปิดเมนูเบอร์เกอร์บนมือถือ (`.mobile-toggle`) จากตัวอักษร Unicode เป็น **SVG Vector Icon** พร้อมจัดวางด้วย Flexbox ให้ไอคอนขีดเมนูอยู่ตรงกลางปุ่มสี่เหลี่ยมอย่างเป๊ะระดับ Pixel-Perfect 100%
    - ปรับเซตระยะห่างระหว่างรูปโลโก้กับตัวอักษรชื่อแบรนด์เป็น **`gap: 0;`** (นำระยะห่าง Chrome DevTools Purple Gap ช่องว่างตรงกลางออก 100%)
