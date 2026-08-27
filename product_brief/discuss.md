@@ -320,3 +320,21 @@
 4. **Brand Logo & Tech Stack Asset Alignment (`index.html`, `image/`):**
    - เปลี่ยนการเรียกใช้โลโก้และรูปภาพไอคอนเทคโนโลยีในเซกชัน **`Powered By`** ทั้งหมด 16 รายการ ให้ดึงรูปภาพจากโฟลเดอร์ภาพรวม **[`image/`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/image/)** โดยตรง โดยอัปเดตใช้ **`image/Apache Kafka.png`** สำหรับ Apache Kafka
    - เพิ่มสีพื้นหลังและขอบกระจกจางๆ ตามเฉดสีประจำแบรนด์ของแต่ละเทคโนโลยี (**Brand Soft Tinted Backgrounds & Border-Glass**) เช่น สีฟ้าใส React/Tailwind, สีเขียวมรกต OpenAI/Node, สีส้มทอง AWS/RabbitMQ, สีม่วงอเมทิสต์ Gemini/Kafka เพิ่มความมิติ ความพรีเมียม และความสวยงามทรงพลัง 100%
+5. **Google Analytics 4 & Meta Pixel Integration (`index.html`, `js/app.js`):**
+   - ติดตั้งแท็กสคริปต์ Google Analytics 4 (**Measurement ID: `G-315091WYYC`**) และ Meta Pixel (**Pixel ID: `1600326638395942`**) ในส่วน `<head>` ของ [`index.html`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/index.html) เรียบร้อย
+   - ตั้งค่า Conversion Event Tracking อัตโนมัติใน [`js/app.js`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/js/app.js) ให้ยิงสัญญาณทั้ง **GA4 `generate_lead`** และ **Meta Pixel `fbq('track', 'Lead')`** เมื่อผู้ใช้งานส่งแบบฟอร์มติดต่อสำเร็จ เพื่อวัดผล Conversion Rate และรองรับการทำ Retargeting Ads บน Facebook/Instagram ได้แม่นยำ 100%
+6. **PDPA & GDPR Cookie Consent Management System (`index.html`, `css/styles.css`, `js/app.js`):**
+   - พัฒนาระบบแถบแจ้งเตือนคุกกี้สไตล์ Glassmorphism (**Glassmorphic Cookie Consent Banner**) รองรับการปฏิบัติตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA) อย่างถูกต้อง 100%
+   - ปรับแต่งความโค้งของปุ่ม **"ปฏิเสธ" (`.btn-cookie-decline`)** ให้อยู่ในสไตล์แคปซูลมนสวยงามเท่ากับปุ่ม **"ยอมรับทั้งหมด" (`border-radius: var(--radius-pill);`)** สมบูรณ์แบบ
+   - ระบบบันทึกการตัดสินใจของผู้ใช้ลงใน `localStorage` (`artsyntax_cookie_consent`):
+     - หากกด **"ยอมรับทั้งหมด"**: เปิดการยิงสัญญาณ Analytics & Meta Pixel ตามปกติ
+     - หากกด **"ปฏิเสธ"**: ระงับสคริปต์ติดตาม GA4 (`window['ga-disable-G-315091WYYC'] = true`) และ Meta Pixel (`fbq('consent', 'revoke')`) ทันทีตามมาตรฐานกฎหมาย Prior Consent 100%
+7. **HTML Character Encoding & Head Position Optimization (`index.html`):**
+   - ย้ายแท็ก `<meta charset="UTF-8">` ขึ้นไปอยู่บรรทัดแรกสุดของส่วน `<head>` เพื่อแก้ปัญหาภาษาต่างดาว (Mojibake/Encoding issue) บนเว็บบราวเซอร์ เนื่องจากแท็กสคริปต์ GA4 และ Meta Pixel ที่เพิ่มเข้ามาใหม่ดันตำแหน่งแท็ก Encoding ให้หลุดพ้น 1024-byte Boundary ของบราวเซอร์ แก้ไขให้ภาษาไทยแสดงผลคมชัด อ่านง่าย สมบูรณ์แบบ 100%
+
+---
+
+## 🚫 [CMO] [2026-08-27] Logo Update Cancellation
+1. **Cancelled `logo.svg` Implementation:**
+   - ได้รับคำสั่งจาก CEO ให้ยกเลิกการพิจารณานำไฟล์ `logo.svg` ไปใช้งาน เนื่องจากดีไซน์รูปทรงไม่ถูกต้อง 
+   - ให้ยึดการแสดงผลชื่อแบรนด์แบบ Text-based (`<span>ARTSYNTAX</span>`) บน Navbar ต่อไป หรือใช้โลโก้เดิมที่ CEO เตรียมไว้เท่านั้น

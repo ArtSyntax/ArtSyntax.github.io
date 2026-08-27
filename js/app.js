@@ -7,7 +7,61 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   initScrollReveal();
   initCustomFormValidation();
+  initCookieConsent();
 });
+
+/* ==========================================================================
+   4. PDPA & GDPR COOKIE CONSENT CONTROLLER
+   ========================================================================== */
+/**
+ * Manages Cookie Consent Banner display, user preference persistence in localStorage,
+ * and enables/disables Google Analytics & Meta Pixel tracking accordingly.
+ */
+function initCookieConsent() {
+  const cookieBanner = document.getElementById('cookieBanner');
+  const btnAccept = document.getElementById('btnAcceptCookies');
+  const btnDecline = document.getElementById('btnDeclineCookies');
+
+  if (!cookieBanner || !btnAccept || !btnDecline) return;
+
+  const consentStatus = localStorage.getItem('artsyntax_cookie_consent');
+
+  if (!consentStatus) {
+    // First visit: show cookie banner after short delay
+    setTimeout(() => {
+      cookieBanner.style.display = 'block';
+    }, 800);
+  } else if (consentStatus === 'declined') {
+    // User declined: disable GA4 & Meta Pixel tracking
+    disableTracking();
+  }
+
+  btnAccept.addEventListener('click', () => {
+    localStorage.setItem('artsyntax_cookie_consent', 'accepted');
+    cookieBanner.style.display = 'none';
+    enableTracking();
+  });
+
+  btnDecline.addEventListener('click', () => {
+    localStorage.setItem('artsyntax_cookie_consent', 'declined');
+    cookieBanner.style.display = 'none';
+    disableTracking();
+  });
+}
+
+function disableTracking() {
+  window['ga-disable-G-315091WYYC'] = true;
+  if (typeof window.fbq === 'function') {
+    window.fbq('consent', 'revoke');
+  }
+}
+
+function enableTracking() {
+  window['ga-disable-G-315091WYYC'] = false;
+  if (typeof window.fbq === 'function') {
+    window.fbq('consent', 'grant');
+  }
+}
 
 /* ==========================================================================
    1. MOBILE DRAWER NAVIGATION CONTROLLER
@@ -166,6 +220,17 @@ function handleFormSubmit(form) {
   })
   .then(response => {
     if (response.ok) {
+      // Trigger GA4 & Meta Pixel Lead Conversion Event
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          event_category: 'Contact',
+          event_label: 'Lead Form Submission'
+        });
+      }
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Lead');
+      }
+
       // Hide form and show success card
       form.style.display = 'none';
       if (successCard) {
