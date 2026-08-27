@@ -364,6 +364,11 @@
      - **แถวที่ 2:** `Google Cloud` ➔ `Azure` ➔ `AWS` ➔ `Firebase` 100%
 11. **Dynamic Navbar CTA Button Scroll Observer (`index.html`, `css/styles.css`, `js/app.js`):**
    - พัฒนาระบบ `IntersectionObserver` ควบคุมปุ่ม "พูดคุยกับผู้เชี่ยวชาญ" บน Navbar ให้ซ่อนตัวอยู่เมื่ออยู่ที่ด้านบนสุดของหน้าเว็บ และค่อยๆ แสดงผลขึ้นมา (Fade In & Slide Down Animation) เมื่อผู้ใช้งานเลื่อนหน้าจอลงจนปุ่มหลักบน Hero Section พ้นจากสายตาไป เพิ่มประสบการณ์การใช้งานที่ราบรื่น สะอาดตา 100%
+12. **Dual Overlapping Hero Section Aura Glow Blobs (`css/styles.css`):**
+   - แยกกลุ่มแสงออกเป็น 2 กลุ่มทรงกลมขนาดยอดนิยมที่แผ่ขยายกว้างขวางมากขึ้น (**Larger Dual Overlapping Glow Blobs**):
+     - **กลุ่มที่ 1 (เยื้องซ้ายบน):** แสง Indigo & Purple ขยายขนาดเป็น `580px × 520px` (`blur: 75px`)
+     - **กลุ่มที่ 2 (เยื้องขวาล่าง):** แสง Cyan & Emerald ขยายขนาดเป็น `640px × 460px` (`blur: 85px`)
+   - ทั้ง 2 กลุ่มขยับเคลื่อนที่สวนทางและเหลื่อมซ้อนทับกัน เกิดความเรืองรองอลังการ มีมิติ สวยงามสะดุดตา 100%
 
 ---
 
@@ -376,6 +381,13 @@ CEO อนุมัติให้สร้างปุ่มแชท LINE แ�
 4. **Animation:** ขอให้มีเอฟเฟกต์ `Pulse` หรือวงแหวนเรืองแสงกระเพื่อมเบาๆ เพื่อดึงดูดสายตา (แนะนำให้ใช้ CSS `@keyframes pulse`)
 5. **Responsiveness:** ตรวจสอบให้แน่ใจว่าปุ่มลอยตัวนี้ **ไม่บัง** แบนเนอร์ Cookie Consent บนหน้าจอมือถือ (อาจจะต้องขยับ `bottom` ขึ้นมาเวลาแถบคุกกี้ยังไม่ถูกกดยอมรับ)
 **Action:** ฝากทีม Dev นำสเปกนี้ไปเขียนโค้ด HTML/CSS ใส่ลงใน `index.html` และ `styles.css` โดยด่วนครับ
+
+---
+
+## ✅ [CEO/CMO] [2026-08-28] Operations Cleared
+1. **FormSubmit Email Activation:**
+   - CEO ยืนยันการกดลิงก์ Activate ระบบรับอีเมลผ่าน FormSubmit เป็นที่เรียบร้อยแล้ว
+   - **Status:** ความเสี่ยงด้าน Lead-gen ขัดข้องถูกปิดตาย ระบบพร้อมรับข้อมูลลูกค้า 100%
 
 ---
 

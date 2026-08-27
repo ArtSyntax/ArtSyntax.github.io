@@ -378,8 +378,88 @@ button {
 }
 
 .hero-section {
+  position: relative;
   padding-top: 7.5rem;
   padding-bottom: 4.5rem;
+  overflow: hidden;
+}
+
+/* Hero Background Ambient Aura Glow Effects (Two Overlapping Glow Groups - Large Size) */
+/* Group 1: Indigo & Purple Glow Blob (Top-Left Offset - Larger) */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 20%;
+  width: 580px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(99, 102, 241, 0.42) 0%,
+    rgba(139, 92, 246, 0.26) 50%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  filter: blur(75px);
+  pointer-events: none;
+  z-index: 0;
+  animation: heroGlowOverlapLeft 4.5s ease-in-out infinite alternate;
+}
+
+/* Group 2: Cyan & Emerald Glow Blob (Bottom-Right Offset - Larger) */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  width: 640px;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(56, 189, 248, 0.38) 0%,
+    rgba(16, 185, 129, 0.2) 55%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  filter: blur(85px);
+  pointer-events: none;
+  z-index: 0;
+  animation: heroGlowOverlapRight 5.5s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlowOverlapLeft {
+  0% {
+    opacity: 0.7;
+    transform: translate(-30px, -20px) scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(20px, 15px) scale(1.12);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translate(-10px, 30px) scale(1.02);
+  }
+}
+
+@keyframes heroGlowOverlapRight {
+  0% {
+    opacity: 0.65;
+    transform: translate(30px, 20px) scale(0.95);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translate(-25px, -15px) scale(1.15);
+  }
+  100% {
+    opacity: 0.75;
+    transform: translate(15px, -30px) scale(1.05);
+  }
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-grid {
