@@ -508,12 +508,57 @@ button {
   margin-bottom: 0.5rem;
 }
 
-/* Pentagon Chevron Arrow Cards (Idea -> Innovation -> AI & Technology -> People & Process -> Business Growth) */
+/* Pentagon Chevron Arrow Cards with Floating Input/Output Nodes */
 .pentagon-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 0.8fr 1.1fr 1.1fr 1.1fr 0.8fr;
   gap: 0.75rem;
+  align-items: stretch;
   margin-top: 2.5rem;
+}
+
+.flow-io-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background: transparent;
+  height: 100%;
+}
+
+.flow-io-node .io-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent-indigo);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  margin-bottom: 0.6rem;
+}
+
+.flow-io-node.flow-output .io-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-emerald);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.flow-io-node h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.3rem;
+}
+
+.flow-io-node p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
 }
 
 .pentagon-card {
@@ -529,6 +574,7 @@ button {
   align-items: center;
   justify-content: flex-start;
   border-radius: var(--radius-md);
+  height: 100%;
 }
 
 .pentagon-card:hover {
@@ -569,13 +615,13 @@ button {
     border-radius: 0;
   }
   
-  .pentagon-card:first-child {
+  .pentagon-card:first-of-type {
     clip-path: polygon(0% 0%, calc(100% - 16px) 0%, 100% 50%, calc(100% - 16px) 100%, 0% 100%);
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
   }
   
-  .pentagon-card:last-child {
+  .pentagon-card:last-of-type {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 16px 50%);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -652,6 +698,55 @@ button {
   border-color: var(--accent-indigo);
   box-shadow: 0 0 12px rgba(99, 102, 241, 0.25);
   background: rgba(17, 24, 39, 0.8);
+}
+
+/* Custom Glassmorphic Error Bubble & Validation Styling */
+.form-control.is-invalid {
+  border-color: rgba(248, 113, 113, 0.8) !important;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.3) !important;
+  background: rgba(30, 15, 25, 0.75) !important;
+}
+
+.custom-error-bubble {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  margin-top: 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  backdrop-filter: blur(16px);
+  position: relative;
+  animation: errorBubbleFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.custom-error-bubble::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background: rgba(15, 23, 42, 0.95);
+  border-left: 1px solid rgba(239, 68, 68, 0.5);
+  border-top: 1px solid rgba(239, 68, 68, 0.5);
+  transform: rotate(45deg);
+}
+
+@keyframes errorBubbleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .btn-submit {
