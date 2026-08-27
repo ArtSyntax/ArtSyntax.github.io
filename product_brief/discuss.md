@@ -330,8 +330,9 @@
    - ระบบบันทึกการตัดสินใจของผู้ใช้ลงใน `localStorage` (`artsyntax_cookie_consent`):
      - หากกด **"ยอมรับทั้งหมด"**: เปิดการยิงสัญญาณ Analytics & Meta Pixel ตามปกติ
      - หากกด **"ปฏิเสธ"**: ระงับสคริปต์ติดตาม GA4 (`window['ga-disable-G-315091WYYC'] = true`) และ Meta Pixel (`fbq('consent', 'revoke')`) ทันทีตามมาตรฐานกฎหมาย Prior Consent 100%
-7. **HTML Character Encoding & Head Position Optimization (`index.html`):**
-   - ย้ายแท็ก `<meta charset="UTF-8">` ขึ้นไปอยู่บรรทัดแรกสุดของส่วน `<head>` เพื่อแก้ปัญหาภาษาต่างดาว (Mojibake/Encoding issue) บนเว็บบราวเซอร์ เนื่องจากแท็กสคริปต์ GA4 และ Meta Pixel ที่เพิ่มเข้ามาใหม่ดันตำแหน่งแท็ก Encoding ให้หลุดพ้น 1024-byte Boundary ของบราวเซอร์ แก้ไขให้ภาษาไทยแสดงผลคมชัด อ่านง่าย สมบูรณ์แบบ 100%
+7. **HTML Character Encoding & Form Validation Optimization (`index.html`, `js/app.js`):**
+   - ย้ายแท็ก `<meta charset="UTF-8">` ขึ้นไปอยู่บรรทัดแรกสุดของส่วน `<head>` เพื่อแก้ปัญหาภาษาต่างดาว (Mojibake/Encoding issue) บนเว็บบราวเซอร์
+   - ปรับแต่งเกณฑ์ขั้นต่ำของการกรอกช่อง "รายละเอียดเบื้องต้น" ในแบบฟอร์มติดต่อจาก 100 ตัวอักษร เหลือ **20 ตัวอักษร (`minlength="20"`)** เพื่ออำนวยความสะดวกให้ผู้ใช้งานส่งข้อความติดต่อได้อย่างสะดวกรวดเร็วยิ่งขึ้น 100%
 
 ---
 
