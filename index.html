@@ -1,592 +1,468 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>ArtSyntax | The AI-Native Solution Studio - Beautiful Brains</title>
-  <meta name="description" content="ArtSyntax - ผู้เชี่ยวชาญด้าน Enterprise AI & Automation, Digital Platform PWA และ Custom Software Transformation สำหรับผู้บริหารยุคใหม่ ผสาน AI ล้ำสมัยกับ UX/UI ระดับโลก">
-  <meta name="keywords" content="AI Solution Studio, Enterprise AI, AI Agent, Web PWA, Software House, Business Transformation, ArtSyntax, GEO, AEO">
-  <meta name="author" content="ArtSyntax Solution Studio">
-  <meta name="theme-color" content="#0b0f19">
-  
-  <link rel="canonical" href="https://artsyntax.github.io/">
-
-  <!-- Friendly Google Fonts: Plus Jakarta Sans & Prompt -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- OpenGraph Meta Tags for Social & AI Indexing -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://artsyntax.github.io/">
-  <meta property="og:title" content="ArtSyntax | The AI-Native Solution Studio">
-  <meta property="og:description" content="Beautiful Brains – ผสานเทคโนโลยี AI ล้ำสมัยเข้ากับงาน UX/UI ดีไซน์ระดับโลก ขับเคลื่อนการเติบโตของธุรกิจระดับองค์กร">
-  <meta property="og:image" content="https://artsyntax.github.io/og-image.jpg">
-
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ArtSyntax | The AI-Native Solution Studio">
-  <meta name="twitter:description" content="Beautiful Brains – AI Engineering & World-Class UX/UI Product Design.">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
-
-  <!-- Structured Data JSON-LD Schemas (AEO/GEO Optimization) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "ArtSyntax Solution Studio",
-    "url": "https://artsyntax.github.io",
-    "logo": "https://artsyntax.github.io/logo.png",
-    "description": "The AI-Native Solution Studio specializing in Enterprise AI & Automation, Modern PWAs, and Custom Software Transformation.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bangkok",
-      "addressCountry": "TH"
-    },
-    "sameAs": [
-      "https://github.com/ArtSyntax"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Core AI Solutions",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Enterprise AI & Automation",
-            "description": "Autonomous AI Agents, Custom RAG, Call Center Automation."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Digital Platforms & Web Experience",
-            "description": "High-Performance PWAs with Sub-second load times and Core Web Vitals 95+."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Custom Software Transformation",
-            "description": "Enterprise Microservices Modernization, Cloud Infrastructure Scaling."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Innovation & Strategy Consulting",
-            "description": "C-Suite AI Strategy Roadmaps and 0-to-1 MVP Product Delivery."
-          }
-        }
-      ]
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "ArtSyntax รับประกันความปลอดภัยของข้อมูลองค์กร (Data Privacy) ในการนำ AI มาใช้อย่างไร?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "เราสร้างไปป์ไลน์ AI ระดับองค์กรแบบแยกอิสระ ข้อมูลความลับของลูกค้าจะไม่มีทางถูกนำไปเทรนโมเดลสาธารณะ ระบบปฏิบัติตามมาตรฐาน PDPA, GDPR และ ISO 27001 อย่างเคร่งครัด"
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>ARTSYNTAX | From Strategy to Growth - AI, Innovation & Software Studio</title>
+    <meta name="description" content="ARTSYNTAX เปลี่ยนไอเดียยุทธศาสตร์ให้เป็น Innovation, AI, Software และทีมที่พร้อมเติบโต ดูแลแบบ End-to-End สำหรับ SME และบริษัทเปิดใหม่ ในงบเริ่มต้นเพียง 20,000 บาท">
+    <meta name="keywords" content="ARTSYNTAX, End-to-End Transformation, AI Solution Studio, Enterprise AI, Web Development, Software House, Business Growth, Agile OKRs">
+    <meta name="author" content="ARTSYNTAX Solution Studio">
+    <meta name="theme-color" content="#0b0f19">
+    
+    <!-- Google Fonts: Plus Jakarta Sans, Prompt & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- JSON-LD Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ARTSYNTAX",
+      "url": "https://artsyntax.github.io/",
+      "logo": "https://artsyntax.github.io/logo.png",
+      "description": "ผู้เชี่ยวชาญด้าน End-to-End Transformation เปลี่ยนไอเดียให้เป็น Innovation, AI, Software และทีมที่พร้อมเติบโต",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "thanyavuth@outlook.com",
+        "contactType": "Solution Architect"
       },
-      {
-        "@type": "Question",
-        "name": "ระยะเวลาในการพัฒนา AI MVP หรือระบบเริ่มต้นใช้เวลานานเท่าใด?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "การทำ Discovery และวางพิมพ์เขียวใช้เวลาในสัปดาห์แรก และเราจัดส่ง MVP ที่พร้อมใช้งานจริงเชิงธุรกิจภายใน 4 ถึง 6 สัปดาห์"
-        }
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Core Service Pillars",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Innovation Design (UX/UI)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Consulting & Transformation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software Development & Web" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Scrum & OKRs Enablement" } }
+        ]
       }
-    ]
-  }
-  </script>
+    }
+    </script>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="container nav-wrapper">
-      <a href="#" class="logo" aria-label="ArtSyntax Home">
-        <div class="logo-icon">A</div>
-        <span>ArtSyntax</span>
-      </a>
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo" aria-label="ARTSYNTAX Home">
+                <span>ARTSYNTAX</span>
+            </a>
 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="#services" class="nav-link">บริการของเรา</a></li>
-          <li><a href="#impact" class="nav-link">ผลงาน & ROI</a></li>
-          <li><a href="#insights" class="nav-link">Executive Insights</a></li>
-          <li><a href="#calculator" class="nav-link">คำนวณ Scope</a></li>
-          <li><a href="#contact" class="nav-link">ติดต่อเรา</a></li>
-        </ul>
-      </nav>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="#transformation" class="nav-link">Solutions</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#why-us" class="nav-link">Why ARTSYNTAX</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
 
-      <div class="nav-actions">
-        <button class="btn btn-primary open-booking-modal" aria-label="นัดคุยยุทธศาสตร์ AI">
-          <span class="nav-btn-desktop">👋 นัดคุยยุทธศาสตร์ AI</span>
-          <span class="nav-btn-mobile">👋 นัดคุย AI</span>
-        </button>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="เปิดเมนู" aria-expanded="false">
-          ☰
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer Menu -->
-  <div class="mobile-drawer" id="mobileDrawer">
-    <a href="#services" class="mobile-nav-link">บริการของเรา (Services)</a>
-    <a href="#impact" class="mobile-nav-link">ผลลัพธ์เชิงธุรกิจ (Impact & Case Studies)</a>
-    <a href="#insights" class="mobile-nav-link">Executive Insights & FAQ</a>
-    <a href="#calculator" class="mobile-nav-link">คำนวณ Scope โปรเจกต์</a>
-    <a href="#contact" class="mobile-nav-link">ติดต่อเรา (Contact Us)</a>
-    <div style="margin-top: auto;">
-      <button class="btn btn-primary open-booking-modal" style="width: 100%;">
-        <span>👋 นัดคุยยุทธศาสตร์ AI</span>
-      </button>
-    </div>
-  </div>
-
-  <main>
-    <!-- Section 1: Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <div class="badge" id="heroBadge">
-              <span class="badge-dot"></span> ✨ Beautiful Brains • AI Solution Studio
-            </div>
-
-            <h1 class="hero-title" id="heroTitle">
-              The AI-Native <span class="gradient-text">Solution Studio</span>
-            </h1>
-
-            <p class="hero-desc" id="heroDesc">
-              เราผสานความอัจฉริยะล้ำลึกของ AI (Brain) เข้ากับงานออกแบบ UX/UI ที่เป็นมิตร ใช้งานง่ายระดับโลก (Beautiful) เพื่อเปลี่ยนโจทย์ธุรกิจของคุณให้กลายเป็นระบบอัจฉริยะ
-            </p>
-
-            <div class="hero-ctas">
-              <button class="btn btn-primary open-booking-modal">
-                <span>👋 นัดคุยยุทธศาสตร์ AI</span>
-              </button>
-              <a href="#calculator" class="btn btn-secondary">
-                <span>📊 ประเมิน Scope โปรเจกต์</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Hero Visual Canvas / Teaser -->
-          <div class="hero-visual">
-            <div class="glass-card ai-card-teaser">
-              <div class="teaser-header">
-                <div class="teaser-title">
-                  <span style="color: var(--accent-cyan);">●</span>
-                  <span>AI Business Transformation</span>
-                </div>
-                <span style="font-size: 0.78rem; color: var(--accent-emerald); font-weight: 600;">ENTERPRISE READY</span>
-              </div>
-              
-              <div class="teaser-body">
-                <p style="margin-bottom: 0.5rem; color: var(--accent-cyan); font-weight: 600;">> system.welcome()</p>
-                <p>"ยินดีต้อนรับครับ! องค์กรของคุณกำลังมองหาทางลดต้นทุน หรือต้องการพัฒนาเว็บ PWA ที่ใช้งานง่ายและโหลดเร็วหรือไม่?"</p>
-              </div>
-
-              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button class="preset-chip open-booking-modal">
-                  💬 ปรึกษาลดต้นทุนคอลเซ็นเตอร์
-                </button>
-                <a href="#calculator" class="preset-chip">
-                  ⚡ คำนวณ Scope เว็บ PWA
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary">
+                    <span>พูดคุยกับผู้เชี่ยวชาญ</span>
                 </a>
-              </div>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="เปิดเมนู" aria-expanded="false">
+                    ☰
+                </button>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- Enterprise Metrics Bar -->
-    <section class="metrics-bar">
-      <div class="container">
-        <div class="metrics-grid">
-          <div class="metric-item">
-            <div class="metric-number gradient-text">-42%</div>
-            <div class="metric-label">Operational Cost Saved</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-number gradient-text">99+</div>
-            <div class="metric-label">Mobile Core Web Vitals</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-number gradient-text">2.8x</div>
-            <div class="metric-label">Lead Conversion Boost</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-number gradient-text">4 Wks</div>
-            <div class="metric-label">Average MVP Delivery</div>
-          </div>
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a href="#transformation" class="mobile-nav-link">Solutions</a>
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#why-us" class="mobile-nav-link">Why ARTSYNTAX</a>
+        <a href="#faq" class="mobile-nav-link">FAQ</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <div style="margin-top: auto;">
+            <a href="#contact" class="btn btn-primary" style="width: 100%;">
+                <span>พูดคุยกับผู้เชี่ยวชาญ</span>
+            </a>
         </div>
-      </div>
-    </section>
-
-    <!-- Section 2: Services -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-header">
-          <div class="badge">OUR SOLUTIONS</div>
-          <h2>โซลูชันระดับเอ็นเตอร์ไพรส์ที่เน้น <span class="gradient-text">ผลลัพธ์ทางธุรกิจ</span></h2>
-          <p>เราเน้นความเข้าใจในภาษาธุรกิจและสร้างประสบการณ์ผู้ใช้ที่ใช้งานง่าย เป็นมิตร และได้ผลจริง</p>
-        </div>
-
-        <div class="services-grid">
-          <!-- Service 1 -->
-          <article class="glass-card service-card">
-            <div class="service-icon">🤖</div>
-            <h3>Enterprise AI & Automation</h3>
-            <p>สร้าง Autonomous AI Agents, ระบบอัตโนมัติ และ Enterprise Knowledge RAG ช่วยลดภาระงานซ้ำซ้อนอย่างเป็นมิตร</p>
-            <ul class="service-features">
-              <li>Autonomous Support Agents 24/7</li>
-              <li>Custom LLM Fine-Tuning & RAG</li>
-              <li>PDPA & Data Security Compliance</li>
-            </ul>
-          </article>
-
-          <!-- Service 2 -->
-          <article class="glass-card service-card">
-            <div class="service-icon">⚡</div>
-            <h3>Digital Platforms & Web</h3>
-            <p>พัฒนา PWA และ Corporate Website ประสิทธิภาพสูง โหลดเร็วกว่า 1.0 วินาที พร้อมโครงสร้างรองรับ AEO/GEO สำหรับ AI Search</p>
-            <ul class="service-features">
-              <li>Core Web Vitals Score 95+</li>
-              <li>Mobile-First Responsive UX/UI</li>
-              <li>GEO / AI Search Optimization</li>
-            </ul>
-          </article>
-
-          <!-- Service 3 -->
-          <article class="glass-card service-card">
-            <div class="service-icon">⚙️</div>
-            <h3>Custom Software Transformation</h3>
-            <p>ยกเครื่องสถาปัตยกรรมซอฟต์แวร์องค์กร รันบน Cloud Microservices เพื่อสเกลระบบได้ไม่มีสะดุด และลดหนี้ทางเทคโนโลยี</p>
-            <ul class="service-features">
-              <li>High-Availability Microservices</li>
-              <li>Legacy System Modernization</li>
-              <li>Zero Downtime Architecture</li>
-            </ul>
-          </article>
-
-          <!-- Service 4 -->
-          <article class="glass-card service-card">
-            <div class="service-icon">💡</div>
-            <h3>Innovation & Strategy Consulting</h3>
-            <p>ให้คำปรึกษาเชิงยุทธศาสตร์การนำ AI มาใช้ในองค์กร ตั้งแต่การประเมิน ROI ไปจนถึงการส่งมอบ MVP ภายใน 4 สัปดาห์</p>
-            <ul class="service-features">
-              <li>C-Suite AI Strategy Roadmap</li>
-              <li>Rapid 0-to-1 MVP Prototyping</li>
-              <li>Technical Architecture Audit</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: Impact & Case Studies -->
-    <section class="section" id="impact">
-      <div class="container">
-        <div class="section-header">
-          <div class="badge">PROVEN IMPACT</div>
-          <h2>ผลงานจริงที่วัดผลเป็น <span class="gradient-text">ตัวเลขความสำเร็จ</span></h2>
-          <p>เน้นตัวเลขการลดต้นทุนและการเติบโตของรายได้เป็นดัชนีชี้วัดหลัก</p>
-        </div>
-
-        <div class="impact-filters">
-          <button class="filter-btn active" data-filter="all">ทั้งหมด (All)</button>
-          <button class="filter-btn" data-filter="fintech">FinTech</button>
-          <button class="filter-btn" data-filter="healthcare">Healthcare</button>
-          <button class="filter-btn" data-filter="retail">E-Commerce</button>
-        </div>
-
-        <div class="case-grid">
-          <!-- Case 1 -->
-          <article class="glass-card case-card" data-category="fintech">
-            <div style="font-size: 0.825rem; color: var(--accent-cyan); font-weight: 700;">FINTECH TRANSFORM</div>
-            <div class="case-metric-highlight">-42% Support Cost</div>
-            <h3>ลดภาระตั๋วงานบริการลูกค้าและตอบสนองเร็วขึ้น 5 เท่า</h3>
-            <p>พัฒนาระบบ Autonomous Customer Support Agent เชื่อมต่อกับระบบหลังบ้านของสถาบันการเงิน ช่วยตอบคำถามและทำธุรกรรมเบื้องต้นได้ทันที</p>
-          </article>
-
-          <!-- Case 2 -->
-          <article class="glass-card case-card" data-category="healthcare">
-            <div style="font-size: 0.825rem; color: var(--accent-cyan); font-weight: 700;">HEALTHCARE NETWORK</div>
-            <div class="case-metric-highlight">+65% Mobile Bookings</div>
-            <h3>ยกระดับระบบนัดหมายแพทย์ผ่านเว็บ PWA ไร้ความหน่วง</h3>
-            <p>ออกแบบระบบจองคิวนัดหมายล่วงหน้า รองรับการคัดกรองอาการด้วย AI พร้อมทำ Core Web Vitals ได้คะแนนเต็ม 100 บนอุปกรณ์มือถือ</p>
-          </article>
-
-          <!-- Case 3 -->
-          <article class="glass-card case-card" data-category="retail">
-            <div style="font-size: 0.825rem; color: var(--accent-cyan); font-weight: 700;">RETAIL & COMMERCE</div>
-            <div class="case-metric-highlight">+35% Order Value</div>
-            <h3>Hyper-Personalization Engine ปรับเปลี่ยนหน้าเว็บรายบุคคล</h3>
-            <p>ใช้ AI แนะนำสินค้าและโปรโมชันที่ตรงใจลูกค้าแต่ละรายโดยอัตโนมัติ ช่วยเพิ่มยอดขายเฉลี่ยต่อออเดอร์อย่างเห็นได้ชัด</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 4: Insights & Thought Leadership -->
-    <section class="section" id="insights">
-      <div class="container">
-        <div class="section-header">
-          <div class="badge">THOUGHT LEADERSHIP</div>
-          <h2>Executive Insights & <span class="gradient-text">ความปลอดภัยของข้อมูล</span></h2>
-          <p>ความรู้เชิงลึกสำหรับผู้บริหารที่ต้องการนำ AI มาใช้ในองค์กรอย่างปลอดภัยและเป็นมิตรต่อผู้ใช้งาน</p>
-        </div>
-
-        <div class="insights-grid">
-          <article class="glass-card insight-card">
-            <div>
-              <div class="badge" style="margin-bottom: 1rem;">WHITE PAPER</div>
-              <h3>Enterprise AI Security & PDPA Framework 2026</h3>
-              <p>คู่มือการนำ AI มาใช้ในองค์กรโดยไม่กระทบต่อความลับของข้อมูล และการปฏิบัติตามกฎหมาย PDPA/GDPR</p>
-            </div>
-            <button class="btn btn-secondary open-booking-modal" style="margin-top: 1rem;">
-              📥 ดาวน์โหลดเอกสารฟรี
-            </button>
-          </article>
-
-          <article class="glass-card insight-card">
-            <div>
-              <div class="badge" style="margin-bottom: 1rem;">AEO GUIDE</div>
-              <h3>Generative Engine Optimization (GEO) Strategy</h3>
-              <p>ทำไมการทำ SEO แบบเดิมไม่เพียงพออีกต่อไป และทำอย่างไรให้ AI Search (Gemini, ChatGPT) แนะนำแบรนด์ของคุณ</p>
-            </div>
-            <button class="btn btn-secondary open-booking-modal" style="margin-top: 1rem;">
-              📖 อ่านบทความวิเคราะห์
-            </button>
-          </article>
-
-          <article class="glass-card insight-card">
-            <div>
-              <div class="badge" style="margin-bottom: 1rem;">ROI BLUEPRINT</div>
-              <h3>Calculating the True ROI of Enterprise AI Agents</h3>
-              <p>วิธีการประเมินจุดคุ้มทุน (Break-even point) ในการลงทุนพัฒนาระบบ AI สำหรับ C-Level</p>
-            </div>
-            <button class="btn btn-secondary open-booking-modal" style="margin-top: 1rem;">
-              📊 ดาวน์โหลด Blueprint
-            </button>
-          </article>
-        </div>
-
-        <!-- Searchable Executive FAQ -->
-        <div class="faq-accordion">
-          <h3 style="text-align: center; margin-bottom: 1.5rem;">คำถามที่พบบ่อยสำหรับผู้บริหาร (Executive FAQ)</h3>
-          
-          <div class="faq-item active">
-            <button class="faq-question">
-              <span>ArtSyntax รับประกันความปลอดภัยของข้อมูลองค์กร (Data Privacy) อย่างไร?</span>
-              <span class="faq-icon">▼</span>
-            </button>
-            <div class="faq-answer">
-              <p>เราสร้างไปป์ไลน์ AI ระดับองค์กรแบบแยกอิสระ (Isolated Enterprise Pipeline) ข้อมูลความลับของลูกค้าจะไม่มีทางถูกนำไปเทรนโมเดลสาธารณะ และทุกระบบปฏิบัติตามมาตรฐาน PDPA, GDPR และ ISO 27001 อย่างเคร่งครัด</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>ระยะเวลาในการพัฒนาโปรเจกต์และส่งมอบ MVP ใช้เวลานานเท่าใด?</span>
-              <span class="faq-icon">▼</span>
-            </button>
-            <div class="faq-answer">
-              <p>เราใช้การทำงานแบบ Agile Discovery สัปดาห์แรกเป็นการตั้งเป้าหมายเชิงยุทธศาสตร์ และเราส่งมอบ MVP ที่พร้อมใช้งานจริงในธุรกิจได้ภายใน 4 ถึง 6 สัปดาห์ครับ</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>โครงสร้างเว็บไซต์นี้รองรับ AI Search Engines (Gemini, ChatGPT) ได้อย่างไร?</span>
-              <span class="faq-icon">▼</span>
-            </button>
-            <div class="faq-answer">
-              <p>เราออกแบบสถาปัตยกรรมด้วย Semantic HTML5, Schema.org JSON-LD ที่สมบูรณ์แบบ พร้อมไฟล์ `/llms.txt` ที่ช่วยให้ AI Search Engine เข้ามาอ่านและดึงข้อมูลบริการของคุณไปตอบผู้ใช้งานได้อย่างแม่นยำ</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 5: Scope Calculator & Contact -->
-    <section class="section" id="calculator">
-      <div class="container">
-        <div class="section-header">
-          <div class="badge">INTERACTIVE ESTIMATOR</div>
-          <h2>ประเมิน <span class="gradient-text">Scope & ระยะเวลา</span> โปรเจกต์ของคุณ</h2>
-          <p>เลือกความต้องการเบื้องต้นเพื่อประเมินขนาดทีมงานและระยะเวลาในการส่งมอบอย่างรวดเร็ว</p>
-        </div>
-
-        <div class="scope-builder">
-          <div class="scope-steps">
-            <div>
-              <div class="scope-group-title">1. ขนาดขององค์กร / ระบบปัจจุบัน:</div>
-              <div class="chip-options">
-                <button class="chip-option scope-chip selected" data-weeks="2" data-multiplier="1.0">SME / High-Growth Startup</button>
-                <button class="chip-option scope-chip" data-weeks="3" data-multiplier="1.4">Mid-Market Enterprise</button>
-                <button class="chip-option scope-chip" data-weeks="5" data-multiplier="2.0">Large Enterprise Network</button>
-              </div>
-            </div>
-
-            <div>
-              <div class="scope-group-title">2. ฟีเจอร์หลักที่ต้องการพัฒนา:</div>
-              <div class="chip-options">
-                <button class="chip-option scope-chip selected" data-weeks="2" data-multiplier="1.0">Enterprise AI Agent & Knowledge RAG</button>
-                <button class="chip-option scope-chip" data-weeks="2" data-multiplier="1.1">High-Performance PWA Website</button>
-                <button class="chip-option scope-chip" data-weeks="4" data-multiplier="1.5">Custom Software Transformation</button>
-              </div>
-            </div>
-
-            <div>
-              <div class="scope-group-title">3. ข้อกำหนดด้านความปลอดภัย:</div>
-              <div class="chip-options">
-                <button class="chip-option scope-chip selected" data-weeks="0" data-multiplier="1.0">Standard Cloud Security</button>
-                <button class="chip-option scope-chip" data-weeks="1" data-multiplier="1.2">Strict PDPA & ISO 27001 Compliance</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="scope-result">
-            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">ESTIMATED DELIVERY SLA</div>
-            <div style="font-size: 1.85rem; font-weight: 800; color: var(--accent-cyan);" id="estTimeline">4 - 6 สัปดาห์</div>
-            <div style="font-size: 0.95rem; color: var(--text-secondary);" id="estBudget">Starter Enterprise Tier</div>
-            <div>
-              <button class="btn btn-primary open-booking-modal">
-                <span>📅 ล็อคคิวนัดหมายปรึกษา Solution Architect</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust & Contact Section -->
-    <section class="section" id="contact" style="padding-top: 0;">
-      <div class="container" style="text-align: center;">
-        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; opacity: 0.85;">
-          <span style="font-size: 0.85rem; color: var(--text-muted);">🔒 ISO 27001 Certified</span>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">🛡️ PDPA / GDPR Compliant</span>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">⚡ Core Web Vitals 95+ Guaranteed</span>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a href="#" class="logo" style="margin-bottom: 1rem;">
-            <div class="logo-icon">A</div>
-            <span>ArtSyntax</span>
-          </a>
-          <p style="font-size: 0.9rem; max-width: 320px;">
-            The AI-Native Solution Studio. Beautiful Brains – ผสานความอัจฉริยะล้ำลึกของ AI เข้ากับ UX/UI ที่เป็นมิตรและประณีตระดับโลก
-          </p>
-        </div>
-
-        <div>
-          <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">Solutions</h4>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
-            <li><a href="#services">Enterprise AI & Automation</a></li>
-            <li><a href="#services">Digital Platforms & PWA</a></li>
-            <li><a href="#services">Custom Software Modernization</a></li>
-            <li><a href="#services">Innovation Consulting</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">GEO & SEO</h4>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
-            <li><a href="llms.txt" target="_blank">llms.txt Knowledgebase</a></li>
-            <li><a href="sitemap.xml" target="_blank">Sitemap.xml</a></li>
-            <li><a href="robots.txt" target="_blank">Robots.txt Crawlers</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">Contact Us</h4>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Bangkok, Thailand</p>
-          <p style="font-size: 0.85rem; color: var(--text-secondary);">thanyavuth@outlook.com</p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>© 2026 ArtSyntax Solution Studio. All rights reserved.</div>
-        <div style="display: flex; gap: 1.5rem;">
-          <a href="#" class="open-booking-modal">Privacy Policy</a>
-          <a href="#" class="open-booking-modal">Terms of Service</a>
-        </div>
-      </div>
     </div>
-  </footer>
 
-  <!-- Booking & Lead Dialog Modal (<dialog>) -->
-  <dialog class="modal" id="bookingModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>👋 นัดคุยยุทธศาสตร์ AI (Executive Consultation)</h3>
-        <button class="close-btn" id="closeBookingModal">✕</button>
-      </div>
+    <main>
+        <!-- 1. Hero Section — Value Proposition -->
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="hero-grid reveal">
+                    <h1 class="hero-title">From Strategy to Growth.<br><span class="gradient-text">Innovation Beyond Software.</span></h1>
+                    <p class="hero-desc">เปลี่ยนไอเดียให้เป็น Innovation ที่สร้างคุณค่า ด้วย AI, Software และปรับทีมให้พร้อมขับเคลื่อนธุรกิจ ช่วยลดต้นทุน เพิ่มประสิทธิภาพการทำงาน และสร้าง Business Impact <strong>เริ่มต้นเพียง 20,000 บาท</strong></p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>พูดคุยกับผู้เชี่ยวชาญ</span>
+                        </a>
+                        <a href="#services" class="btn" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: white;">
+                            ดูบริการของเรา
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <form id="leadForm" action="https://formsubmit.co/thanyavuth@outlook.com" method="POST">
-        <input type="hidden" name="_subject" value="🚀 [ArtSyntax Lead] นัดหมายยุทธศาสตร์ AI">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <div class="form-group">
-          <label class="form-label" for="leadName">ชื่อ-นามสกุล:</label>
-          <input type="text" id="leadName" class="form-control" placeholder="คุณสมชาย ใจดี" required>
+                <!-- 2. End-to-End Transformation Framework Section ⭐ -->
+        <section class="section-padding" id="transformation">
+            <div class="container">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem;" class="reveal">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.5rem;">End-to-End Transformation</span>
+                    <h2 class="gradient-text" style="font-size: clamp(2.25rem, 4.5vw, 3.5rem); font-weight: 800; filter: drop-shadow(0 0 25px rgba(99, 102, 241, 0.4));">Solutions</h2>
+                    <p style="margin-top: 0.75rem;"><strong>Idea to Business Growth</strong> — เราขับเคลื่อนธุรกิจตั้งแต่ กลยุทธ์และไอเดียต้นน้ำ ไปจนถึงผลลัพธ์ทางธุรกิจปลายน้ำ ไม่ได้หยุดเพียงการพัฒนา Software แต่เชื่อม Innovation, Technology, People และ Process เข้าด้วยกัน เพื่อสร้างขีดความสามารถใหม่ที่ช่วยให้ธุรกิจเติบโตและแข่งขันได้อย่างยั่งยืน</p>
+                </div>
+
+                <div class="pentagon-grid">
+                    <!-- Pentagon Step 1: Idea -->
+                    <div class="pentagon-card reveal">
+                        <span class="pentagon-step-num" style="background: rgba(99, 102, 241, 0.2); color: var(--accent-indigo);">01. IDEA</span>
+                        <h3>Idea</h3>
+                        <p>ค้นหาโอกาสทางธุรกิจ ค้นพบ New S-Curve และวางเป้าหมายยุทธศาสตร์</p>
+                    </div>
+
+                    <!-- Pentagon Step 2: Innovation -->
+                    <div class="pentagon-card reveal">
+                        <span class="pentagon-step-num" style="background: rgba(139, 92, 246, 0.2); color: var(--accent-purple);">02. INNOVATION</span>
+                        <h3>Innovation</h3>
+                        <p>ออกแบบประสบการณ์ผู้ใช้ วาง UX Flow และทำ Interactive Prototype</p>
+                    </div>
+
+                    <!-- Pentagon Step 3: AI & Technology -->
+                    <div class="pentagon-card reveal">
+                        <span class="pentagon-step-num" style="background: rgba(56, 189, 248, 0.2); color: var(--accent-cyan);">03. TECH</span>
+                        <h3>AI & Technology</h3>
+                        <p>พัฒนา Enterprise RAG, AI Agents และสถาปัตยกรรมซอฟต์แวร์ที่สเกลได้</p>
+                    </div>
+
+                    <!-- Pentagon Step 4: People & Process -->
+                    <div class="pentagon-card reveal">
+                        <span class="pentagon-step-num" style="background: rgba(245, 158, 11, 0.2); color: #f59e0b;">04. PROCESS</span>
+                        <h3>People & Process</h3>
+                        <p>โค้ชทีมด้วย Scrum Framework และปรับจูนกระบวนการทำงานให้สปีดสูง</p>
+                    </div>
+
+                    <!-- Pentagon Step 5: Business Growth -->
+                    <div class="pentagon-card reveal">
+                        <span class="pentagon-step-num" style="background: rgba(16, 185, 129, 0.2); color: var(--accent-emerald);">05. GROWTH</span>
+                        <h3>Business Growth</h3>
+                        <p>สร้างการเติบโต ไดรฟ์เป้าหมาย OKRs และลดต้นทุน 30-50% ได้จริง</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. บริการของเรา (4 Services with Key Outcomes) -->
+        <section class="section-padding" id="services">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto;" class="reveal">
+                    <h2>Services</h2>
+                    <p>4 บริการหลักเพื่อตอบโจทย์การยกระดับธุรกิจในยุคดิจิทัลและ AI</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1: Innovation Design -->
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 17 22 12"></polyline></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>Innovation Design (UX/UI)</h3>
+                            <p>เปลี่ยนไอเดียให้เป็นผลิตภัณฑ์ที่จับต้องได้ ด้วย UX/UI, User Flow และ Interactive Prototype พร้อมทดสอบแนวคิดก่อนเริ่มพัฒนาจริง</p>
+                            <div class="key-outcomes">
+                                <div class="key-outcomes-title">Key Outcomes</div>
+                                <ul class="key-outcomes-list">
+                                    <li>Validate ไอเดียก่อนลงทุนพัฒนา</li>
+                                    <li>ลดความเสี่ยงและต้นทุนการแก้ไข</li>
+                                    <li>ได้ Prototype พร้อมนำไปพัฒนาต่อ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: AI Consulting & Transformation -->
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="15" x2="23" y2="15"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="15" x2="4" y2="15"></line></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>AI Consulting & Transformation</h3>
+                            <p>วางกลยุทธ์และออกแบบ AI Solutions ตั้งแต่ AI Readiness, Enterprise RAG ไปจนถึง AI Agents เพื่อยกระดับกระบวนการทำงานขององค์กร</p>
+                            <div class="key-outcomes">
+                                <div class="key-outcomes-title">Key Outcomes</div>
+                                <ul class="key-outcomes-list">
+                                    <li>ค้นหา AI Use Cases ที่เหมาะกับธุรกิจ</li>
+                                    <li>ลดงานซ้ำและเพิ่มประสิทธิภาพทีม</li>
+                                    <li>พร้อมนำ AI ไปใช้งานจริงอย่างเป็นระบบ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Software Development & Web -->
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>Software Development & Web</h3>
+                            <p>ออกแบบและพัฒนา Website, Web Application และ Software Solutions ที่เร็ว ยืดหยุ่น และพร้อมเชื่อมต่อกับ AI และระบบภายนอก</p>
+                            <div class="key-outcomes">
+                                <div class="key-outcomes-title">Key Outcomes</div>
+                                <ul class="key-outcomes-list">
+                                    <li>ระบบรองรับการเติบโตของธุรกิจ</li>
+                                    <li>Performance และ User Experience ที่ดี</li>
+                                    <li>Architecture พร้อมต่อยอดในอนาคต</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: Scrum & OKRs Enablement -->
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>Scrum & OKRs Enablement</h3>
+                            <p>เชื่อมเป้าหมายองค์กรกับการทำงานของทีมด้วย OKRs, Scrum และ Team Coaching เพื่อเปลี่ยน Strategy ให้เกิด Execution จริง</p>
+                            <div class="key-outcomes">
+                                <div class="key-outcomes-title">Key Outcomes</div>
+                                <ul class="key-outcomes-list">
+                                    <li>เป้าหมายและความรับผิดชอบชัดเจน</li>
+                                    <li>มองเห็น Progress และปัญหาได้เร็ว</li>
+                                    <li>ทีมส่งมอบงานได้อย่างต่อเนื่อง</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Why Us / จุดเด่นของเรา ⭐ -->
+        <section class="section-padding" id="why-us">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto;" class="reveal">
+                    <h2>Why ARTSYNTAX</h2>
+                    <p>ทำไมองค์กรยุคใหม่และ SME จึงมั่นใจเลือกเราเป็น Partner</p>
+                </div>
+
+                <div class="services-grid" style="margin-top: 2.5rem;">
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box" style="background: rgba(99, 102, 241, 0.15);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>Business × Technology × Execution</h3>
+                            <p>เราเข้าใจทั้งบริบทของธุรกิจ เทคโนโลยีขั้นสูง และการลงมือปฏิบัติจริง ไม่ใช่แค่การเขียนโค้ด แต่คือการแก้ปัญหาธุรกิจอย่างตรงจุด</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box" style="background: rgba(139, 92, 246, 0.15);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6"></path><path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>End-to-End Integration</h3>
+                            <p>ดูแลครบวงจรตั้งแต่การวาง Strategy ยุทธศาสตร์ต้นน้ำ, การออกแบบ Prototype ไปจนถึงการเขียนซอฟต์แวร์ และการโค้ชทีมให้ดูแลต่อได้เอง</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box" style="background: rgba(56, 189, 248, 0.15);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>Scalable & Secure Tech Stack</h3>
+                            <p>ออกแบบสถาปัตยกรรมเทคโนโลยีที่เสถียร รองรับการสเกลเติบโตในอนาคต ปลอดภัยสูงสุดตามมาตรฐาน PDPA, GDPR และ ISO 27001</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box" style="background: rgba(16, 185, 129, 0.15);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>Focus on Business Outcome</h3>
+                            <p>เน้นผลลัพธ์เชิงธุรกิจ (Measurable ROI) ที่วัดผลได้จริง เช่น การลดต้นทุน 30-50% และ Speed-to-Market ที่เร็วขึ้น 2.5 เท่า ไม่ใช่แค่คำว่า Deliverables</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Our Approach / How We Work -->
+        <section class="section-padding" id="approach">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto;" class="reveal">
+                    <h2>วิธีทำงาน</h2>
+                    <p>Our Approach — 5 ขั้นตอนในการทำงานร่วมกันอย่างเป็นระบบ เพื่อความมั่นใจของ SME และองค์กร</p>
+                </div>
+
+                <div class="approach-grid">
+                    <div class="glass-card approach-card reveal">
+                        <div class="approach-number">01. DISCOVER</div>
+                        <h3 style="font-size: 1.1rem; color: white; margin-bottom: 0.4rem;">ทำความเข้าใจธุรกิจ</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">พูดคุย วิเคราะห์เป้าหมาย ค้นหา Pain Point และประเมินโอกาสร่วมกัน (ปรึกษาฟรี)</p>
+                    </div>
+
+                    <div class="glass-card approach-card reveal">
+                        <div class="approach-number">02. DESIGN</div>
+                        <h3 style="font-size: 1.1rem; color: white; margin-bottom: 0.4rem;">วางพิมพ์เขียว & UX</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">วางสถาปัตยกรรมระบบ ออกแบบ UX/UI และสร้าง Interactive Prototype ทดสอบก่อน</p>
+                    </div>
+
+                    <div class="glass-card approach-card reveal">
+                        <div class="approach-number">03. BUILD</div>
+                        <h3 style="font-size: 1.1rem; color: white; margin-bottom: 0.4rem;">พัฒนาด้วย Agile</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">เขียนโค้ดและพัฒนาระบบ AI/Software สปีดสูง ส่งมอบ MVP ได้ภายใน 2-4 สัปดาห์</p>
+                    </div>
+
+                    <div class="glass-card approach-card reveal">
+                        <div class="approach-number">04. ENABLE</div>
+                        <h3 style="font-size: 1.1rem; color: white; margin-bottom: 0.4rem;">ถ่ายทอด & โค้ชทีม</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">อบรมทีมงาน ปรับกระบวนการด้วย Scrum และเชื่อมเป้าหมายองค์กรสู่ OKRs</p>
+                    </div>
+
+                    <div class="glass-card approach-card reveal">
+                        <div class="approach-number">05. SCALE</div>
+                        <h3 style="font-size: 1.1rem; color: white; margin-bottom: 0.4rem;">ติดตามผล & สเกล</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">ประเมินผลตอบแทน ROI ดูแลรักษาระบบ และขยายผลลัพธ์การเติบโตอย่างยั่งยืน</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Executive Insights & FAQ -->
+        <section class="section-padding" id="faq">
+            <div class="container">
+                <div style="text-align: center; max-width: 650px; margin: 0 auto;" class="reveal">
+                    <h2>FAQ</h2>
+                    <p>Executive Insights & FAQ — ไขข้อข้องใจและคำถามยอดฮิตที่ผู้บริหารควรรู้ในการปรับตัวสู่ยุค AI</p>
+                </div>
+
+                <div class="services-grid" style="margin-top: 2.5rem;">
+                    <!-- FAQ 1 -->
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>เหมาะกับธุรกิจประเภทไหน?</h3>
+                            <p>เหมาะสำหรับ SME, บริษัทเปิดใหม่ (Startups) และองค์กรที่ต้องการปรับตัวสู่ยุค AI โดยไม่ต้องลงทุนตั้งทีม Tech ขนาดใหญ่เอง เราพร้อมเป็น Partner ช่วยขับเคลื่อนทุกขั้นตอน</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>เริ่มต้นงบประมาณเท่าไร?</h3>
+                            <p>เราเน้นความคุ้มค่าและความโปร่งใส งบประมาณ<strong>เริ่มต้นเพียง 20,000 บาท</strong> สามารถควบคุมได้ตามความต้องการจริงของธุรกิจ โดยไม่มีค่าใช้จ่ายซ่อนเร้น</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>ต้องมีทีม IT อยู่แล้วหรือไม่?</h3>
+                            <p>ไม่จำเป็นเลยครับ ทีม ARTSYNTAX พร้อมดูแลและเป็นทีม Tech ให้คุณตั้งแต่ต้นจนจบ พร้อมบริการโค้ชอบรมทีมงานภายในของคุณให้สามารถดูแลและใช้งานต่อได้อย่างราบรื่น</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>ใช้เวลาพัฒนานานแค่ไหน?</h3>
+                            <p>เราเน้น Fast Delivery ด้วยกระบวนการทำงานแบบ Agile & Scrum การทำ Prototype / Discovery ใช้เวลาในสัปดาห์แรก และจัดส่ง MVP ที่พร้อมใช้งานจริงภายใน 2 ถึง 4 สัปดาห์</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>สามารถเริ่มจาก Project เล็กๆ ได้หรือไม่?</h3>
+                            <p>ได้แน่นอนครับ คุณสามารถเริ่มต้นจากโครงการนำร่อง (Pilot Project) หรือการทดลองทำ AI Proof of Concept เพื่อพิสูจน์ผลตอบแทน ROI ก่อนขยายผลสู่โครงการใหญ่ได้</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="glass-card bento-card reveal">
+                        <div class="service-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <div class="bento-content">
+                            <h3>รับดูแลต่อหลังพัฒนาเสร็จหรือไม่?</h3>
+                            <p>มีบริการ Maintenance & Support หลังส่งมอบระบบอย่างต่อเนื่อง พร้อมการอัปเดตรักษาความปลอดภัยข้อมูลมาตรฐาน PDPA/GDPR เพื่อความอุ่นใจของคุณตลอดการใช้งาน</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Contact / CTA Section ⭐ -->
+        <section class="section-padding contact-section" id="contact">
+            <div class="container">
+                <div class="glass-card contact-card reveal">
+                    <div>
+                        <h2>Contact<br><span class="gradient-text">มีไอเดีย แต่ยังไม่รู้จะเริ่มตรงไหน?</span></h2>
+                        <p style="margin-top: 1rem;">ให้เราช่วยประเมินแนวทางและโอกาสที่เหมาะกับธุรกิจของคุณ พูดคุยกับ Solution Architect พร้อมประเมินราคาฟรี ไม่มีข้อผูกมัด</p>
+                        <p style="font-weight: 700; color: white; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            thanyavuth@outlook.com
+                        </p>
+                    </div>
+
+                    <div>
+                        <form action="https://formsubmit.co/thanyavuth@outlook.com" method="POST">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_subject" value="New AI Consultation Request!">
+                            <input type="hidden" name="_next" value="https://artsyntax.github.io/">
+
+                            <div class="form-group">
+                                <label for="name">ชื่อ - นามสกุล (Name)</label>
+                                <input type="text" id="name" name="name" class="form-control" required placeholder="เช่น สมชาย ใจดี">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">อีเมล (Email)</label>
+                                <input type="email" id="email" name="email" class="form-control" required placeholder="example@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">รายละเอียดเบื้องต้น (Message)</label>
+                                <textarea id="message" name="message" rows="3" class="form-control" required placeholder="คุณต้องการสร้างความเปลี่ยนแปลงหรืออัปเกรดเรื่องใด?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                Book a Consultation (นัดคุยยุทธศาสตร์ฟรี)
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ARTSYNTAX - The AI-Native Solution Studio. All rights reserved.</p>
         </div>
+    </footer>
 
-        <div class="form-group">
-          <label class="form-label" for="leadCompany">ชื่อองค์กร / บริษัท:</label>
-          <input type="text" id="leadCompany" class="form-control" placeholder="บริษัท ตัวอย่าง จำกัด" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="leadEmail">อีเมลธุรกิจ (Corporate Email):</label>
-          <input type="email" id="leadEmail" class="form-control" placeholder="somchai@company.com" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="leadPhone">เบอร์โทรศัพท์ติดต่อ:</label>
-          <input type="tel" id="leadPhone" class="form-control" placeholder="081-234-5678" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="leadGoal">โจทย์ธุรกิจ หรือความต้องการหลัก:</label>
-          <textarea id="leadGoal" class="form-control" rows="3" placeholder="เช่น ต้องการทำ AI Agent ลดงานซ้ำซ้อนในองค์กร..."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
-          🚀 ยืนยันการนัดหมายคุยกับ Solution Architect
-        </button>
-      </form>
-    </div>
-  </dialog>
-
-  <!-- Application Logic JS -->
-  <script src="js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
