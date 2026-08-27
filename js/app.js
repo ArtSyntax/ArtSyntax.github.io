@@ -87,13 +87,15 @@ function initCookieConsent() {
 
   const consentStatus = localStorage.getItem('artsyntax_cookie_consent');
 
-  if (!consentStatus) {
-    // First visit: show cookie banner after short delay
+  // Only keep banner hidden if user permanently accepted cookies ('accepted')
+  if (consentStatus === 'accepted') {
+    cookieBanner.style.display = 'none';
+    enableTracking();
+  } else {
+    // First visit OR if user previously declined: show banner again after 800ms delay
     setTimeout(() => {
       cookieBanner.style.display = 'block';
     }, 800);
-  } else if (consentStatus === 'declined') {
-    // User declined: disable GA4 & Meta Pixel tracking
     disableTracking();
   }
 
@@ -104,7 +106,8 @@ function initCookieConsent() {
   });
 
   btnDecline.addEventListener('click', () => {
-    localStorage.setItem('artsyntax_cookie_consent', 'declined');
+    // Clear persistent consent state so banner re-appears asking again on next visit/refresh
+    localStorage.removeItem('artsyntax_cookie_consent');
     cookieBanner.style.display = 'none';
     disableTracking();
   });
