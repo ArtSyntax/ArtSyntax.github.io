@@ -333,6 +333,7 @@ button {
   display: block;
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
 }
 
 .mobile-toggle:hover {
