@@ -358,9 +358,10 @@
    - ปรับเปลี่ยนอีเมลรับข้อมูลติดต่อหลักทั่วทั้งระบบเป็น **`artsyntax.app@gmail.com`** ครบถ้วนทุกจุด ทั้ง HTML Contact Card, FormSubmit.co AJAX Endpoint (`https://formsubmit.co/ajax/artsyntax.app@gmail.com`), JSON-LD Schema (AEO/SEO), เอกสาร `llms.txt` และเอกสาร Product Briefs ทั้งหมด 100%
 10. **Partner Tech Stack Cards Sequence Update (`index.html`):**
    - ตัดคำว่า "Microsoft" ออกเปลี่ยนชื่อแสดงผลการ์ดเป็น **`Azure`** 
+   - ตัดคำว่า "Google" ออกเปลี่ยนชื่อแสดงผลการ์ดเป็น **`Gemini`**
    - สลับตำแหน่งให้ **`AWS`** แสดงผลก่อน **`Firebase`** ในแถวที่ 2
    - **ลำดับการ์ดทั้งหมด 8 รายการล่าสุด:**
-     - **แถวที่ 1:** `Google Gemini` ➔ `OpenAI` ➔ `Claude` ➔ `Redis`
+     - **แถวที่ 1:** `Gemini` ➔ `OpenAI` ➔ `Claude` ➔ `Redis`
      - **แถวที่ 2:** `Google Cloud` ➔ `Azure` ➔ `AWS` ➔ `Firebase` 100%
 11. **Dynamic Navbar CTA Button Scroll Observer (`index.html`, `css/styles.css`, `js/app.js`):**
    - พัฒนาระบบ `IntersectionObserver` ควบคุมปุ่ม "พูดคุยกับผู้เชี่ยวชาญ" บน Navbar ให้ซ่อนตัวอยู่เมื่ออยู่ที่ด้านบนสุดของหน้าเว็บ และค่อยๆ แสดงผลขึ้นมา (Fade In & Slide Down Animation) เมื่อผู้ใช้งานเลื่อนหน้าจอลงจนปุ่มหลักบน Hero Section พ้นจากสายตาไป เพิ่มประสบการณ์การใช้งานที่ราบรื่น สะอาดตา 100%
