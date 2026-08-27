@@ -1,7 +1,7 @@
 # 🌟 Core Product Offerings & Key Outcomes
 **Company Name:** ARTSYNTAX | Innovation & Technology Partner  
 **Positioning:** Innovation & Technology Partner | AI, Software & Business Transformation  
-**Target Budget:** เริ่มต้นเพียง 20,000 บาท (สำหรับ SME, Startup, และองค์กรยุคใหม่)  
+**Target Budget:** ยืดหยุ่น เริ่มต้นเพียง 20,000 บาท สำหรับ 1 บริการ/MVP (สำหรับ SME, Startup, และองค์กรยุคใหม่)  
 **Framework:** Idea to Business Growth (5-Stage End-to-End Transformation)  
 
 ---
@@ -71,6 +71,6 @@
 
 ## ❓ คำถามที่พบบ่อย (Executive FAQ Summary)
 
-* **เริ่มต้นงบประมาณเท่าไร?** ──► เริ่มต้นที่ 20,000 บาท กำหนด Scope และค่าใช้จ่ายชัดเจน ควบคุมงบได้ตั้งแต่แรก
+* **เริ่มต้นงบประมาณเท่าไร?** ──► เริ่มต้นที่ 20,000 บาท สำหรับการเริ่มต้น 1 บริการ (เช่น ทำ Prototype หรือ Mini Project) และมีแพ็กเกจ End-to-End ตามขอบเขตงาน
 * **ต้องมีทีม IT อยู่แล้วหรือไม่?** ──► ไม่จำเป็น เราทำหน้าที่เป็น Technology Partner ดูแลแบบ End-to-End พร้อมถ่ายทอดองค์ความรู้
 * **ติดต่อช่องทางไหน?** ──► ผ่านแบบฟอร์มบนเว็บไซต์ (เพิ่มช่องกรอกเบอร์โทรศัพท์) หรืออีเมล thanyavuth@outlook.com

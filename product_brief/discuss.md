@@ -271,17 +271,6 @@
 
 ---
 
-## 💻 [CTO] [2026-08-27] Documentation Synchronization and Mobile UX Optimization
-
-### 📌 Summary of Updates
-11. **Comprehensive `llms.txt` Update from `index.html` (`llms.txt`):**
-   - ปรับปรุงและอัปเดตไฟล์ [`llms.txt`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/llms.txt) ใหม่ทั้งหมดโดยยึดโครงสร้างและข้อความจริงจาก [`index.html`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/index.html) แบบ 100% Verbatim
-12. **Mobile Form Focus Auto-Zoom Prevention (`css/styles.css`):**
-   - แก้ไขปัญหาหน้าเว็บเด้งซูม (Auto-Zoom) บนมือถือ (Mobile Safari / Chrome) เวลาแตะกดช่องกรอกแบบฟอร์ม
-   - กำหนดขนาดฟอนต์ของช่องอินพุตทุกชนิด (`.form-control`, `input`, `textarea`) เป็น **`16px` (`1rem`)** ทั้งใน Base CSS และ `@media (max-width: 768px)` ซึ่งเป็นมาตรฐานของ iOS/Android ที่ป้องกันไม่ให้เว็บบราวเซอร์ทำการเด้งซูมภาพเข้าอัตโนมัติ 100%
-
----
-
 ## 🎨 [CPO] [2026-08-27] Competitor & Market Analysis Log (SME Segment)
 
 ### 📌 Summary of Analysis
@@ -316,42 +305,13 @@
 
 ---
 
-## 🎨 [CMO] [2026-08-27] Logo Design Brief Generation Log
+## 👔 [CEO] [2026-08-27] Pricing Strategy & Modular Service Clarity Fix
 
 ### 📌 Summary of Actions
-1. **Created Logo Design Brief:**
-   - ร่างเอกสารบรีฟสำหรับออกแบบโลโก้แบรนด์ [logo_design_brief.md](file:///Users/artthunder/ai_work/ArtSyntax.github.io/product_brief/logo_design_brief.md) ขึ้นมาใหม่
-   - กำหนดทิศทาง (Design Direction) ให้เป็นสไตล์ **Minimal Luxury, Modern Tech, OLED Studio Aesthetic** เน้นความเรียบหรู ดูแพง แต่ทันสมัย
-   - วางแนวคิดโลโก้ (Concepts) ที่เชื่อมโยงระหว่าง "ศิลปะ (Art)" และ "โค้ดดิ้ง/ตรรกะ (Syntax)" ให้ออกมาเป็นสัญลักษณ์แห่งการเติบโต
-   - กำหนดให้โลโก้ต้องรองรับการแสดงผลบน Dark Mode (`#0b0f19`) เป็นหลัก เพื่อให้เข้ากับ [index.html](file:///Users/artthunder/ai_work/ArtSyntax.github.io/index.html) ของเราได้อย่างสมบูรณ์แบบ
-
----
-
-## 💻 [CTO] [2026-08-27] Mobile Form Focus Auto-Zoom Prevention
-1. **Mobile Form Focus Auto-Zoom Prevention (`css/styles.css`):**
-   - แก้ไขปัญหาหน้าเว็บเด้งซูม (Auto-Zoom) บนมือถือ (Mobile Safari / Chrome) เวลาแตะกดช่องกรอกแบบฟอร์ม
-   - กำหนดขนาดฟอนต์ของช่องอินพุตทุกชนิด (`.form-control`, `input`, `textarea`) เป็น **`16px` (`1rem`)** ทั้งใน Base CSS และ `@media (max-width: 768px)` ซึ่งเป็นมาตรฐานระบบปฏิบัติการ iOS/Android ที่ป้องกันไม่ให้เว็บบราวเซอร์ทำการเด้งซูมหน้าเว็บเข้าอัตโนมัติ 100%
-2. **Brand Logo Asset Integration & Font Typography (`index.html`, `css/styles.css`):**
-   - นำไฟล์ไอคอนโลโก้แบรนด์ [`logo.jpeg`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/logo.jpeg) มาประมวลผลลบพื้นหลังสีขาวทั้งส่วนภายนอกและส่วนช่องว่างตรงกลางออกอย่างละเอียด ได้เป็นไฟล์โลโก้โปร่งใส **[`logo.png`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/logo.png)** (Transparent PNG)
-   - ปรับแบบฟอนต์ของชื่อเว็บ/แบรนด์ **`ARTSYNTAX`** บน Header Navbar (`.logo`) ให้ใช้ฟอนต์ **`Plus Jakarta Sans`** (`font-weight: 800; letter-spacing: -0.02em;`) ปรับลุคให้ทันสมัย สไตล์เทคโนโลยีระดับสากล 100%
-   - ปรับขนาดความสูงของรูปโลโก้เป็นขนาดมาตรฐาน 1x ที่ **`34px × 34px`** ในส่วน Header Navigation Bar (`.logo-img`)
-   - ปรับลดระยะ Padding ซ้าย-ขวาของ `.nav-wrapper` บนมือถือ (`@media (max-width: 768px)`) ลงเหลือ **`0.25rem`** ให้ใช้พื้นที่ส่วนกว้างของหน้าจอสมาร์ตโฟนได้อย่างสมบูรณ์แบบ
-   - เปลี่ยนไอคอนปุ่มเปิดเมนูเบอร์เกอร์บนมือถือ (`.mobile-toggle`) จากตัวอักษร Unicode เป็น **SVG Vector Icon** พร้อมจัดวางด้วย Flexbox ให้ไอคอนขีดเมนูอยู่ตรงกลางปุ่มสี่เหลี่ยมอย่างเป๊ะระดับ Pixel-Perfect 100%
-   - ปรับเซตระยะห่างระหว่างรูปโลโก้กับตัวอักษรชื่อแบรนด์เป็น **`gap: 0;`** (นำระยะห่าง Chrome DevTools Purple Gap ช่องว่างตรงกลางออก 100%)
-   - ปรับเพิ่มเอฟเฟกต์ CSS `filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.45))` ให้โลโก้โดดเด่น คมชัด สง่างาม 100%
-
----
-
-## 👔 [CEO] [2026-08-27] Final Holistic Audit & Health Check
-
-### 📌 Summary of Final Review
-1. **Website Codebase & Content Sync:**
-   - เข้าตรวจสอบ [index.html](file:///Users/artthunder/ai_work/ArtSyntax.github.io/index.html) โครงสร้างโค้ดทั้งหมดมีความสมบูรณ์ รองรับหน้าจอ Mobile 100% 
-   - ระบบกัน Zoom บน Mobile Form ถูกต้อง (`font-size: 1rem`)
-   - 4 บริการหลักและ 5-Stage Value Chain ตรงกับ End-to-End Brief ทุกประการ
-2. **Documentation (`product_brief/`):**
-   - เอกสารแกนหลักทั้งหมด (รวมถึง `end_to_end_brief.md`, `sme_website_brief.md`, และเอกสาร PRD) ข้อมูลตรงกับหน้าเว็บแบบบรรทัดต่อบรรทัด
-   - ทีม CPO, CTO, CMO ทำหน้าที่ Audit และ Resolve Conflict ได้อย่างดีเยี่ยม ข้อมูลมีความเป็น **Single Source of Truth**
-3. **Next Step:**
-   - ระบบพร้อมสำหรับการ Launch และทำ GTM (Go-to-Market) สู่กลุ่มเป้าหมาย SME อย่างเป็นทางการ
-
+1. **Pricing Expectation Alignment:**
+   - ตรวจพบว่าการใช้ข้อความ "ดูแลแบบ End-to-End ในงบเริ่มต้น 20,000 บาท" ทำให้เกิดความเข้าใจผิด (Expectation Mismatch) ว่าทุกบริการรวมกันในราคาเดียว
+   - ปรับเปลี่ยนข้อความเพื่ออธิบาย **ความยืดหยุ่น (Modular)** ว่า 20,000 บาท คือสำหรับการ **เริ่มต้นทีละ 1 บริการ** (เช่น งานออกแบบ Prototype, หรือมินิโปรเจกต์)
+2. **Implementation in `index.html` & `product_brief`:**
+   - อัปเดต Hero Section (`#home`): `"ยืดหยุ่นด้วยการเริ่มต้นทีละบริการในงบเพียง 20,000 บาท หรือยกระดับแบบครบวงจร (End-to-End)"`
+   - อัปเดต FAQ Section (`#faq`): `"คุณสามารถเลือกเริ่มต้นทีละ 1 บริการ (เช่น งาน Prototype หรือระบบขนาดเล็ก) ในงบเริ่มต้น 20,000 บาท..."` รวมถึงอัปเดต Schema JSON-LD
+   - อัปเดตรายละเอียดงบประมาณใน `core_product_offerings.md`, `end_to_end_brief.md`, `product_strategy.md`, และ `sme_website_brief.md`

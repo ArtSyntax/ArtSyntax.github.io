@@ -2,7 +2,7 @@
 
 **Company:** ARTSYNTAX | Innovation & Technology Partner  
 **Positioning:** Innovation & Technology Partner | AI, Software & Business Transformation  
-**Target Budget:** เริ่มต้นเพียง 20,000 บาท (สำหรับ SME, Startup, และองค์กรยุคใหม่)  
+**Target Budget:** ยืดหยุ่น เริ่มต้นเพียง 20,000 บาท สำหรับ 1 บริการ/MVP (สำหรับ SME, Startup, และองค์กรยุคใหม่)
 **Document Owner:** Chief Product Officer (CPO)  
 **Date:** 27 August 2026 (Synchronized with Live `index.html`)  
 

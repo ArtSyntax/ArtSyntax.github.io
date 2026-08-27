@@ -26,14 +26,14 @@ ARTSYNTAX เปลี่ยนไอเดียยุทธศาสตร์�
   - ได้ Prototype พร้อมนำไปพัฒนาต่อ
 
 ### 2. AI Consulting & Transformation
-- **Description:** วางกลยุทธ์และออกแบบ AI Solutions ตั้งแต่ AI Readiness, Enterprise RAG ไปจนถึง AI Agents เพื่อยกระดับกระบวนการทำงานขององค์กร
+- **Description:** วางกลยุทธ์และออกแบบ AI Solutions ตั้งแต่ AI Readiness, Enterprise RAG (ระบบ AI ค้นหาข้อมูลและตอบคำถามเอกสารในองค์กร) ไปจนถึง AI Agents เพื่อยกระดับกระบวนการทำงานขององค์กร
 - **Key Outcomes:**
   - ค้นหา AI Use Cases ที่เหมาะกับธุรกิจ
   - ลดงานซ้ำและเพิ่มประสิทธิภาพทีม
   - พร้อมนำ AI ไปใช้งานจริงอย่างเป็นระบบ
 
 ### 3. Software Development & Web
-- **Description:** ออกแบบและพัฒนา Website, Web Application และ Software Solutions ที่เร็ว ยืดหยุ่น ปลอดภัย และพร้อมเชื่อมต่อกับ AI และระบบภายนอก (รองรับ AEO / GEO สำหรับ AI Search Engines)
+- **Description:** ออกแบบและพัฒนา Website, Web Application และ Software Solutions ที่เร็ว ยืดหยุ่น ปลอดภัย รองรับ AEO / GEO (การทำ SEO ยุคใหม่ให้ค้นหาเจอใน ChatGPT / Gemini / Perplexity) และพร้อมเชื่อมต่อกับ AI และระบบภายนอก
 - **Key Outcomes:**
   - ระบบรองรับการเติบโตของธุรกิจ
   - Performance และ User Experience ที่ดี
