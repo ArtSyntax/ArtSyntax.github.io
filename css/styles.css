@@ -384,13 +384,13 @@ button {
   overflow: hidden;
 }
 
-/* Hero Background Ambient Aura Glow Effects (Two Overlapping Glow Groups - Large Size) */
-/* Group 1: Indigo & Purple Glow Blob (Top-Left Offset - Larger) */
+/* Hero Background Ambient Aura Glow Effects (Two Overlapping Glow Groups - Centered) */
+/* Group 1: Indigo & Purple Glow Blob (Top-Left Offset - Centered) */
 .hero-section::before {
   content: '';
   position: absolute;
   top: 8%;
-  left: 20%;
+  left: 50%;
   width: 580px;
   height: 520px;
   border-radius: 50%;
@@ -406,12 +406,12 @@ button {
   animation: heroGlowOverlapLeft 4.5s ease-in-out infinite alternate;
 }
 
-/* Group 2: Cyan & Emerald Glow Blob (Bottom-Right Offset - Larger) */
+/* Group 2: Cyan & Emerald Glow Blob (Bottom-Right Offset - Centered) */
 .hero-section::after {
   content: '';
   position: absolute;
   top: 20%;
-  left: 35%;
+  left: 50%;
   width: 640px;
   height: 460px;
   border-radius: 50%;
@@ -430,30 +430,30 @@ button {
 @keyframes heroGlowOverlapLeft {
   0% {
     opacity: 0.7;
-    transform: translate(-30px, -20px) scale(0.9);
+    transform: translate(-60%, -20px) scale(0.9);
   }
   50% {
     opacity: 1;
-    transform: translate(20px, 15px) scale(1.12);
+    transform: translate(-42%, 15px) scale(1.12);
   }
   100% {
     opacity: 0.8;
-    transform: translate(-10px, 30px) scale(1.02);
+    transform: translate(-52%, 30px) scale(1.02);
   }
 }
 
 @keyframes heroGlowOverlapRight {
   0% {
     opacity: 0.65;
-    transform: translate(30px, 20px) scale(0.95);
+    transform: translate(-40%, 20px) scale(0.95);
   }
   50% {
     opacity: 0.95;
-    transform: translate(-25px, -15px) scale(1.15);
+    transform: translate(-58%, -15px) scale(1.15);
   }
   100% {
     opacity: 0.75;
-    transform: translate(15px, -30px) scale(1.05);
+    transform: translate(-45%, -30px) scale(1.05);
   }
 }
 
@@ -1060,6 +1060,18 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .hero-section::before {
+    top: 5%;
+    width: 320px;
+    height: 320px;
+    filter: blur(50px);
+  }
+  .hero-section::after {
+    top: 22%;
+    width: 340px;
+    height: 280px;
+    filter: blur(55px);
+  }
   body {
     font-size: 1rem;
   }
