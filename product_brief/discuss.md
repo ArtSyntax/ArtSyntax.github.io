@@ -305,8 +305,6 @@
 
 ---
 
-## 👔 [CEO] [2026-08-27] Pricing Strategy & Modular Service Clarity Fix
-
 ### 📌 Summary of Actions
 1. **Pricing Expectation Alignment:**
    - ตรวจพบว่าการใช้ข้อความ "ดูแลแบบ End-to-End ในงบเริ่มต้น 20,000 บาท" ทำให้เกิดความเข้าใจผิด (Expectation Mismatch) ว่าทุกบริการรวมกันในราคาเดียว
@@ -315,3 +313,10 @@
    - อัปเดต Hero Section (`#home`): `"ยืดหยุ่นด้วยการเริ่มต้นทีละบริการในงบเพียง 20,000 บาท หรือยกระดับแบบครบวงจร (End-to-End)"`
    - อัปเดต FAQ Section (`#faq`): `"คุณสามารถเลือกเริ่มต้นทีละ 1 บริการ (เช่น งาน Prototype หรือระบบขนาดเล็ก) ในงบเริ่มต้น 20,000 บาท..."` รวมถึงอัปเดต Schema JSON-LD
    - อัปเดตรายละเอียดงบประมาณใน `core_product_offerings.md`, `end_to_end_brief.md`, `product_strategy.md`, และ `sme_website_brief.md`
+3. **Tech Stack & Powered By Section Integration (`index.html`, `css/styles.css`):**
+   - เพิ่มเซกชันใหม่ **`Powered By`** ในตำแหน่ง Section 6 บน [`index.html`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/index.html) พร้อมลิงก์เมนู `Tech Stack` บน Navbar และ Mobile Drawer
+   - แสดงผลขุมพลังเทคโนโลยี 16 แบรนด์ชั้นนำ: **React, Node.js, TailwindCSS, PostgreSQL, MongoDB, Redis, Apache Kafka, RabbitMQ, ELK Stack, Python, OpenAI, Google Gemini, Claude, AWS, Microsoft Azure, Google Cloud** ด้วย SVG Vector Icons สีแบรนด์แท้ ในดีไซน์ Glassmorphism
+   - จัดวางรูปแบบการแสดงผลทั้งบน Desktop และ Mobile สมดุลที่ **4 คอลัมน์สมบูรณ์แบบ (4 × 4 Grid)** ปรับความกว้างรวมของตารางการ์ดบน Desktop ให้กระชับลงที่ **`max-width: 820px;`** วางกึ่งกลางหน้าจอ สวยงาม พอดี และโปรเฟสชันนัล 100%
+4. **Brand Logo & Tech Stack Asset Alignment (`index.html`, `image/`):**
+   - เปลี่ยนการเรียกใช้โลโก้และรูปภาพไอคอนเทคโนโลยีในเซกชัน **`Powered By`** ทั้งหมด 16 รายการ ให้ดึงรูปภาพจากโฟลเดอร์ภาพรวม **[`image/`](file:///Users/artthunder/ai_work/ArtSyntax.github.io/image/)** โดยตรง โดยอัปเดตใช้ **`image/Apache Kafka.png`** สำหรับ Apache Kafka
+   - เพิ่มสีพื้นหลังและขอบกระจกจางๆ ตามเฉดสีประจำแบรนด์ของแต่ละเทคโนโลยี (**Brand Soft Tinted Backgrounds & Border-Glass**) เช่น สีฟ้าใส React/Tailwind, สีเขียวมรกต OpenAI/Node, สีส้มทอง AWS/RabbitMQ, สีม่วงอเมทิสต์ Gemini/Kafka เพิ่มความมิติ ความพรีเมียม และความสวยงามทรงพลัง 100%
