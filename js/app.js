@@ -1,3 +1,8 @@
+/**
+ * ARTSYNTAX Website Client Logic
+ * Core functionality: Mobile Drawer, Scroll Reveal Observer, Custom Form Validation
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   initScrollReveal();
@@ -5,8 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. Mobile Drawer Navigation Controller (from artsyntax.app)
+   1. MOBILE DRAWER NAVIGATION CONTROLLER
    ========================================================================== */
+/**
+ * Toggles the full-screen mobile menu drawer on hamburger click
+ * and automatically closes when any menu link is clicked.
+ */
 function initMobileDrawer() {
   const toggleBtn = document.getElementById('mobileToggle');
   const drawer = document.getElementById('mobileDrawer');
@@ -26,7 +35,7 @@ function initMobileDrawer() {
     }
   });
 
-  // Close drawer on link click
+  // Close drawer when any navigation link is clicked
   const links = drawer.querySelectorAll('.mobile-nav-link, .btn');
   links.forEach(link => {
     link.addEventListener('click', () => {
@@ -38,8 +47,12 @@ function initMobileDrawer() {
 }
 
 /* ==========================================================================
-   2. Scroll Reveal Animations (Micro-interactions)
+   2. SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
    ========================================================================== */
+/**
+ * Observes elements with class '.reveal' and activates smooth fade-in
+ * and transform animations when they enter the viewport threshold.
+ */
 function initScrollReveal() {
   const revealElements = document.querySelectorAll('.reveal');
   
@@ -63,13 +76,17 @@ function initScrollReveal() {
 }
 
 /* ==========================================================================
-   3. Custom Glassmorphic Form Validation Error Bubbles
+   3. CUSTOM GLASSMORPHIC FORM VALIDATION ERROR BUBBLES
    ========================================================================== */
+/**
+ * Intercepts form submission and renders dark glassmorphic error speech bubbles
+ * instead of native browser popups for required inputs, email format, and minlength.
+ */
 function initCustomFormValidation() {
   const forms = document.querySelectorAll('form');
 
   forms.forEach(form => {
-    // Intercept form submit event
+    // Intercept form submit event for custom validation check
     form.addEventListener('submit', (e) => {
       let isValid = true;
       const inputs = form.querySelectorAll('.form-control[required]');
@@ -91,7 +108,7 @@ function initCustomFormValidation() {
       }
     });
 
-    // Remove error bubble on typing
+    // Automatically remove error bubble when user types in the field
     const allInputs = form.querySelectorAll('.form-control');
     allInputs.forEach(input => {
       input.addEventListener('input', () => {
@@ -101,6 +118,11 @@ function initCustomFormValidation() {
   });
 }
 
+/**
+ * Validates a single input field against required, email, and minlength rules.
+ * @param {HTMLInputElement|HTMLTextAreaElement} input
+ * @returns {boolean} True if valid, false if invalid
+ */
 function validateInput(input) {
   const val = input.value.trim();
   const minLength = input.getAttribute('minlength') ? parseInt(input.getAttribute('minlength'), 10) : 0;
@@ -121,10 +143,20 @@ function validateInput(input) {
   return true;
 }
 
+/**
+ * Regex check for valid email format
+ * @param {string} email
+ * @returns {boolean}
+ */
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+/**
+ * Renders custom dark glassmorphic error speech bubble under the input field
+ * @param {HTMLElement} input
+ * @param {string} message
+ */
 function showCustomErrorBubble(input, message) {
   input.classList.add('is-invalid');
 
@@ -138,6 +170,10 @@ function showCustomErrorBubble(input, message) {
   input.parentNode.appendChild(bubble);
 }
 
+/**
+ * Removes custom error bubble and invalid class from an input field
+ * @param {HTMLElement} input
+ */
 function removeErrorBubble(input) {
   input.classList.remove('is-invalid');
   const existingBubble = input.parentNode.querySelector('.custom-error-bubble');
@@ -146,6 +182,11 @@ function removeErrorBubble(input) {
   }
 }
 
+/**
+ * Extracts friendly label text for form validation messages
+ * @param {HTMLElement} input
+ * @returns {string}
+ */
 function getLabelText(input) {
   const label = input.parentNode.querySelector('label');
   if (label) {

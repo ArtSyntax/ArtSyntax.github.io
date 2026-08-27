@@ -1,3 +1,21 @@
+/* ==========================================================================
+   ARTSYNTAX GLOBAL STYLESHEET
+   --------------------------------------------------------------------------
+   TABLE OF CONTENTS:
+   1. DESIGN TOKENS & ROOT VARIABLES
+   2. RESET & BASE ELEMENTS
+   3. TYPOGRAPHY HIERARCHY
+   4. UTILITY CONTAINERS & CARDS
+   5. NAVIGATION BAR & MOBILE DRAWER
+   6. HERO SECTION
+   7. TRANSFORMATION FRAMEWORK (IDEA TO GROWTH)
+   8. SERVICES & BENTO CARDS
+   9. KEY OUTCOMES COMPONENT
+   10. CONTACT FORM & CUSTOM ERROR BUBBLE
+   11. FOOTER & SCROLL REVEAL ANIMATIONS
+   12. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
@@ -353,7 +371,11 @@ button {
   align-items: center;
   text-align: center;
   max-width: 880px;
-  margin: 0 auto;
+  margin: max(2rem, calc((100% - 880px) / 2)) auto;
+}
+
+.hero-grid.reveal.active {
+  margin: max(2rem, calc((100% - 880px) / 2)) auto;
 }
 
 .hero-title {
