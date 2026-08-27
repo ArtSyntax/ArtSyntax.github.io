@@ -35,7 +35,7 @@ Sitemap Anchors (index.html):
 ├── #services (Services: 4 Core Service Bento Cards & Key Outcomes)
 ├── #why-us (Why ARTSYNTAX: 4 Differentiators Cards)
 ├── #faq (Executive FAQ: 7 Key Questions & Answers)
-└── #contact (Contact Form: Lead Generation to thanyavuth@outlook.com)
+└── #contact (Contact Form: Lead Generation to artsyntax.app@gmail.com)
 ```
 
 ---
@@ -51,7 +51,7 @@ Sitemap Anchors (index.html):
 * **FAQPage Schema (`@type: FAQPage`):** Map 7 คำถามบนหน้าเว็บ (`#faq`) เข้าสู่ JSON-LD เพื่อให้ Google/AI ดึงไปตอบเป็น Rich Snippets ได้โดยตรง
 
 ### 3.2 Lead Capture Form (`#contact`)
-* **Endpoint:** `https://formsubmit.co/thanyavuth@outlook.com` (id: `contactForm`)
+* **Endpoint:** `https://formsubmit.co/artsyntax.app@gmail.com` (id: `contactForm`)
 * **Form Fields:**
   * `name` (ชื่อ - นามสกุล)
   * `email` (อีเมลองค์กร)

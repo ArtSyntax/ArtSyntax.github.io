@@ -67,7 +67,7 @@
    - ย่อยข้อความบริการ 3 เสาหลักใน Bento Grid ให้เข้าใจง่ายสำหรับกลุ่มผู้ประกอบการ SME และบริษัทเปิดใหม่
 
 4. **Lead Generation & Mobile Readiness:**
-   - ตั้งค่าฟอร์มติดต่อส่งไปยัง `thanyavuth@outlook.com` 
+   - ตั้งค่าฟอร์มติดต่อส่งไปยัง `artsyntax.app@gmail.com` 
    - แก้ไขการตัดคำปุ่มนัดหมายบนอุปกรณ์เคลื่อนที่ (`white-space: normal`, `word-break: break-word`) ป้องกันปุ่มล้นหรือทับซ้อนในทุกหน้าจอ
 
 ---
@@ -354,6 +354,8 @@
    - เพิ่มปุ่มเพิ่มเพื่อน LINE Official Account (`https://lin.ee/Y8pm6YV`) ในส่วน Contact Section (`#contact`) ใต้อีเมลติดต่อหลัก
    - พัฒนากล่องแชทลอยปฏิสัมพันธ์สไตล์ Glassmorphism (**Glassmorphic Interactive Floating Chat Box Widget**) ที่มุมขวาล่างของหน้าจอทุกอุปกรณ์
    - จัดการระยะตำแหน่งกล่องแชทลอยบนมือถือ (`@media (max-width: 768px)`) ให้ขยับชิดขวา (**right: 1rem, left: auto, max-width: 310px, bottom: 4.8rem**) จัดวางลอยตรงแนวกับปุ่มแชทลอยทรงกลมอย่างระเบียบ สวยงาม ป้องกันการซ้อนทับกัน 100%
+9. **Contact Email Address Update (`artsyntax.app@gmail.com`):**
+   - ปรับเปลี่ยนอีเมลรับข้อมูลติดต่อหลักทั่วทั้งระบบเป็น **`artsyntax.app@gmail.com`** ครบถ้วนทุกจุด ทั้ง HTML Contact Card, FormSubmit.co AJAX Endpoint (`https://formsubmit.co/ajax/artsyntax.app@gmail.com`), JSON-LD Schema (AEO/SEO), เอกสาร `llms.txt` และเอกสาร Product Briefs ทั้งหมด 100%
 
 ---
 
@@ -366,3 +368,33 @@ CEO อนุมัติให้สร้างปุ่มแชท LINE แ�
 4. **Animation:** ขอให้มีเอฟเฟกต์ `Pulse` หรือวงแหวนเรืองแสงกระเพื่อมเบาๆ เพื่อดึงดูดสายตา (แนะนำให้ใช้ CSS `@keyframes pulse`)
 5. **Responsiveness:** ตรวจสอบให้แน่ใจว่าปุ่มลอยตัวนี้ **ไม่บัง** แบนเนอร์ Cookie Consent บนหน้าจอมือถือ (อาจจะต้องขยับ `bottom` ขึ้นมาเวลาแถบคุกกี้ยังไม่ถูกกดยอมรับ)
 **Action:** ฝากทีม Dev นำสเปกนี้ไปเขียนโค้ด HTML/CSS ใส่ลงใน `index.html` และ `styles.css` โดยด่วนครับ
+
+---
+
+## 👔 [CEO] [2026-08-28] Operations Update & Strategic Weakness Analysis (Vulnerability Check)
+
+### 📌 Summary of Review
+1. **Recent Updates Acknowledged:**
+   - รับทราบการติดตั้ง GA4, Meta Pixel และระบบ Consent Management (PDPA) สมบูรณ์แบบ
+   - รับทราบการเพิ่ม Floating LINE Chat Bubble เพื่อกระตุ้น Conversion
+   - รับทราบการตัดสินใจระงับใช้ `logo.svg` เพื่อรักษามาตรฐานดีไซน์
+
+2. **Strategic Weaknesses (จุดอ่อนที่พบ) & Mitigation Plan:**
+   จากการประเมินทิศทางร่วมกับเอกสารวิเคราะห์คู่แข่ง (Competitor Analysis) ผมพบ "จุดอ่อน" และความเสี่ยง 3 ประการที่ต้องรีบอุดช่องโหว่:
+
+   - 🔴 **Weakness 1: คำศัพท์เทคนิค (Technical Jargon) ล้นเกินไปสำหรับ SME**
+     - *Issue:* คำว่า RAG, AEO/GEO, Next.js, Scrum อาจทำให้เจ้าของธุรกิจ SME ขนาดเล็กสับสนว่ามันคืออะไรและได้ประโยชน์อะไร
+     - *Mitigation:* ทีม BD และ CMO ต้องแปลศัพท์เหล่านี้ให้เป็น **"ผลลัพธ์ (Business Outcomes)"** เวลาตอบแชท LINE หรือพรีเซนต์งาน เช่น เปลี่ยน "RAG" เป็น "ระบบ AI ถามตอบจากเอกสารบริษัทคุณ", เปลี่ยน "AEO" เป็น "ทำเว็บให้ AI อย่าง ChatGPT ค้นหาธุรกิจคุณเจอ"
+
+   - 🔴 **Weakness 2: กับดักราคา 20,000 บาท (Margin Trap)**
+     - *Issue:* การโฆษณาว่ารับทำ End-to-End ในราคา 20,000 บาท อาจทำให้ลูกค้าคาดหวังระบบสเกลใหญ่ในราคาถูก ซึ่งจะทำให้ทีมงาน Burnout และขาดทุน
+     - *Mitigation:* CPO ต้องไปทำตารางขอบเขตบริการ (Service Scope Boundary) ให้ชัดเจน ว่างบ 20k คือการทำ **"Discovery Sprint & Prototype"** หรือ Pilot Project เล็กๆ เท่านั้น หากต้องการพัฒนาระบบเต็มรูปแบบ ต้องเป็นแพ็กเกจระดับ 100k-300k ตามที่วางไว้ เพื่อป้องกันขอบเขตงานงอก (Scope Creep)
+
+   - 🔴 **Weakness 3: มีระบบ Tracking แต่ขาด Traffic Strategy**
+     - *Issue:* เราติดตั้ง GA4, Pixel สวยงาม มีระบบเก็บ Lead ดีเยี่ยม แต่เรายังไม่มีกลยุทธ์การดึงคนเข้าเว็บ (Inbound Traffic) 
+     - *Mitigation:* สั่งการให้ CMO วางแผน **Digital Marketing & Content Strategy** ทันที เริ่มจากการยิง Ads บน Facebook (ใช้ประโยชน์จาก Pixel ที่ติดไว้) หรือ LinkedIn B2B โดยทำคอนเทนต์เจาะ Pain Point SME เช่น "ทำไมเว็บคุณถึงตกยุคในยุค AI Search?"
+
+3. **Next Step:**
+   - CPO เตรียมจัดแพ็กเกจ Productized Services (20k vs 100k vs 300k) ให้ชัด
+   - CMO วางแผนยิง Ads และทำ Content ดึงคนเข้าเว็บ
+

@@ -78,7 +78,7 @@ Q: รับดูแลต่อหลังพัฒนาเสร็จห�
 A: มี เรามีบริการ Maintenance & Support รวมถึงการปรับปรุงและพัฒนาระบบอย่างต่อเนื่อง พร้อมให้คำแนะนำด้าน Security และ Data Privacy ตามลักษณะและข้อกำหนดของแต่ละระบบ
 
 Q: ติดต่อ ARTSYNTAX ได้ทางไหนบ้าง?
-A: สามารถนัดหมายพูดคุยประเมินราคาฟรีผ่านเว็บไซต์ หรือส่งอีเมลมาที่ thanyavuth@outlook.com
+A: สามารถนัดหมายพูดคุยประเมินราคาฟรีผ่านเว็บไซต์ หรือส่งอีเมลมาที่ artsyntax.app@gmail.com
 
 ---
 
@@ -88,4 +88,4 @@ A: สามารถนัดหมายพูดคุยประเมิ�
 - **Company Name:** ARTSYNTAX (Innovation & Technology Partner)
 - **Tagline:** From Strategy to Growth. Innovation Beyond Software.
 - **Starting Budget:** เริ่มต้นเพียง 20,000 บาท
-- **Contact Email:** thanyavuth@outlook.com
+- **Contact Email:** artsyntax.app@gmail.com

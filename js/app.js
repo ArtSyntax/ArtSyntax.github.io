@@ -244,7 +244,7 @@ function handleFormSubmit(form) {
 
   const formData = new FormData(form);
 
-  fetch('https://formsubmit.co/ajax/thanyavuth@outlook.com', {
+  fetch('https://formsubmit.co/ajax/artsyntax.app@gmail.com', {
     method: 'POST',
     body: formData,
     headers: {
