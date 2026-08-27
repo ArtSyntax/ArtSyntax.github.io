@@ -8,7 +8,40 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initCustomFormValidation();
   initCookieConsent();
+  initChatWidget();
 });
+
+/* ==========================================================================
+   5. INTERACTIVE FLOATING CHAT WIDGET CONTROLLER
+   ========================================================================== */
+/**
+ * Toggles the Glassmorphic Interactive Floating Chat Box Widget
+ */
+function initChatWidget() {
+  const btnToggle = document.getElementById('btnToggleChatWidget');
+  const btnClose = document.getElementById('btnCloseChatWidget');
+  const chatCard = document.getElementById('chatWidgetCard');
+  const btnGoToForm = document.getElementById('btnGoToForm');
+
+  if (!btnToggle || !chatCard) return;
+
+  btnToggle.addEventListener('click', () => {
+    const isHidden = chatCard.style.display === 'none' || !chatCard.style.display;
+    chatCard.style.display = isHidden ? 'block' : 'none';
+  });
+
+  if (btnClose) {
+    btnClose.addEventListener('click', () => {
+      chatCard.style.display = 'none';
+    });
+  }
+
+  if (btnGoToForm) {
+    btnGoToForm.addEventListener('click', () => {
+      chatCard.style.display = 'none';
+    });
+  }
+}
 
 /* ==========================================================================
    4. PDPA & GDPR COOKIE CONSENT CONTROLLER

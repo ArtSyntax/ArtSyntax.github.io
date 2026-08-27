@@ -676,6 +676,9 @@
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                             thanyavuth@outlook.com
                         </p>
+                        <div style="margin-top: 1.25rem;">
+                            <a href="https://lin.ee/Y8pm6YV" target="_blank" rel="noopener noreferrer"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน LINE Official Account" height="36" style="border: 0; display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></a>
+                        </div>
                     </div>
 
                     <div>
@@ -739,6 +742,42 @@
             <p>&copy; 2026 ARTSYNTAX - Innovation & Technology Partner. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Interactive Glassmorphic Floating Chat Box Widget -->
+    <div id="chatWidgetCard" class="chat-widget-card" style="display: none;">
+        <div class="chat-widget-header">
+            <div class="chat-avatar-box">
+                <img src="image/logo.png" alt="ARTSYNTAX Avatar" class="chat-avatar-img">
+                <span class="chat-online-dot"></span>
+            </div>
+            <div class="chat-header-info">
+                <span class="chat-header-title">ARTSYNTAX Specialist</span>
+                <span class="chat-header-status">🟢 พร้อมให้คำปรึกษาฟรี</span>
+            </div>
+            <button type="button" id="btnCloseChatWidget" class="btn-close-chat" aria-label="ปิดกล่องแชท">✕</button>
+        </div>
+        <div class="chat-widget-body">
+            <div class="chat-bubble-msg">
+                <p>สวัสดีครับ! 👋 มีโจทย์ด้าน <strong>AI, Software</strong> หรือ <strong>Innovation</strong> พูดคุยกับทีม ARTSYNTAX ได้เลยครับ เราพร้อมช่วยสำรวจโจทย์และหาแนวทางที่เหมาะกับธุรกิจของคุณ</p>
+                <span class="chat-msg-time">Just now</span>
+            </div>
+        </div>
+        <div class="chat-widget-footer">
+            <a href="https://lin.ee/Y8pm6YV" target="_blank" rel="noopener noreferrer" class="btn btn-chat-line">
+                <img src="image/Line.svg" alt="LINE" class="line-btn-icon">
+                <span>เริ่มแชททันทีผ่าน LINE OA</span>
+            </a>
+            <a href="#contact" id="btnGoToForm" class="btn btn-chat-form">
+                <span>นัดคุยกับผู้เชี่ยวชาญ</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating Chat Trigger Button -->
+    <button type="button" id="btnToggleChatWidget" class="line-float-bubble" aria-label="เปิดกล่องแชทปรึกษาฟรี">
+        <img src="image/Line.svg" alt="LINE" class="line-bubble-icon">
+        <span class="line-bubble-tooltip">ปรึกษาผู้เชี่ยวชาญ</span>
+    </button>
 
     <!-- Glassmorphic Cookie Consent Banner (PDPA / GDPR Compliant) -->
     <div id="cookieBanner" class="cookie-banner" style="display: none;">

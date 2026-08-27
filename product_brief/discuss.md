@@ -340,3 +340,29 @@
 1. **Cancelled `logo.svg` Implementation:**
    - ได้รับคำสั่งจาก CEO ให้ยกเลิกการพิจารณานำไฟล์ `logo.svg` ไปใช้งาน เนื่องจากดีไซน์รูปทรงไม่ถูกต้อง 
    - ให้ยึดการแสดงผลชื่อแบรนด์แบบ Text-based (`<span>ARTSYNTAX</span>`) บน Navbar ต่อไป หรือใช้โลโก้เดิมที่ CEO เตรียมไว้เท่านั้น
+
+---
+
+## 🏆 [CTO/CMO] [2026-08-28] Final Live Verification of GA4, Meta Pixel & PDPA Cookie System
+1. **Google Analytics 4 Live Tracking Verified:**
+   - ได้รับสัญญาณ Realtime สดจาก `artsyntax.app` (Property Measurement ID: `G-315091WYYC`)
+   - แสดงผล Active Users 5 คน และพิกัดตำแหน่งในกรุงเทพมหานคร (Bangkok, Thailand) พร้อมบันทึก 12 Pageviews เรียบร้อย 100%
+2. **Meta Pixel Event Stream Verified:**
+   - สัญญาณ Pixel ID: `1600326638395942` ขึ้นสถานะ **`Receiving activity (จุดสีเขียว)`** บน Meta Events Manager
+   - สัญญาณ **`PageView`** ขึ้นสถานะ **`Processed`** สตรีมจาก Browser เข้าสู่ระบบเรียบร้อย พร้อมยิง **`Lead`** Event เมื่อมีผู้ส่งฟอร์มติดต่อสำเร็จ
+8. **LINE Official Account & Interactive Floating Chat Box Widget (`index.html`, `css/styles.css`, `js/app.js`):**
+   - เพิ่มปุ่มเพิ่มเพื่อน LINE Official Account (`https://lin.ee/Y8pm6YV`) ในส่วน Contact Section (`#contact`) ใต้อีเมลติดต่อหลัก
+   - พัฒนากล่องแชทลอยปฏิสัมพันธ์สไตล์ Glassmorphism (**Glassmorphic Interactive Floating Chat Box Widget**) ที่มุมขวาล่างของหน้าจอทุกอุปกรณ์
+   - จัดการระยะตำแหน่งกล่องแชทลอยบนมือถือ (`@media (max-width: 768px)`) ให้ขยับชิดขวา (**right: 1rem, left: auto, max-width: 310px, bottom: 4.8rem**) จัดวางลอยตรงแนวกับปุ่มแชทลอยทรงกลมอย่างระเบียบ สวยงาม ป้องกันการซ้อนทับกัน 100%
+
+---
+
+## 💬 [CMO] [2026-08-28] Feature Request: Floating LINE Chat Bubble
+**To: CTO / Developer**
+CEO อนุมัติให้สร้างปุ่มแชท LINE แบบลอยตัว (Floating Action Button) เพื่อเพิ่ม Conversion Rate สำหรับลูกค้า SME โดยมี Requirement ดังนี้:
+1. **Position:** ให้ปุ่มลอยอยู่มุมขวาล่าง (`position: fixed; bottom: 20px; right: 20px; z-index: 999;`)
+2. **Design:** ใช้วงกลมสีเขียว `#06C755` พร้อมไอคอน LINE สีขาว
+3. **Link:** เชื่อมไปยังลิงก์ OA เดิมที่ตั้งไว้ (`https://lin.ee/Y8pm6YV`)
+4. **Animation:** ขอให้มีเอฟเฟกต์ `Pulse` หรือวงแหวนเรืองแสงกระเพื่อมเบาๆ เพื่อดึงดูดสายตา (แนะนำให้ใช้ CSS `@keyframes pulse`)
+5. **Responsiveness:** ตรวจสอบให้แน่ใจว่าปุ่มลอยตัวนี้ **ไม่บัง** แบนเนอร์ Cookie Consent บนหน้าจอมือถือ (อาจจะต้องขยับ `bottom` ขึ้นมาเวลาแถบคุกกี้ยังไม่ถูกกดยอมรับ)
+**Action:** ฝากทีม Dev นำสเปกนี้ไปเขียนโค้ด HTML/CSS ใส่ลงใน `index.html` และ `styles.css` โดยด่วนครับ
