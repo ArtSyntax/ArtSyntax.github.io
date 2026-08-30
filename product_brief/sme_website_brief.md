@@ -37,6 +37,7 @@
 * **Differentiators:** `10+ Years Technology Experience`, `Enterprise Architecture`, `Business × Technology × Execution`, `End-to-End Partnership`
 * **FAQ:** มี 7 คำถาม (ครอบคลุม SME, อธิบายชัดเจนว่า 20,000 บาท คือการเริ่มต้น 1 บริการ ไม่ใช่แบบ E2E, ทีม IT, เวลาพัฒนา, Project เล็ก, ดูแลหลังพัฒนา, และช่องทางติดต่อ) พร้อมเพิ่มโครงสร้าง Schema `@type: "FAQPage"`
 * **Contact Action:** พูดคุยกับผู้เชี่ยวชาญเพื่อสำรวจโจทย์ธุรกิจ **เริ่มต้นพูดคุยฟรี ไม่มีข้อผูกมัด**
+* **Interactive Element:** เพิ่มปุ่มแอด LINE สไตล์แบนเนอร์ด้านล่างอีเมลติดต่อ
 * **Form Action Endpoint:** `https://formsubmit.co/artsyntax.app@gmail.com`
 * **Form Fields:** `ชื่อ - นามสกุล`, `อีเมลองค์กร`, **`เบอร์โทรศัพท์ติดต่อ` (เพิ่มใหม่)**, `ชื่อองค์กร (Optional)`, `ตำแหน่งงาน (Optional)`, `รายละเอียดเบื้องต้น`
 * **Form Success:** แสดง Glassmorphic Success Message Card เมื่อส่งแบบฟอร์มสำเร็จ

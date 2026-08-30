@@ -42,6 +42,11 @@ Sitemap Anchors (index.html):
 
 ## 3. Technical Requirements & Feature Specifications
 
+### 3.0 Analytics, PDPA & Tech Partners
+* **Tracking:** Google Analytics 4 (G-315091WYYC) & Meta Pixel (1600326638395942)
+* **Cookie Consent:** Glassmorphic Banner (PDPA/GDPR Compliant) - Session-only decline logic, LocalStorage acceptance.
+* **Tech Partners Grid (`#partners`):** 16 Enterprise Tech Stacks (React, Node.js, TailwindCSS, PostgreSQL, MongoDB, Redis, Kafka, RabbitMQ, ELK, Python, OpenAI, Gemini, Claude, AWS, Azure, Google Cloud).
+
 ### 3.1 Structured Data (JSON-LD) Specification & AEO
 * **Organization Schema (`@type: ProfessionalService`):**
   * `name: "ARTSYNTAX"`, `url: "https://artsyntax.app/"`
@@ -50,7 +55,8 @@ Sitemap Anchors (index.html):
 * **hasOfferCatalog (OfferCatalog):** ครอบคลุมทั้ง 4 บริการหลักเพื่อสนับสนุน AI Search Crawlers
 * **FAQPage Schema (`@type: FAQPage`):** Map 7 คำถามบนหน้าเว็บ (`#faq`) เข้าสู่ JSON-LD เพื่อให้ Google/AI ดึงไปตอบเป็น Rich Snippets ได้โดยตรง
 
-### 3.2 Lead Capture Form (`#contact`)
+### 3.2 Lead Capture & Interaction (`#contact` & LINE OA)
+* **Interactive Chat Widget:** Floating Glassmorphic Chat Widget linking to LINE OA (https://lin.ee/Y8pm6YV) with Pulse animation.
 * **Endpoint:** `https://formsubmit.co/artsyntax.app@gmail.com` (id: `contactForm`)
 * **Form Fields:**
   * `name` (ชื่อ - นามสกุล)

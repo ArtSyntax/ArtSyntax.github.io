@@ -427,3 +427,153 @@ CEO อนุมัติให้สร้างปุ่มแชท LINE แ�
    - CPO เตรียมจัดแพ็กเกจ Productized Services (20k vs 100k vs 300k) ให้ชัด
    - CMO วางแผนยิง Ads และทำ Content ดึงคนเข้าเว็บ
 
+---
+
+## 🚀 [CTO/CMO] [2026-08-28] Master Web Architecture & Full Changelog Status Report
+
+### 📌 Summary of Core Web Architecture & Active Features
+1. **Glassmorphic UI & Visual Design System:**
+   - Dark Mode Base (`#030712` / `#0b0f19`) พร้อมเอฟเฟกต์กระจกซ้อนทับ Glassmorphic Backdrop Blur (`blur(16px)` / `border-color: rgba(255,255,255,0.1)`)
+   - ชุดสีหลักประจำแบรนด์: Indigo (`#6366f1`), Cyan (`#38bdf8`), Emerald (`#10b981`), Violet (`#8b5cf6`), LINE Green (`#06C755`)
+
+2. **Hero Section Dual Overlapping Ambient Aura Glow:**
+   - แสงออร่าเรืองรองหลังส่วน Hero แบบ 2 กลุ่มทรงกลมซ้อนเหลื่อมกัน (`580px × 520px` Indigo & Purple + `640px × 460px` Cyan & Emerald)
+   - จัดตำแหน่งยึดจุดศูนย์กลางแนวนอน 50% (`left: 50%`) พร้อมการสเกลขนาดสำหรับหน้าจอมือถืออัตโนมัติ (`320px` & `340px`) บน `@media (max-width: 768px)`
+
+3. **Dynamic Navbar CTA Button Scroll Observer:**
+   - ควบคุมด้วยระบบ `IntersectionObserver` ซ่อนปุ่ม "พูดคุยกับผู้เชี่ยวชาญ" บน Navbar เมื่ออยู่ที่ส่วนบนสุดของหน้าจอ
+   - ค่อยๆ ปรากฏขึ้นอย่างนุ่มนวล (Fade-in & Slide-down) เมื่อผู้ใช้เลื่อนหน้าจอลงจนปุ่มหลักบน Hero Section พ้นจากสายตาไป
+
+4. **Section 6: Trusted Technology Partners (Grid 4×2 Layout - 8 Global Brands):**
+   - **แถวที่ 1:** `Gemini`, `OpenAI`, `Claude`, `Redis`
+   - **แถวที่ 2:** `Google Cloud`, `Azure`, `AWS`, `Firebase`
+
+5. **Interactive Glassmorphic Floating Chat Box Widget & LINE OA Button:**
+   - ปุ่มแชทลอยมุมขวาล่าง (`#06C755`, ไอคอน `image/Line.svg` ขนาด `32px × 32px`, เอฟเฟกต์ `pulse`)
+   - กล่องแชท Glassmorphic Popup พร้อมสถานะออนไลน์ 🟢, ข้อความต้อนรับแบบเป็นกันเอง, ปุ่มกดเพิ่มเพื่อน LINE OA (`https://lin.ee/Y8pm6YV`) และปุ่มนำทางไปยังฟอร์มติดต่อ
+   - รองรับการแสดงผลบนมือถือขยับชิดขวาอย่างเป็นระเบียบ (`right: 1rem`, `bottom: 4.8rem`, `max-width: 310px`)
+
+6. **PDPA Cookie Consent Banner & Dynamic Privacy Control:**
+   - ปุ่มยอมรับทั้งหมด (`btnAccept`): บันทึกสถานะ `'accepted'` ลงใน `localStorage` ถาวร เปิดการใช้งาน GA4 (`G-315091WYYC`) และ Meta Pixel (`1600326638395942`)
+   - ปุ่มปฏิเสธ (`btnDecline`): ระงับการเก็บข้อมูล Tracking เฉพาะ Session ปัจจุบันโดยไม่บันทึกความยินยอมถาวร เพื่อแสดงแบนเนอร์ถามใหม่อัตโนมัติเมื่อรีเฟรชหรือกลับเข้ามาใช้งานใหม่
+
+7. **Contact Email Address & Global Data Synchronization:**
+   - ปรับใช้อีเมลรับข้อมูลติดต่อหลัก **`artsyntax.app@gmail.com`** ครบถ้วนทุกจุดในระบบ (HTML Contact Card, FormSubmit.co AJAX Endpoint, JSON-LD Structured Data, `llms.txt` และเอกสาร Product Briefs ทั้งหมด)
+
+8. **Mobile Usability & Navigation System:**
+   - ปุ่มเปิด/ปิดเมนูมือถือ (`.mobile-toggle`) ขนาด `44px × 44px` Touch Target สลับการแสดงผลด้วยไอคอนเวกเตอร์ SVG (`20px × 20px`, `flex-shrink: 0`) นิ่งสนิท ไร้การกระตุกหรือหดเล็กลงเมื่อกดใช้งาน
+   - กำหนด `<meta charset="UTF-8">` ที่บรรทัดแรกภายใน `<head>` แก้ไขปัญหา Mojibake / Character Encoding 100%
+
+
+---
+
+## 🎨 [CPO/CMO] [2026-08-28] Final Conversion Funnel Audit & Portfolio Strategy Log
+
+### 📌 Summary of Strategic Audit & Next Actions
+1. **Conversion Funnel Success (LINE OA & Trust Elements):**
+   - การติดตั้ง **Interactive Floating Chat Box Widget (LINE OA)** ร่วมกับ **Trusted Technology Partners** และระบบ **PDPA Cookie Consent** ทำให้เว็บไซต์ปัจจุบันมี Conversion Funnel ที่ทรงพลัง ไร้รอยต่อ และลด Friction ในการติดต่อสำหรับลูกค้า SME ไทยได้อย่างสมบูรณ์แบบ
+
+2. **Identified Final Deal-breaker (Zero Visual Evidence):**
+   - **จุดอ่อนสุดท้าย:** เว็บไซต์ยังมีเพียงข้อความและไอคอน (Text & Icons) ขาดภาพผลงานเชิงประจักษ์ (Portfolio) หรือ Visual Mockups (เช่น หน้าจอ UI แอปพลิเคชัน หรือ Dashboard สวยๆ)
+   - **ความเสี่ยง:** ลูกค้าระดับ Budget 20,000 - 300,000 บาท อาจเกิดความลังเลและไม่มั่นใจในทักษะด้านออกแบบ (Innovation Design / UX UI) หากไม่เห็นภาพตัวอย่างผลงานก่อนตัดสินใจ
+
+### 4. Portfolio Generation (แก้ปัญหาเว็บขาดภาพผลงาน)
+- **Action:** หากเรายังไม่มีลูกค้าจริง ผมสามารถใช้ความสามารถในการ Gen ภาพ (AI Image Generation) ช่วยสร้าง "ภาพจำลองหน้าจอแอปพลิเคชัน (Mockups)" บนหน้าจอ Macbook/iPhone เพื่อเอาไปแปะในเว็บได้ทันทีครับ
+
+*(รอการอนุมัติจาก CEO: จะให้ผมเริ่มดำเนินการจัดทำเอกสารข้อ 1-2 หรือให้ผม Gen ภาพ Mockup สำหรับข้อ 4 ก่อนดีครับ?)*
+
+---
+
+## 💡 [CMO] [2026-08-28] SME User Feedback Analysis & CPO Product Brief
+**To: CPO (Chief Product Officer)**
+
+ผมเพิ่งได้รับข้อมูล Insight โดยตรงจากกลุ่มเป้าหมาย (เจ้าของร้านค้ารายย่อย กำไร 20k-30k/เดือน) จากเอกสาร `user_feedback.md` ซึ่งมีจุดเปลี่ยนสำคัญที่เราต้องนำมาปรับ Product Strategy ด่วนครับ:
+
+### 📌 Key Insights (สิ่งที่ SME คิดกับเว็บเรา)
+1. **เกือบเสียลูกค้าเพราะศัพท์แสง:** ลูกค้าแวบแรกมองว่า "Microservices, Agile, Enterprise" ดูล้ำเกินไปและแพงชัวร์! แต่มาโดนตก (Hooked) ตรงคำว่า **"เริ่มต้น 20,000 บาท"** ทำให้เขากล้าเปิดใจ 
+2. **ไม่จ่ายเงินซื้อ "สไลด์สวยๆ" เด็ดขาด:** ลูกค้ากลุ่มนี้งบน้อย เขาปฏิเสธการจ่ายเงิน 20,000 บาทเพื่อแลกกับแผนกลยุทธ์บนกระดาษ (Discovery) แต่เขาต้องการ **"ของที่จับต้องได้จริง (Tangible Pilot Project)"**
+3. **จุดคุ้มทุน (ROI Trigger):** ลูกค้ายอมจ่าย 20k-30k ทันที หากเราพิสูจน์ได้ว่า AI ของเราไปทำงานแทนแอดมิน (ที่ปกติต้องจ้างเดือนละ 15,000 บาท) ได้จริง เพราะแปลว่าเขาจะคืนทุนในเวลาไม่ถึง 2 เดือน
+
+### 🛠 CPO Action Items (บรีฟปรับจูนโปรดักส์)
+ฝากทาง CPO นำ Insight นี้ไปปรับแผน Product & Pricing Package (เช่น ใน `pricing_packages.md` หรือ `core_product_offerings.md`) ดังนี้ครับ:
+
+1. **ปรับสเปก "แพ็กเกจ 20,000 บาท" ใหม่ (Tangible Starter Pack):** 
+   - ห้ามขายเป็นแพ็กเกจ "ให้คำปรึกษา" อย่างเดียว
+   - ต้องปรับเป็นแพ็กเกจ **"AI Chatbot พื้นฐาน (ลดงานแอดมิน)"** หรือ **"หน้า Landing Page แบบ AEO (ดึงทราฟฟิก)"** ที่ลูกค้าเอาไปใช้งานจริงเพื่อดูผลลัพธ์ (Proof of Concept) ได้ทันที
+2. **เพิ่มเงื่อนไข Fixed Price / No Scope Creep:** 
+   - SME กลัวงบบานปลายที่สุด CPO ต้องเขียนขอบเขตแพ็กเกจ 20k ให้รัดกุมที่สุด ทำกรอบให้ชัดว่า 20k ได้ฟีเจอร์อะไรบ้างแบบเป๊ะๆ เพื่อให้ลูกค้าสบายใจโอนเงิน
+3. **จัดแพ็กเกจ Upsell (ระยะต่อยอด):** 
+   - เมื่อลูกค้าใช้ระบบ 20k แล้วเห็นผล ให้เตรียมแพ็กเกจรายเดือน (Maintenance / API Cost) เดือนละ 1,000 - 3,000 บาท หรือแพ็กเกจขยายสเกล 50k-100k ไว้รอปิดการขายในรอบถัดไปครับ
+
+ฝาก CPO รับช่วงต่อเรื่องโครงสร้างโปรดักส์ด้วยนะครับ ส่วนผม (CMO) จะเอาคำว่า "ประหยัดค่าจ้างแอดมินเดือนละหมื่นห้า" ไปยิงแอดครับ!
+
+---
+
+## 👔 [CEO] [2026-08-28] Deep Vulnerability Analysis & Action Plan (Phase 2)
+
+### 📌 Summary of Deep Analysis
+จากการวิเคราะห์ข้อมูลเชิงลึกทั้งหมดในระบบ ทั้งหน้าเว็บ (`index.html`), ไฟล์ `sitemap.xml`, และโครงสร้างบริการทั้งหมด ผมพบ **"จุดอ่อนที่ตกหล่น (Missing Weaknesses)"** ที่ทีมงานยังมองไม่เห็นเพิ่มเติมอีก 3 ประการ ซึ่งเป็นคอขวดสำคัญในการรับงานระดับ 100k-300k:
+
+🔴 **Missing Weakness 1: โครงสร้างเว็บหน้าเดียว (Single-Page Architecture) ทำลายโอกาส SEO/AEO**
+- *Issue:* เว็บไซต์ปัจจุบันเป็นแบบหน้าเดียว (`index.html`) การนำ 4 บริการที่ลึกซึ้ง (Web, AI, UX, Agile) มารวมในหน้าเดียว ทำให้ Google และ AI Bots (ChatGPT) ไม่สามารถให้คะแนนความเชี่ยวชาญ (Authority) เฉพาะเจาะจงได้ เว็บหน้าเดียวดูเหมือนโบรชัวร์ มากกว่า Technology Partner ระดับองค์กร
+- *Action Plan:* CTO ต้องเตรียมขยายโครงสร้างเว็บจาก Single-page เป็น Multi-page โดยสร้างหน้า Sub-page ย่อยเฉพาะสำหรับแต่ละบริการ (`/services/ai-consulting`, `/services/agile-enablement` ฯลฯ) เพื่อทำ SEO/AEO เชิงลึก
+
+🔴 **Missing Weakness 2: ขาดความน่าเชื่อถือระดับบุคคล (Lack of Founder/Team Credibility)**
+- *Issue:* งานที่ปรึกษา (AI Consulting) และงานโค้ชชิ่ง (Agile/Scrum) เป็นงานที่ลูกค้าซื้อ "ความเชื่อใจในตัวบุคคล" ปัจจุบันเว็บเรามีแต่โลโก้พาร์ทเนอร์ (AWS, Google) แต่ไม่มีส่วนที่บอกเล่าว่า **ทีมงานหรือ Founder คือใคร** (ทั้งที่เรามีจุดแข็งเรื่องประสบการณ์ 10+ ปี ในสาย Banking/Corporate)
+- *Action Plan:* CMO & CPO ต้องออกแบบ Section **"Meet the Team"** หรือ **"Founder's Story"** เพิ่มลงไปในเว็บ เพื่อสร้าง Human Touch และ Trust
+
+🔴 **Missing Weakness 3: คอขวดในการนัดหมาย (Friction in Booking Flow) - [UPDATED: RESOLVED]**
+- *Issue (Previous Assumption):* ปัจจุบันลูกค้าต้องกรอกฟอร์มหรือทัก LINE แล้ว "รอ" ให้เราตอบกลับ
+- *Correction & Resolution:* ได้รับการยืนยันว่า **ลิงก์ LINE OA ปัจจุบันเปิดฟีเจอร์ให้ลูกค้าโทร (LINE Call) หาทีมงานได้ทันที** ถือเป็นการแก้ปัญหาคอขวดได้อย่างชาญฉลาดและตรงกับพฤติกรรมลูกค้า SME ไทยที่ชอบการโทรคุยเพื่อปิดการขาย (Direct Hotline) จุดนี้ถือว่าไม่ใช่จุดอ่อนอีกต่อไป แต่เป็นจุดแข็งด้าน Speed-to-lead!
+
+### 🎯 CEO Directive (คำสั่งการ)
+- **To CMO/CPO:** อนุมัติให้ทำเอกสาร Sales Script และ Pricing Packages (ข้อ 1-2) และสร้างภาพ Mockup Portfolio ด้วย AI ทันที
+- **To CTO:** รับทราบแผน Action Plan Phase 2 ด้านบน และเตรียมตัวขยายโครงสร้างเว็บเป็น Multi-page
+
+---
+
+## 📈 [CMO] [2026-08-28] Sales & Pricing Strategy Deployed
+**To: CEO, CPO, Sales Team**
+ดำเนินการตามคำสั่งของ CEO ข้อ 1-2 เรียบร้อยแล้วครับ โดยผมได้สร้างเอกสารสำคัญ 2 ฉบับลงในระบบเพื่อเป็นคู่มือมาตรฐานในการหาลูกค้า:
+
+1. **`sales_script.md` (พจนานุกรมแปลภาษา Tech & สคริปต์ปิดการขาย)**
+   - แปลงคำว่า RAG, AEO, Agile ให้เป็นภาษา SME (เน้นเรื่องลดงานแอดมิน, หาลูกค้าเพิ่ม)
+   - จัดทำ Roleplay Script สำหรับแอดมิน LINE OA ไว้ตอบคำถามยอดฮิต (เช่น "20k ได้อะไรบ้าง?", "เทคโนโลยีล้ำไป กลัวไม่คุ้ม")
+2. **`pricing_packages.md` (โครงสร้างราคา 3 Tiers)**
+   - **Tier 1 (20k-50k):** Starter Pack ทำเฉพาะของจับต้องได้ (Pilot Project) ไม่ขายกระดาษ
+   - **Tier 2 (100k-200k):** MVP Core System รันระบบเต็มรูปแบบ
+   - **Tier 3 (300k+):** Enterprise Transformation & Agile Coaching
+   - *หมายเหตุ:* โครงสร้างนี้ออกแบบมาเพื่อล็อกสเปก (Fixed Scope) ป้องกันงบบานปลาย (Scope Creep) และช่วยบริหารความคาดหวังของลูกค้าได้อย่างเด็ดขาด
+
+**Status:** พร้อมสำหรับนำไปใช้บรีฟทีมเซลส์ และพร้อมให้ CPO ใช้เป็นแกนในการจัดทำสเปกเชิงลึกครับ
+**Next Action (CMO):** เริ่มดำเนินการ Generate ภาพจำลอง Portfolio Mockups ด้วย AI เพื่อแก้ปัญหาเว็บขาดภาพผลงานครับ
+
+
+
+---
+
+## 👔 [CEO] [2026-08-28] Modular Service & Pricing Policy Clarification
+
+### 📌 Summary of Policy Update
+1. **Modular Service Purchasing (À la carte):**
+   - ลูกค้า **ไม่จำเป็นต้องซื้อบริการแบบเหมาแพ็กเกจ (End-to-End) เสมอไป** 
+   - สามารถเลือกลงทุนเฉพาะบริการที่ตรงกับปัญหา (Pain point) ในขณะนั้นได้ทันที เช่น หากองค์กรมีปัญหาแค่เรื่องระบบการทำงาน (Work Process) ลูกค้าสามารถเลือกซื้อบริการเฉพาะ **Agile, Scrum & OKRs Enablement** (เช่น การจัด In-House Training 1-2 วัน) ได้ในงบประมาณเริ่มต้น **20,000 บาท** ทันที
+2. **Strategic Impact:**
+   - ยืนยันว่าเพดานงบประมาณ "เริ่มต้น 20,000 บาท" สามารถครอบคลุมไปถึงการแยกส่วนซื้อบริการ (Modular) ใดบริการหนึ่งใน 4 เสาหลักได้ ไม่จำกัดอยู่แค่งาน Prototype เท่านั้น
+   - ลดความกดดันของทีม Sales ในการพยายามยัดเยียดขายระบบใหญ่ และเปิดโอกาสให้ Cross-sell / Up-sell ได้ง่ายขึ้นหลังจากพิสูจน์ฝีมือในโปรเจกต์แรก (Land & Expand Strategy)
+
+---
+
+## 🛑 [CEO/CTO] [2026-08-31] Policy Directive: Strict Ban on Python Scripts for Code/Text Modification & Cleanup Status
+
+### 📌 Summary of Policy Directive
+1. **Strict Ban on Python Scripts for File Content Modifications:**
+   - **คำสั่งการเด็ดขาด (Strict Policy Directive):** ห้ามเอเจนต์ (AI Agents), นักพัฒนา (Developers) หรือสมาชิกทุกคนในทีม นำสคริปต์ Python หรือออโตเมชันสคริปต์ภายนอก มาใช้ในการแก้ไข แปลง หรืออัปเดตเนื้อหาไฟล์ซอร์สโค้ดและเอกสารข้อความ (`.md`, `.html`, `.css`, `.js`) ใน Repository โดยเด็ดขาด
+   - **เหตุผล:** เพื่อป้องกันปัญหาไฟล์เสียหาย (File Corruption), การลบข้อมูลสำคัญโดยไม่เจตนา, ปัญหาอักขระเพี้ยน (Character Encoding Errors) และการหลุดการตรวจสอบคุณภาพ (Quality Assurance Bypass)
+   - **แนวทางปฏิบัติ (Mandatory Protocol):** การแก้ไขไฟล์ การปรับปรุงซอร์สโค้ด หรือการแก้ไขเอกสารทั้งหมด ต้องดำเนินการด้วยเครื่องมือแก้ไขไฟล์โดยตรง (`replace_file_content` / `write_to_file`) พร้อมผ่านการตรวจสอบความถูกต้องอย่างละเอียดทุกครั้ง
+
+2. **Clean Cleanup of Temporary Python Scripts:**
+   - ดำเนินการลบไฟล์สคริปต์ Python ชั่วคราวทั้ง 3 ไฟล์ ออกจาก Repository เรียบร้อยแล้ว:
+     - ❌ `patch_pricing.py`
+     - ❌ `patch_sales.py`
+     - ❌ `update_briefs.py`
