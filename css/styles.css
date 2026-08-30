@@ -247,7 +247,9 @@ button {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  gap: 1.25rem;
 }
 
 .nav-link {

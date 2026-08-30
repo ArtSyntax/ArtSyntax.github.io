@@ -364,7 +364,8 @@
      - **แถวที่ 1:** `Gemini` ➔ `OpenAI` ➔ `Claude` ➔ `Redis`
      - **แถวที่ 2:** `Google Cloud` ➔ `Azure` ➔ `AWS` ➔ `Firebase` 100%
 11. **Dynamic Navbar CTA Button Scroll Observer (`index.html`, `css/styles.css`, `js/app.js`):**
-   - พัฒนาระบบ `IntersectionObserver` ควบคุมปุ่ม "พูดคุยกับผู้เชี่ยวชาญ" บน Navbar ให้ซ่อนตัวอยู่เมื่ออยู่ที่ด้านบนสุดของหน้าเว็บ และค่อยๆ แสดงผลขึ้นมา (Fade In & Slide Down Animation) เมื่อผู้ใช้งานเลื่อนหน้าจอลงจนปุ่มหลักบน Hero Section พ้นจากสายตาไป เพิ่มประสบการณ์การใช้งานที่ราบรื่น สะอาดตา 100%
+   - พัฒนาระบบ `IntersectionObserver` พร้อมคำนวณ `rootMargin` อิงตามความสูงของ Navbar จริง (`navbar.offsetHeight`)
+   - ควบคุมให้ปุ่ม "พูดคุยกับผู้เชี่ยวชาญ" บน Navbar แสดงผลทันทีที่ปุ่มหลักบน Hero Section เลื่อนเข้าไปอยู่ใต้ Navbar ทั้งปุ่ม (Trigger ทันทีที่ปุ่ม Hero หลุดใต้แถบ Navbar) และซ่อนตัวกลับอย่างนุ่มนวลเมื่อเลื่อนกลับขึ้นไป เพิ่มประสบการณ์ใช้งานที่แม่นยำ 100%
 12. **Dual Overlapping Hero Section Aura Glow Blobs (`css/styles.css`):**
    - แยกกลุ่มแสงออกเป็น 2 กลุ่มทรงกลมขนาดยอดนิยมที่แผ่ขยายกว้างขวางมากขึ้น (**Larger Dual Overlapping Glow Blobs**):
      - **กลุ่มที่ 1 (เยื้องซ้ายบน):** แสง Indigo & Purple ขยายขนาดเป็น `580px × 520px` (`blur: 75px`)
@@ -548,6 +549,50 @@ CEO อนุมัติให้สร้างปุ่มแชท LINE แ�
 **Status:** พร้อมสำหรับนำไปใช้บรีฟทีมเซลส์ และพร้อมให้ CPO ใช้เป็นแกนในการจัดทำสเปกเชิงลึกครับ
 **Next Action (CMO):** เริ่มดำเนินการ Generate ภาพจำลอง Portfolio Mockups ด้วย AI เพื่อแก้ปัญหาเว็บขาดภาพผลงานครับ
 
+---
+
+## 🔎 [CEO/CMO] [2026-08-31] SEO Indexation & Google Search Console Status
+**Action:** CEO ทำการเพิ่มโดเมน `artsyntax.app` เข้าสู่ Google Search Console สำเร็จแล้ว
+**Observation:** แดชบอร์ดแสดงผลการคลิก (2 Clicks) ในช่วงวันที่ 26-28 ส.ค. แต่ระบบค้นหา `site:artsyntax.app` บน Google ยังไม่แสดงผล (Index Delay)
+**Next Step (Pending):** CEO ต้องทำการบังคับ Submit Sitemap และ Request Indexing เพื่อเร่งให้ AI Search และ Google ปล่อยเว็บขึ้นระบบค้นหาแบบสาธารณะ
+
+---
+
+## 🎯 [CMO/SEO] [2026-08-31] On-Page SEO Keyword Optimization Brief
+**To: CTO / Developer**
+
+จากการวิเคราะห์ SEO เชิงลึกร่วมกับ CEO พบว่าโครงสร้าง On-page ปัจจุบันของ `index.html` ใช้ภาษาอังกฤษและศัพท์กว้างเกินไป ทำให้เราสูญเสียโอกาสในการติดหน้าแรก Google สำหรับกลุ่มเป้าหมาย (SME ไทย) รบกวนทีม Dev อัปเดตโค้ด HTML ตามสเปกด้านล่างนี้ทันที เพื่อให้ทันรอบการทำงานของ Google บอท:
+
+1. **อัปเดต `<title>` (เน้นคีย์เวิร์ดหลัก):**
+   - **จากเดิม:** `<title>ARTSYNTAX — Innovation & Technology Partner | AI, Software & Business Transformation</title>`
+   - **เปลี่ยนเป็น:** `<title>ARTSYNTAX | รับทำเว็บไซต์และระบบ AI สำหรับ SME ครบวงจร</title>`
+
+2. **อัปเดต Hero Section `<h1>` (ดึงดูดลูกค้าและ Google):**
+   - **จากเดิม:** `From Idea to Business Growth.<br><span class="gradient-text">Innovation Beyond Software.</span>`
+   - **เปลี่ยนเป็น:** `รับทำเว็บไซต์และระบบ AI<br><span class="gradient-text">ยกระดับธุรกิจ SME สู่ยุคดิจิทัล</span>`
+
+3. **อัปเดต `<h2>` ทั่วทั้งหน้าเว็บ (แปลเป็นไทยและเสริม SEO Keywords ให้เป็นทิศทางเดียวกันทั้งหมด):**
+   - **Hero Subheading:** เปลี่ยนจาก `<h2>Idea to Business Growth</h2>` ➔ `<h2>เปลี่ยนไอเดียธุรกิจ ให้เติบโตด้วย Digital Transformation</h2>`
+   - **Section Services:** เปลี่ยนจาก `<h2>Services</h2>` ➔ `<h2>บริการรับทำเว็บไซต์และ AI Solution สำหรับ SME</h2>`
+   - **Section Why Us:** เปลี่ยนจาก `<h2>Why ARTSYNTAX</h2>` ➔ `<h2>ทำไม SME ถึงเลือกจ้าง ARTSYNTAX</h2>`
+   - **Section Partners:** เปลี่ยนจาก `<h2>Trusted Technology Partners</h2>` ➔ `<h2>เทคโนโลยีที่คัดสรรเพื่อคุณ</h2>`
+   - **Section FAQ:** เปลี่ยนจาก `<h2>FAQ</h2>` ➔ `<h2>คำถามที่พบบ่อย (FAQ) เรื่องการทำระบบ AI และเว็บไซต์</h2>`
+   - **Section Contact:** เปลี่ยนจาก `<h2>พูดคุยกับผู้เชี่ยวชาญ...</h2>` ➔ `<h2>ปรึกษาผู้เชี่ยวชาญด้านเทคโนโลยีฟรี<br><span class="gradient-text">พร้อมเปลี่ยนไอเดียคุณให้เป็นจริงในงบจำกัด</span></h2>`
+
+4. **อัปเดตชื่อเมนูนำทาง (Navbar & Mobile Menu):**
+   เพื่อให้สอดคล้องกับหัวข้อภาษาไทยและเจาะกลุ่ม SME แบบ 100% ให้ปรับข้อความใน `<a class="nav-link">` และ `<a class="mobile-nav-link">` ดังนี้:
+   - `Solutions` ➔ `โซลูชัน`
+   - `Services` ➔ `บริการของเรา`
+   - `Why ARTSYNTAX` ➔ `ทำไมต้อง ARTSYNTAX`
+   - `Partners` ➔ `เทคโนโลยีที่ใช้`
+   - `FAQ` ➔ `คำถามที่พบบ่อย`
+   - `Contact` ➔ `ติดต่อเรา`
+
+5. **Strategic Architecture Update (Phase 2):**
+   - ขอให้ทีม Dev วางแผนโครงสร้างแยกหน้าเพจ (Multi-page Routing) ออกจาก `index.html` เพื่อทำ SEO เชิงลึกแยกตามบริการ (Web, AI Chatbot, UX/UI) ในเฟสต่อไป
+
+**Action:** ฝาก CTO อัปเดตโค้ดข้อ 1-4 ลงใน `index.html` ทันทีครับ
+
 
 
 ---
@@ -577,3 +622,45 @@ CEO อนุมัติให้สร้างปุ่มแชท LINE แ�
      - ❌ `patch_pricing.py`
      - ❌ `patch_sales.py`
      - ❌ `update_briefs.py`
+
+---
+
+## 📋 [CTO/CMO/CPO] [2026-08-31] Pending Action Items & Master Project Roadmap (Hold Execution)
+
+**Status:** ⏸️ **HOLD / PENDING APPROVAL** (รอดำเนินการ - บันทึกแผนงานเรียบร้อย ยังไม่เริ่มลงมือแก้ไขโค้ดใดๆ)
+
+### 📌 Summary of Pending Tasks & Required Updates (รายการงานที่ต้องทำทั้งหมด)
+
+#### 1. 🔍 On-Page Thai Keyword & SEO/AEO Optimization (`index.html`) - [RESOLVED & DEPLOYED]
+- [x] **`<title>` Tag Update:** เปลี่ยนเป็น `<title>ARTSYNTAX | รับทำเว็บไซต์และระบบ AI สำหรับ SME ครบวงจร</title>`
+- [x] **Hero Headline `<h1>` Update:** เปลี่ยนเป็น `รับทำเว็บไซต์และระบบ AI<br><span class="gradient-text">ยกระดับธุรกิจ SME สู่ยุคดิจิทัล</span>`
+- [x] **Section Headings `<h2>` Thai Keyword Alignment:**
+  - Hero Subheading: `เปลี่ยนไอเดียให้ธุรกิจเติบโตในยุค AI`
+  - Services: `บริการรับทำเว็บไซต์และระบบ AI สำหรับ SME`
+  - Why Us: `ทำไม SME เลือกจ้าง ARTSYNTAX`
+  - Partners: `เทคโนโลยีที่คัดสรรเพื่อคุณ`
+  - FAQ: `คำถามที่พบบ่อย (FAQ) เรื่องการทำระบบ AI และเว็บไซต์`
+  - Contact: `ปรึกษาผู้เชี่ยวชาญด้านเทคโนโลยีฟรี<br><span class="gradient-text">พร้อมเปลี่ยนไอเดียคุณให้เป็นจริงในงบจำกัด</span>`
+- [x] **Navigation Menu Thai Localization (`Navbar & Mobile Drawer` - Verified Anchor Links):**
+  - `href="#solutions"` ➔ `โซลูชันเพื่อคุณ`
+  - `href="#services"` ➔ `บริการของเรา`
+  - `href="#why-us"` ➔ `ทำไมต้อง ARTSYNTAX`
+  - `href="#partners"` ➔ `เทคโนโลยีที่คัดสรร`
+  - `href="#faq"` ➔ `คำถามที่พบบ่อย`
+  - `href="#contact"` ➔ `พูดคุยกับผู้เชี่ยวชาญ`
+  - *Navbar Spacing Optimization:* ปรับลดระยะห่างระหว่างเมนู (`gap: 1.25rem` / `margin: 0; padding: 0;`) เพื่อให้เมนูภาษาไทยแสดงผลกระชับ สวยงาม สบายตา และไม่เบียดกับโลโก้และปุ่ม CTA บนทุกขนาดหน้าจอ 100%
+  - *Navbar CTA Trigger Optimization:* กำหนด `rootMargin: -${navHeight}px` เพื่อให้ปุ่ม CTA บน Navbar ปรากฏขึ้นมาทันทีเมื่อปุ่ม Hero CTA เลื่อนเข้าไปอยู่ใต้ Navbar ทั้งปุ่ม 100%
+- [x] **`llms.txt` Data Synchronization:** ซิงก์ข้อมูลเอกสารสำหรับ AI Search Engine (ChatGPT, Gemini, Perplexity) ให้ตรงกับโครงสร้างคีย์เวิร์ดภาษาไทย ลำดับพาร์ทเนอร์ 8 แบรนด์ ช่องทางติดต่อ LINE OA และอีเมลหลัก `artsyntax.app@gmail.com` 100%
+
+#### 2. 👤 "Meet the Team & Founder Credibility" Section (`index.html`)
+- [ ] เพิ่มส่วนโปรไฟล์ผู้ก่อตั้งและทีมงาน (Founder's Story & Team Profile) เพื่อสร้างความน่าเชื่อถือ (Human Touch & Trust) ชูจุดแข็งประสบการณ์ 10+ ปี สาย Banking / Corporate & Agile Coaching
+
+#### 3. 🖼️ AI-Generated Portfolio Mockups Showcase (`index.html`)
+- [ ] สร้างและแสดงผลภาพจำลองผลงานด้วย AI (AI-Generated Portfolio Mockups) เช่น ระบบ AI Knowledge Base, SME E-commerce Platform, Mobile Booking System เพื่ออุดช่องโหว่การไม่มีผลงานตัวอย่างบนหน้าเว็บ
+
+#### 4. 💰 Pricing Packages & Scope Boundary UI (`index.html`)
+- [ ] อัปเดตตารางแสดงแพ็กเกจราคา 3 Tiers (Tier 1: 20k-50k Pilot, Tier 2: 100k-200k Core MVP System, Tier 3: 300k+ Enterprise) พร้อมเน้นย้ำสิทธิ์การซื้อแบบแยกบริการ Modular Service (À la carte) ในงบเริ่มต้น 20,000 บาท เพื่อป้องกันการเกิด Scope Creep
+
+#### 5. 🌐 Google Search Console Indexation & Phase 2 Multi-page Architecture
+- [ ] CEO ดำเนินการ Submit Sitemap บน Google Search Console และยื่นกด Request Indexing บังคับให้ Google Index หน้าเว็บ
+- [ ] วางแผนสถาปัตยกรรมแยกหน้าเพจ (Multi-page Routing) สำหรับบริการเฉพาะทางเพื่อทำ Deep SEO/AEO ในเฟสถัดไป

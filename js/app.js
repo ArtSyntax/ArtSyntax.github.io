@@ -21,22 +21,43 @@ document.addEventListener('DOMContentLoaded', () => {
 function initNavbarCtaToggle() {
   const heroCtaBtn = document.getElementById('heroCtaBtn');
   const navCtaBtn = document.getElementById('navCtaBtn');
+  const navbar = document.querySelector('.navbar');
 
   if (!heroCtaBtn || !navCtaBtn) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navCtaBtn.classList.remove('visible');
-      } else {
-        navCtaBtn.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0
-  });
+  const getNavHeight = () => (navbar ? navbar.offsetHeight : 60);
 
+  const createObserver = () => {
+    const navHeight = getNavHeight();
+    return new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // When hero CTA button is below the navbar, hide navbar CTA
+        if (entry.isIntersecting) {
+          navCtaBtn.classList.remove('visible');
+        } else {
+          // When hero CTA button scrolls up completely under/past the navbar, show navbar CTA immediately
+          if (entry.boundingClientRect.top < navHeight) {
+            navCtaBtn.classList.add('visible');
+          } else {
+            navCtaBtn.classList.remove('visible');
+          }
+        }
+      });
+    }, {
+      rootMargin: `-${navHeight}px 0px 0px 0px`,
+      threshold: 0
+    });
+  };
+
+  let observer = createObserver();
   observer.observe(heroCtaBtn);
+
+  // Re-calculate rootMargin on window resize / orientation change
+  window.addEventListener('resize', () => {
+    observer.disconnect();
+    observer = createObserver();
+    observer.observe(heroCtaBtn);
+  });
 }
 
 /* ==========================================================================

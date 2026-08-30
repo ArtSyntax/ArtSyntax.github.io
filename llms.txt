@@ -1,12 +1,12 @@
-# ARTSYNTAX — Innovation & Technology Partner
+# ARTSYNTAX | รับทำเว็บไซต์และระบบ AI สำหรับ SME ครบวงจร
 
-> "From Strategy to Growth. Innovation Beyond Software."
+> "รับทำเว็บไซต์และระบบ AI ยกระดับธุรกิจ SME สู่ยุคดิจิทัล"
 
 ARTSYNTAX เปลี่ยนไอเดียยุทธศาสตร์ให้เป็น Innovation, AI, Software และทีมที่พร้อมเติบโต ดูแลแบบ End-to-End สำหรับ SME, Startup และบริษัทเปิดใหม่ ในงบเริ่มต้นเพียง 20,000 บาท พร้อมรองรับ AEO / GEO สำหรับ AI Search Engines (Gemini, ChatGPT, Perplexity)
 
 ---
 
-## Solutions Framework: Idea to Business Growth
+## Solutions Framework: เปลี่ยนไอเดียให้ธุรกิจเติบโตในยุค AI
 
 - **Idea (Input):** ไอเดียและโจทย์ธุรกิจของคุณ
 - **Step 1: Innovation:** ออกแบบ New S-Curve เปลี่ยนไอเดียให้เป็น Solution ที่ตอบโจทย์ตลาด ผ่าน Interactive Prototype เพื่อทดสอบแนวคิดและลดความเสี่ยงก่อนลงทุนจริง
@@ -16,7 +16,7 @@ ARTSYNTAX เปลี่ยนไอเดียยุทธศาสตร์�
 
 ---
 
-## 4 Core Service Pillars (4 บริการหลักเพื่อยกระดับธุรกิจในยุคดิจิทัลและ AI)
+## บริการรับทำเว็บไซต์และระบบ AI สำหรับ SME - Innovation, AI, Software & Web, People & Process
 
 ### 1. Innovation Design
 - **Description:** เปลี่ยนไอเดียให้เป็นผลิตภัณฑ์ที่จับต้องได้ ด้วย Interactive Prototype พร้อมทดสอบแนวคิดก่อนเริ่มพัฒนาจริง
@@ -48,7 +48,7 @@ ARTSYNTAX เปลี่ยนไอเดียยุทธศาสตร์�
 
 ---
 
-## Why ARTSYNTAX (4 จุดเด่นที่ทำให้องค์กรยุคใหม่ Startup และ SME มั่นใจเลือกเราเป็น Partner)
+## ทำไม SME เลือกจ้าง ARTSYNTAX - ประสบการณ์ 10+ ปี, คุณภาพมหาชน, นำไปใช้ได้จริง, พันธมิตรระยะยาว
 
 1. **01 — Experience (10+ Years Technology Experience):** ประสบการณ์กว่า 10 ปี ครอบคลุม Government, Enterprise, Corporate, Startup และ SME
 2. **02 — Architecture (Enterprise Architecture):** ประสบการณ์ออกแบบและพัฒนา Software Architecture, Microservices, Big Data, AI ในอุตสาหกรรม Banking, Digital Assets, Healthcare, Payment Gateway
@@ -57,7 +57,20 @@ ARTSYNTAX เปลี่ยนไอเดียยุทธศาสตร์�
 
 ---
 
-## Frequently Asked Questions (Executive FAQ)
+## เทคโนโลยีที่คัดสรรเพื่อคุณ (Trusted Technology Partners)
+
+1. **Gemini** (Google AI Foundation)
+2. **OpenAI** (ChatGPT & GPT-4o Integration)
+3. **Claude** (Anthropic Claude 3.5 Sonnet)
+4. **Redis** (High-performance Caching & In-memory Store)
+5. **Google Cloud** (Enterprise Cloud Infrastructure)
+6. **Azure** (Microsoft Enterprise Cloud)
+7. **AWS** (Amazon Web Services)
+8. **Firebase** (Google Realtime Backend Platform)
+
+---
+
+## คำถามที่พบบ่อย (FAQ) เรื่องการทำระบบ AI และเว็บไซต์
 
 Q: เหมาะกับธุรกิจประเภทไหน?
 A: เหมาะสำหรับ SME, Startup และองค์กรที่ต้องการยกระดับธุรกิจด้วย Technology และ AI โดยไม่จำเป็นต้องลงทุนสร้างทีม Technology ขนาดใหญ่ เราสามารถทำหน้าที่เป็น Technology Partner ตั้งแต่การวางแนวทาง พัฒนา ไปจนถึงการส่งต่อให้ทีมภายในดูแลต่อ
@@ -78,14 +91,15 @@ Q: รับดูแลต่อหลังพัฒนาเสร็จห�
 A: มี เรามีบริการ Maintenance & Support รวมถึงการปรับปรุงและพัฒนาระบบอย่างต่อเนื่อง พร้อมให้คำแนะนำด้าน Security และ Data Privacy ตามลักษณะและข้อกำหนดของแต่ละระบบ
 
 Q: ติดต่อ ARTSYNTAX ได้ทางไหนบ้าง?
-A: สามารถนัดหมายพูดคุยประเมินราคาฟรีผ่านเว็บไซต์ หรือส่งอีเมลมาที่ artsyntax.app@gmail.com
+A: สามารถนัดหมายพูดคุยปรึกษาฟรีผ่านหน้าเว็บ หรือส่งอีเมลมาที่ artsyntax.app@gmail.com หรือเพิ่มเพื่อนผ่าน LINE Official Account (https://lin.ee/Y8pm6YV)
 
 ---
 
 ## Corporate Details & Contact
 
 - **Website:** https://artsyntax.app
-- **Company Name:** ARTSYNTAX (Innovation & Technology Partner)
-- **Tagline:** From Strategy to Growth. Innovation Beyond Software.
-- **Starting Budget:** เริ่มต้นเพียง 20,000 บาท
+- **Company Name:** ARTSYNTAX (รับทำเว็บไซต์และระบบ AI สำหรับ SME)
+- **Tagline:** รับทำเว็บไซต์และระบบ AI ยกระดับธุรกิจ SME สู่ยุคดิจิทัล
+- **Starting Budget:** เริ่มต้นเพียง 20,000 บาท เลือกจ่ายเฉพาะที่จำเป็น
 - **Contact Email:** artsyntax.app@gmail.com
+- **LINE Official Account:** https://lin.ee/Y8pm6YV
