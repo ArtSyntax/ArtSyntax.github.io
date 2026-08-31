@@ -10,7 +10,52 @@ document.addEventListener('DOMContentLoaded', () => {
   initCookieConsent();
   initChatWidget();
   initNavbarCtaToggle();
+  initAnalyticsCtaListeners();
 });
+
+/* ==========================================================================
+   ANALYTICS & CTA EVENT TRACKING (GA4 & Meta Pixel)
+   ========================================================================== */
+function initAnalyticsCtaListeners() {
+  // Track all 'พูดคุยไอเดีย' CTA clicks
+  document.querySelectorAll('a[href*="contact"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'cta_consult_project', {
+          event_category: 'CTA',
+          event_label: btn.textContent.trim()
+        });
+      }
+    });
+  });
+
+  // Track 'ดูบริการ' CTA clicks
+  document.querySelectorAll('a[href*="services"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'cta_view_services', {
+          event_category: 'CTA',
+          event_label: btn.textContent.trim()
+        });
+      }
+    });
+  });
+
+  // Track LINE OA CTA clicks
+  document.querySelectorAll('a[href*="lin.ee"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'cta_line', {
+          event_category: 'Social',
+          event_label: 'LINE OA Click'
+        });
+      }
+      if (typeof window.fbq === 'function') {
+        window.fbq('trackCustom', 'LineOAClick');
+      }
+    });
+  });
+}
 
 /* ==========================================================================
    6. NAVBAR CTA BUTTON SCROLL OBSERVER
@@ -254,7 +299,7 @@ function initCustomFormValidation() {
       handleFormSubmit(form);
     });
 
-    // Automatically remove error bubble when user types in the field
+    // Automatically remove error bubble when user types or changes value in the field
     const allInputs = form.querySelectorAll('.form-control');
     allInputs.forEach(input => {
       input.addEventListener('input', (e) => {
@@ -263,6 +308,11 @@ function initCustomFormValidation() {
         }
         removeErrorBubble(input);
       });
+      if (input.tagName === 'SELECT') {
+        input.addEventListener('change', () => {
+          removeErrorBubble(input);
+        });
+      }
     });
   });
 
@@ -345,7 +395,7 @@ function handleFormSubmit(form) {
 
 /**
  * Validates a single input field against required, email, phone, and minlength rules.
- * @param {HTMLInputElement|HTMLTextAreaElement} input
+ * @param {HTMLInputElement|HTMLTextAreaElement|HTMLSelectElement} input
  * @returns {boolean} True if valid, false if invalid
  */
 function validateInput(input) {
@@ -354,7 +404,11 @@ function validateInput(input) {
   let message = '';
 
   if (!val) {
-    message = `กรุณากรอก${getLabelText(input)}`;
+    if (input.tagName === 'SELECT') {
+      message = `กรุณาเลือก${getLabelText(input)}`;
+    } else {
+      message = `กรุณากรอก${getLabelText(input)}`;
+    }
   } else if (input.type === 'email' && !isValidEmail(val)) {
     message = 'กรุณากรอกอีเมลให้ถูกต้อง (เช่น example@company.com)';
   } else if ((input.type === 'tel' || input.id === 'phone') && !isValidPhone(val)) {
@@ -429,7 +483,7 @@ function removeErrorBubble(input) {
 function getLabelText(input) {
   const label = input.parentNode.querySelector('label');
   if (label) {
-    return label.textContent.split('(')[0].trim();
+    return label.textContent.replace(/\*/g, '').split('(')[0].trim();
   }
   return 'ข้อมูลในช่องนี้';
 }
