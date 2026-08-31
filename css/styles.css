@@ -513,6 +513,32 @@ button {
   margin-top: 0.5rem;
 }
 
+.hero-philosophy-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: var(--radius-pill);
+  padding: 0.45rem 1.25rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.hero-pill-brand {
+  font-weight: 800;
+  color: var(--accent-cyan);
+  white-space: nowrap;
+}
+
+.hero-pill-dot {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-pill-desc {
+  white-space: nowrap;
+}
+
 /* Services Grid (4 Pillars) */
 .services-grid {
   display: grid;
@@ -2921,6 +2947,21 @@ select.form-control option {
   .outputs-grid { grid-template-columns: 1fr; }
   .faq-grid-12,
   .faq-grid-2col { grid-template-columns: 1fr; }
+  .hero-philosophy-pill {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    max-width: 92%;
+    margin: 0 auto;
+  }
+  .hero-pill-dot { display: none; }
+  .hero-pill-desc {
+    white-space: normal;
+    font-size: 0.825rem;
+    line-height: 1.45;
+  }
   .footer-wrapper { grid-template-columns: 1fr; }
   .footer-bottom-bar { flex-direction: column; text-align: center; }
 }
