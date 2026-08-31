@@ -171,22 +171,22 @@
                 </div>
 
                 <div class="workflow-grid">
-                    <div class="glass-card workflow-card reveal">
+                    <div class="workflow-card step-1 reveal">
                         <div class="step-num-badge">01</div>
                         <h3>DISCOVER</h3>
                         <p>สำรวจปัญหา สัมภาษณ์ และทำความเข้าใจพฤติกรรมลูกค้า</p>
                     </div>
-                    <div class="glass-card workflow-card reveal">
+                    <div class="workflow-card step-2 reveal">
                         <div class="step-num-badge" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">02</div>
                         <h3>DEFINE</h3>
                         <p>กำหนดโจทย์ที่สำคัญที่สุดและคัดกรองฟีเจอร์หลัก</p>
                     </div>
-                    <div class="glass-card workflow-card reveal">
+                    <div class="workflow-card step-3 reveal">
                         <div class="step-num-badge" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">03</div>
                         <h3>DESIGN</h3>
                         <p>ออกแบบ User Journey, UX/UI Wireframe และ Prototype</p>
                     </div>
-                    <div class="glass-card workflow-card reveal">
+                    <div class="workflow-card step-4 reveal">
                         <div class="step-num-badge" style="background: linear-gradient(135deg, #10b981, #059669);">04</div>
                         <h3>VALIDATE</h3>
                         <p>ทดสอบแนวคิด ประเมินความเป็นไปได้ และสรุปแนวทางพัฒนา</p>
@@ -245,7 +245,7 @@
             <div class="footer-wrapper">
                 <div class="footer-brand">
                     <h4>ARTSYNTAX</h4>
-                    <p style="font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.5rem;">Turn Business Ideas Into Digital Growth.</p>
+                    <p style="font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.5rem;">Turn Business Ideas Into Digital and AI Growth.</p>
                     <p>Technology Partner ที่ช่วยธุรกิจเปลี่ยนไอเดีย ปัญหา และโอกาส ให้กลายเป็น Digital Solutions ที่ใช้งานได้จริง</p>
                 </div>
 
@@ -290,6 +290,56 @@
             </div>
         </div>
     </footer>
+
+    <!-- Interactive Glassmorphic Floating Chat Box Widget -->
+    <div id="chatWidgetCard" class="chat-widget-card" style="display: none;">
+        <div class="chat-widget-header">
+            <div class="chat-avatar-box">
+                <img src="../../image/logo.png" alt="ARTSYNTAX" class="chat-avatar-img">
+                <span class="chat-online-dot"></span>
+            </div>
+            <div class="chat-header-info">
+                <span class="chat-header-title">ARTSYNTAX Specialist</span>
+                <span class="chat-header-status">🟢 พร้อมให้คำปรึกษาฟรี</span>
+            </div>
+            <button type="button" id="btnCloseChatWidget" class="btn-close-chat" aria-label="ปิดกล่องแชท">✕</button>
+        </div>
+        <div class="chat-widget-body">
+            <div class="chat-bubble-msg">
+                <p>สวัสดีครับ! 👋 มีโจทย์ด้าน <strong>Innovation, AI, Software</strong> หรือ <strong>การทำงานของทีม</strong> พูดคุยกับทีม ARTSYNTAX ได้เลยครับ</p>
+                <span class="chat-msg-time">Just now</span>
+            </div>
+        </div>
+        <div class="chat-widget-footer">
+            <a href="https://lin.ee/Y8pm6YV" target="_blank" rel="noopener noreferrer" class="btn btn-chat-line">
+                <img src="../../image/Line.svg" alt="LINE" class="line-btn-icon">
+                <span>เริ่มแชททันทีผ่าน LINE OA</span>
+            </a>
+            <a href="../../contact/" id="btnGoToForm" class="btn btn-chat-form">
+                <span>นัดพูดคุยไอเดีย</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating Chat Trigger Button -->
+    <button type="button" id="btnToggleChatWidget" class="line-float-bubble" aria-label="เปิดกล่องแชทปรึกษาฟรี">
+        <img src="../../image/Line.svg" alt="LINE" class="line-bubble-icon">
+        <span class="line-bubble-tooltip">พูดคุยไอเดีย</span>
+    </button>
+
+    <!-- Glassmorphic Cookie Consent Banner (PDPA / GDPR Compliant) -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <span class="cookie-title">การใช้งานคุกกี้</span>
+                <p>เว็บไซต์นี้ใช้คุกกี้และเทคโนโลยีติดตามเพื่อพัฒนาประสิทธิภาพ ประสบการณ์การใช้งาน และวิเคราะห์สถิติ โดยเป็นไปตามมาตรการคุ้มครองข้อมูลส่วนบุคคล (PDPA)</p>
+            </div>
+            <div class="cookie-actions">
+                <button type="button" id="btnDeclineCookies" class="btn btn-cookie-decline">ปฏิเสธ</button>
+                <button type="button" id="btnAcceptCookies" class="btn btn-primary btn-cookie-accept">ยอมรับ</button>
+            </div>
+        </div>
+    </div>
 
     <script src="../../js/app.js"></script>
 </body>

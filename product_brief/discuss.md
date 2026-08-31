@@ -7,7 +7,7 @@
 
 ## 📌 Executive Summary (สรุปสถานะโปรเจกต์ปัจจุบัน)
 
-**ARTSYNTAX: Turn Business Ideas Into Digital Growth.**
+**ARTSYNTAX: Turn Business Ideas Into Digital and AI Growth.**
 *   **Target Audience:** ธุรกิจ SME, Startup, และผู้ประกอบการที่ต้องการใช้ Innovation, AI, Software และ Agile เพื่อเพิ่มประสิทธิภาพและการเติบโต
 *   **Commercial Model:** **4 Core Standalone Services** (สามารถซื้อแยกเดี่ยวได้ 100% ไม่จำเป็นต้องซื้อครบ 4 Services)
 *   **Signature Framework (Methodology):** `Discover. Design. Build. Grow.` (วิธีคิดและวิธีทำงานของ ARTSYNTAX)

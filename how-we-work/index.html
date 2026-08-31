@@ -121,6 +121,36 @@
                 <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 760px; margin: 0 auto 1.5rem; line-height: 1.7;">
                     Framework การทำงานของ ARTSYNTAX ที่ช่วยเปลี่ยน Business Problem และ Business Idea ให้กลายเป็น Solution ที่นำไปใช้จริงและพัฒนาต่อได้ ไม่ว่าคุณจะเลือกบริการใด เราใช้หลักคิดเดียวกันในการขับเคลื่อนผลลัพธ์
                 </p>
+
+                <div class="chevron-grid" style="margin-top: 2rem; margin-bottom: 2rem;">
+                    <!-- 01 DISCOVER -->
+                    <div class="chevron-card step-discover reveal">
+                        <span class="chevron-step-num">01</span>
+                        <h3>DISCOVER</h3>
+                        <p>เข้าใจ ธุรกิจ, ลูกค้า, ทีมงาน และ ปัญหา ก่อนลงมือ</p>
+                    </div>
+
+                    <!-- 02 DESIGN -->
+                    <div class="chevron-card step-design reveal">
+                        <span class="chevron-step-num">02</span>
+                        <h3>DESIGN</h3>
+                        <p>ออกแบบแนวทางแก้ไขปัญหา และวิธีทำงานที่เหมาะกับเป้าหมาย</p>
+                    </div>
+
+                    <!-- 03 BUILD -->
+                    <div class="chevron-card step-build reveal">
+                        <span class="chevron-step-num">03</span>
+                        <h3>BUILD</h3>
+                        <p>ลงมือพัฒนา ทดลอง หรือส่งต่อให้ทีมงานดูแลได้เอง</p>
+                    </div>
+
+                    <!-- 04 GROW -->
+                    <div class="chevron-card step-grow reveal">
+                        <span class="chevron-step-num">04</span>
+                        <h3>GROW</h3>
+                        <p>เก็บ Feedback ปรับปรุง และต่อยอดธุรกิจ</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -215,7 +245,7 @@
             <div class="footer-wrapper">
                 <div class="footer-brand">
                     <h4>ARTSYNTAX</h4>
-                    <p style="font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.5rem;">Turn Business Ideas Into Digital Growth.</p>
+                    <p style="font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.5rem;">Turn Business Ideas Into Digital and AI Growth.</p>
                     <p>Technology Partner ที่ช่วยธุรกิจเปลี่ยนไอเดีย ปัญหา และโอกาส ให้กลายเป็น Digital Solutions ที่ใช้งานได้จริง</p>
                 </div>
 
@@ -260,6 +290,56 @@
             </div>
         </div>
     </footer>
+
+    <!-- Interactive Glassmorphic Floating Chat Box Widget -->
+    <div id="chatWidgetCard" class="chat-widget-card" style="display: none;">
+        <div class="chat-widget-header">
+            <div class="chat-avatar-box">
+                <img src="../image/logo.png" alt="ARTSYNTAX" class="chat-avatar-img">
+                <span class="chat-online-dot"></span>
+            </div>
+            <div class="chat-header-info">
+                <span class="chat-header-title">ARTSYNTAX Specialist</span>
+                <span class="chat-header-status">🟢 พร้อมให้คำปรึกษาฟรี</span>
+            </div>
+            <button type="button" id="btnCloseChatWidget" class="btn-close-chat" aria-label="ปิดกล่องแชท">✕</button>
+        </div>
+        <div class="chat-widget-body">
+            <div class="chat-bubble-msg">
+                <p>สวัสดีครับ! 👋 มีโจทย์ด้าน <strong>Innovation, AI, Software</strong> หรือ <strong>การทำงานของทีม</strong> พูดคุยกับทีม ARTSYNTAX ได้เลยครับ</p>
+                <span class="chat-msg-time">Just now</span>
+            </div>
+        </div>
+        <div class="chat-widget-footer">
+            <a href="https://lin.ee/Y8pm6YV" target="_blank" rel="noopener noreferrer" class="btn btn-chat-line">
+                <img src="../image/Line.svg" alt="LINE" class="line-btn-icon">
+                <span>เริ่มแชททันทีผ่าน LINE OA</span>
+            </a>
+            <a href="../contact/" id="btnGoToForm" class="btn btn-chat-form">
+                <span>นัดพูดคุยไอเดีย</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating Chat Trigger Button -->
+    <button type="button" id="btnToggleChatWidget" class="line-float-bubble" aria-label="เปิดกล่องแชทปรึกษาฟรี">
+        <img src="../image/Line.svg" alt="LINE" class="line-bubble-icon">
+        <span class="line-bubble-tooltip">พูดคุยไอเดีย</span>
+    </button>
+
+    <!-- Glassmorphic Cookie Consent Banner (PDPA / GDPR Compliant) -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <span class="cookie-title">การใช้งานคุกกี้</span>
+                <p>เว็บไซต์นี้ใช้คุกกี้และเทคโนโลยีติดตามเพื่อพัฒนาประสิทธิภาพ ประสบการณ์การใช้งาน และวิเคราะห์สถิติ โดยเป็นไปตามมาตรการคุ้มครองข้อมูลส่วนบุคคล (PDPA)</p>
+            </div>
+            <div class="cookie-actions">
+                <button type="button" id="btnDeclineCookies" class="btn btn-cookie-decline">ปฏิเสธ</button>
+                <button type="button" id="btnAcceptCookies" class="btn btn-primary btn-cookie-accept">ยอมรับ</button>
+            </div>
+        </div>
+    </div>
 
     <script src="../js/app.js"></script>
 </body>
