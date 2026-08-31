@@ -2005,101 +2005,234 @@ footer {
 
 /* 6. Case Studies Section */
 .case-studies-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   margin-top: 2.5rem;
 }
 
 .case-study-card {
-  flex: 0 1 calc((100% - 3rem) / 3);
-  min-width: 320px;
-  max-width: calc((100% - 3rem) / 3);
-  padding: 2.25rem 2rem;
+  padding: 2.5rem 2.25rem;
   border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.35rem;
+  transition: all var(--transition-normal);
+  background: var(--surface-glass);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.case-study-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.case-header-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 .case-industry-tag {
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   font-family: var(--font-mono);
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--accent-emerald);
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  padding: 0.25rem 0.65rem;
-  border-radius: 4px;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
   display: inline-block;
   align-self: flex-start;
 }
 
 .case-study-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 800;
+  color: var(--accent-cyan);
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  transition: color var(--transition-fast);
+}
+
+.case-study-card:hover h3 {
   color: white;
+  text-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+.case-tagline {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+.case-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
   margin: 0;
 }
 
-.case-item {
-  margin-bottom: 0.5rem;
+.case-block {
+  padding: 1.15rem 1.25rem;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.case-item-label {
+.case-block-label {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--text-muted);
-  letter-spacing: 0.05em;
-  margin-bottom: 0.25rem;
+  color: #94a3b8;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
 }
 
-.case-item-text {
-  font-size: 0.9rem;
+.case-challenge-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.case-challenge-list li {
+  font-size: 0.875rem;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.case-challenge-list li::before {
+  content: "—";
+  color: #64748b;
+  font-weight: 700;
+}
+
+.case-solution-subhead {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.2rem;
+}
+
+.case-solution-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
   margin: 0;
 }
 
+.case-capabilities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.capability-pill {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+}
+
+/* Business Impact Highlight (Focal Accent Point) */
 .case-result-box {
   margin-top: auto;
-  padding: 1rem 1.25rem;
-  background: rgba(16, 185, 129, 0.08);
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 1.25rem 1.35rem;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.3);
   border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.case-result-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent-cyan), var(--accent-emerald));
 }
 
 .case-result-box .result-title {
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--accent-emerald);
-  margin-bottom: 0.4rem;
+  color: var(--accent-cyan);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.45rem;
 }
 
-.case-result-box ul {
-  list-style: none;
-  padding: 0;
+.case-result-text {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.6;
   margin: 0;
 }
 
-.case-result-box li {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: white;
+.case-tags-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.25rem;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 0.25rem;
 }
 
-.case-result-box li::before {
-  content: "✓";
-  color: var(--accent-emerald);
-  font-weight: 900;
+.case-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tech-tag-item {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.case-card-cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.case-card-cta:hover {
+  color: var(--accent-cyan);
+  transform: translateX(3px);
 }
 
 /* 7. Start Small & Pricing */
@@ -2696,11 +2829,8 @@ select.form-control option {
     max-width: calc((100% - 1.25rem) / 2);
     min-width: 280px;
   }
-  .case-study-card {
-    flex: 0 1 calc((100% - 1.5rem) / 2);
-    max-width: calc((100% - 1.5rem) / 2);
-    min-width: 280px;
-  }
+  .case-studies-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .case-study-card { padding: 2rem 1.75rem; }
   .proof-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-wrapper { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
@@ -2714,12 +2844,13 @@ select.form-control option {
   .chevron-card h3 { font-size: 1.2rem; }
   .chevron-card p { font-size: 0.875rem; }
   .problem-card,
-  .why-card,
-  .case-study-card {
+  .why-card {
     flex: 1 1 100%;
     max-width: 100%;
     min-width: 100%;
   }
+  .case-study-card { padding: 1.75rem 1.25rem; }
+  .case-tags-footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
   .solutions-grid { grid-template-columns: 1fr; }
   .proof-grid { grid-template-columns: 1fr; }
   .outputs-grid { grid-template-columns: 1fr; }
