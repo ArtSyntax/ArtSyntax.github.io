@@ -24,7 +24,7 @@
 
 ### 1. Master Website Implementation Plan — 4 Core Standalone Services & Multi-Page SEO Restructure (2026-08-31)
 *   **Brand & Navigation Restructure:** 
-    *   ลดเมนูนำทางเหลือ 6 รายการหลัก (`บริการ`, `ผลงาน`, `วิธีทำงาน`, `ทำไม ARTSYNTAX`, `บทความ`, `เกี่ยวกับเรา` + CTA `[พูดคุยไอเดีย]`)
+    *   ลดเมนูนำทางเหลือ 6 รายการหลัก (`บริการ`, `ผลงาน`, `วิธีทำงาน`, `ทำไมต้อง ARTSYNTAX`, `บทความ`, `เกี่ยวกับเรา` + CTA `[พูดคุยไอเดีย]`)
     *   สร้าง Mega Menu สำหรับเมนู `บริการ` เพื่อเชื่อมต่อไปยัง 4 บริการหลักโดยตรง
 *   **Full Multi-Page Architecture (12 Dedicated Landing Pages):**
     *   `/` (Homepage: 12 Sections ครบถ้วนตามผังมาตรฐาน)
