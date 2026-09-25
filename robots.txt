@@ -2,6 +2,16 @@
 User-agent: *
 Allow: /
 
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 # Directives for AI Search & Crawlers (AEO / GEO Optimization)
 User-agent: GPTBot
 Allow: /
